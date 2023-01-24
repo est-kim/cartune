@@ -7,7 +7,8 @@ class AutomobileVOEncoder(ModelEncoder):
     properties = [
         "id",
         "vin",
-        "import_href"
+        "sold",
+        "import_href",
     ]
 
 
