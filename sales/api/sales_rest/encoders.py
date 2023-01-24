@@ -36,9 +36,6 @@ class SalesRecordEncoder(ModelEncoder):
     properties = [
         "id",
         "sales_price",
-        # "sales_person",
-        # "customer",
-        # "automobile",
     ]
 
     def get_extra_data(self, o):
