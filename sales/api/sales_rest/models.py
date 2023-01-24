@@ -51,7 +51,7 @@ class SaleRecord(models.Model):
         related_name="sales_records",
         on_delete=models.PROTECT,
     )
-    sales_price = models.DecimalField(max_digits=None, decimal_places=2)
+    sales_price = models.DecimalField(max_digits=25, decimal_places=2)
 
     def __str__(self):
         return self.sales_person
