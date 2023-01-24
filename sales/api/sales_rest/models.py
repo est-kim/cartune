@@ -4,12 +4,13 @@ from django.urls import reverse
 
 class AutomobileVO(models.Model):
     vin = models.CharField(max_length=17, unique=True)
+    import_href = models.CharField(max_length=200, unique=True, blank=True, null=True)
 
     def __str__(self):
-        return self.vin
+        return str(self.vin)
 
-    def get_api_url(self):
-        return reverse("api_automobile", kwargs={"vin": self.vin})
+    # def get_api_url(self):
+    #     return reverse("api_automobile", kwargs={"vin": self.vin})
 
 
 class SalesPerson(models.Model):
@@ -17,10 +18,10 @@ class SalesPerson(models.Model):
     employee_number = models.PositiveIntegerField(unique=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
-    def get_api_url(self):
-        return reverse("api_salesperson", kwargs={"pk": self.id})
+    # def get_api_url(self):
+    #     return reverse("api_salesperson", kwargs={"pk": self.id})
 
 
 class Customer(models.Model):
@@ -29,13 +30,13 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=25, unique=True)
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
-    def get_api_url(self):
-        return reverse("api_customer", kwargs={"pk": self.id})
+    # def get_api_url(self):
+    #     return reverse("api_customer", kwargs={"pk": self.id})
 
 
-class SaleRecord(models.Model):
+class SalesRecord(models.Model):
     sales_person = models.ForeignKey(
         SalesPerson,
         related_name="sales_records",
@@ -54,4 +55,4 @@ class SaleRecord(models.Model):
     sales_price = models.DecimalField(max_digits=25, decimal_places=2)
 
     def __str__(self):
-        return self.sales_person
+        return f'{self.sales_person} - {self.automobile}'
