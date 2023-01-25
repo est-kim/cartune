@@ -1,15 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function ServiceHistory({ appointments, setAppointments}) {
     const[searchVin, setSearchVin] = useState('')
 
     const handleSearch = async (event) => {
-        event.preventDefault();
-        const filteredAppointments = appointments.filter((appointment) =>
-        appointment.vin.includes(searchVin)
-        );
-        setAppointments(filteredAppointments);
+        if (searchVin.length === 0) {
+            const filteredAppointments = appointments.filter((appointment) =>
+                appointment.vin.includes(searchVin)
+            );
+            setAppointments(filteredAppointments)
+        }
+        else {
+            event.preventDefault();
+            const filteredAppointments = appointments.filter((appointment) =>
+                appointment.vin.includes(searchVin)
+            );
+            setAppointments(filteredAppointments);
+        }
     };
+
     const handleInputChange = async (event) => {
         const value = event.target.value;
         setSearchVin(value);
@@ -26,7 +35,7 @@ function ServiceHistory({ appointments, setAppointments}) {
         </div>
         <table className="table table-striped">
         <thead>
-          <tr>
+          <tr className='text-center'>
             <th>VIN</th>
             <th>Customer Name</th>
             <th>Date</th>
@@ -40,7 +49,7 @@ function ServiceHistory({ appointments, setAppointments}) {
         <tbody>
             {appointments.map(appointment => {
                 return (
-                    <tr key={appointment.id}>
+                    <tr key={appointment.id} className='text-center'>
                         <td>{ appointment.vin }</td>
                         <td>{ appointment.customer_name }</td>
                         <td>{ new Date(appointment.date_time).toLocaleDateString("en-US") }</td>
@@ -51,8 +60,20 @@ function ServiceHistory({ appointments, setAppointments}) {
                         </td>
                         <td>{ appointment.technician.name }</td>
                         <td>{ appointment.reason }</td>
-                        <td>{ appointment.vip ? "👑" : ""}</td>
-                        <td>{ appointment.completed ? "Completed" : "In Progress" }</td>
+                        <td>{ appointment.vip ? <img src='https://cdn-icons-png.flaticon.com/512/5983/5983922.png' alt="" width="25px" height="25px"/> : ""}</td>
+                        <td>{ appointment.completed ?
+                            <img
+                                src='https://cdn-icons-png.flaticon.com/512/463/463574.png'
+                                alt=""
+                                width="25px"
+                                height="25px"/> :
+                            <img
+                                src='https://cdn-icons-png.flaticon.com/512/5129/5129420.png'
+                                alt=""
+                                width="25px"
+                                height="25px"/>
+                            }
+                        </td>
                     </tr>
                     );
             })}
