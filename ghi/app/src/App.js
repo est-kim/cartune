@@ -9,12 +9,15 @@ import TechniciansList from './TechniciansList';
 import TechnicianForm from './TechnicianForm';
 import ManufacturersList from './ManufacturerList';
 import ManufacturerForm from './ManufacturerForm';
+import VehiclesList from './VehiclesList';
 
 
 function App() {
-  const[appointments, setAppointments] = useState([])
-  const[technicians, setTechnicians] = useState([])
-  const[manufacturers, setManufacturers] = useState([])
+  const[appointments, setAppointments] = useState([]);
+  const[technicians, setTechnicians] = useState([]);
+  const[manufacturers, setManufacturers] = useState([]);
+  const[vehicles, setVehicles] = useState([]);
+
 
   const getAppointments = async () => {
     const url = "http://localhost:8080/api/appointments"
@@ -49,14 +52,28 @@ function App() {
     }
   }
 
+  const getVehicles = async () => {
+    const url = "http://localhost:8100/api/models"
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json()
+      const vehicles = data.models
+      setVehicles(vehicles)
+    }
+  }
+
+
   useEffect( () => {
     getAppointments();
     getTechnicians();
     getManufacturers();
+    getVehicles();
   }, [
     setAppointments,
     setTechnicians,
     setManufacturers,
+    setVehicles,
   ]
   )
 
@@ -82,6 +99,10 @@ function App() {
           <Route path="manufacturers">
               <Route path="" element={<ManufacturersList manufacturers={manufacturers} getManufacturers={getManufacturers} />} />
               <Route path="new" element={<ManufacturerForm getManufacturers={getManufacturers} />} />
+          </Route>
+          <Route path="vehicles">
+              <Route path="" element={<VehiclesList vehicles={vehicles} getVehicles={getVehicles} />} />
+              {/* <Route path="new" element={<VehicleForm getVehicles={getVehicles} />} /> */}
           </Route>
         </Routes>
       </div>

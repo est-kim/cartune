@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ServiceHistory({ appointments, setAppointments}) {
+function ServiceHistory({appointments, setAppointments}) {
     const[searchVin, setSearchVin] = useState('')
 
     const handleSearch = async (event) => {
