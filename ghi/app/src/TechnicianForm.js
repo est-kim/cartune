@@ -33,7 +33,6 @@ function TechnicianForm ({getTechnicians}) {
         const response = await fetch(url, fetchConfig);
         if (response.ok) {
             const newTechnician = await response.json();
-            console.log(newTechnician);
 
             setName('');
             setEmployeeNumber('');

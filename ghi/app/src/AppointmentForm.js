@@ -55,7 +55,6 @@ function AppointmentForm ({getAppointments}) {
         const appointmentResponse = await fetch(appointmentUrl, fetchConfig);
         if (appointmentResponse.ok) {
             const appointment = await appointmentResponse.json();
-            console.log(appointment);
 
             setVin('');
             setCustomerName('');

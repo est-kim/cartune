@@ -62,7 +62,15 @@ function AppointmentsList({appointments, getAppointments}) {
                             </td>
                             <td>{ appointment.technician.name }</td>
                             <td>{ appointment.reason }</td>
-                            <td>{ appointment.vip ? "👑" : ""}</td>
+                            <td>{ appointment.vip ?
+                                <img
+                                    src='https://cdn-icons-png.flaticon.com/512/5983/5983922.png'
+                                    alt=""
+                                    width="25px"
+                                    height="25px"/> :
+                                ""
+                                }
+                            </td>
                             <td>
                                 <button id={ appointment.id } onClick={() => cancelAppointment(appointment)}
                                 type="button" className="btn btn-danger">Cancel</button>
