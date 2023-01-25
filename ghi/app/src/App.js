@@ -3,6 +3,7 @@ import React, { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
 import SalesPersonsList from './SalesPersonsList';
+import SalesPersonForm from './SalesPersonForm';
 
 function App() {
   const [salesPersons, setSalesPersons] = useState([])
@@ -32,7 +33,7 @@ function App() {
           <Route index element={<MainPage />} />
           <Route path="salespersons">
             <Route path="" element={<SalesPersonsList salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
-            {/* <Route path="new" element={<SalesPersonForm getSalesPersons={getSalesPersons} />} /> */}
+            <Route path="new" element={<SalesPersonForm getSalesPersons={getSalesPersons} />} />
           </Route>
         </Routes>
       </div>
