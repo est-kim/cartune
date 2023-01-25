@@ -4,20 +4,14 @@ function ServiceHistory({appointments, setAppointments}) {
     const[searchVin, setSearchVin] = useState('')
 
     const handleSearch = async (event) => {
-        if (searchVin.length === 0) {
-            const filteredAppointments = appointments.filter((appointment) =>
-                appointment.vin.includes(searchVin)
-            );
-            setAppointments(filteredAppointments)
-        }
-        else {
+        if (searchVin.length !== 0) {
             event.preventDefault();
-            const filteredAppointments = appointments.filter((appointment) =>
-                appointment.vin.includes(searchVin)
-            );
-            setAppointments(filteredAppointments);
         }
-    };
+        const filteredAppointments = appointments.filter((appointment) =>
+            appointment.vin.includes(searchVin)
+        );
+        setAppointments(filteredAppointments);
+        }
 
     const handleInputChange = async (event) => {
         const value = event.target.value;
@@ -71,12 +65,12 @@ function ServiceHistory({appointments, setAppointments}) {
                         </td>
                         <td>{ appointment.completed ?
                             <img
-                                src='https://cdn-icons-png.flaticon.com/512/463/463574.png'
+                                src='https://cdn-icons-png.flaticon.com/512/5610/5610944.png'
                                 alt=""
                                 width="25px"
                                 height="25px"/> :
                             <img
-                                src='https://cdn-icons-png.flaticon.com/512/5129/5129420.png'
+                                src='https://cdn-icons-png.flaticon.com/512/463/463575.png'
                                 alt=""
                                 width="25px"
                                 height="25px"/>
