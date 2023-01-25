@@ -33,7 +33,7 @@ function AppointmentsList({appointments, getAppointments}) {
     return (
         <>
         <div className='p-5 text-center'>
-            <h1 className='mb-3'>Appointments List</h1>
+            <h1 className='mb-3'>List of Appointments</h1>
         </div>
         <table className="table table-striped">
         <thead>

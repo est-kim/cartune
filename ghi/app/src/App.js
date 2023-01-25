@@ -8,6 +8,7 @@ import AppointmentForm from './AppointmentForm';
 import TechniciansList from './TechniciansList';
 import TechnicianForm from './TechnicianForm';
 import ManufacturersList from './ManufacturerList';
+import ManufacturerForm from './ManufacturerForm';
 
 
 function App() {
@@ -80,7 +81,7 @@ function App() {
           </Route>
           <Route path="manufacturers">
               <Route path="" element={<ManufacturersList manufacturers={manufacturers} getManufacturers={getManufacturers} />} />
-              {/* <Route path="new" element={<ManufacturerForm getManufacturers={getManufacturers} />} /> */}
+              <Route path="new" element={<ManufacturerForm getManufacturers={getManufacturers} />} />
           </Route>
         </Routes>
       </div>

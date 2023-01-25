@@ -19,7 +19,7 @@ function ManufacturersList({manufacturers, getManufacturers}) {
     return (
         <>
         <div className='p-5 text-center'>
-            <h1 className='mb-3'>Manufacturers List</h1>
+            <h1 className='mb-3'>List of Manufacturers</h1>
         </div>
         <table className="table table-striped">
         <thead>

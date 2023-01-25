@@ -37,6 +37,19 @@ function Nav() {
                 </li>
               </ul>
             </div>
+            <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+              <ul className="navbar-nav">
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Manufacturers
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><Link className="dropdown-item" to="/manufacturers">Manufacturers List</Link></li>
+                    <li><Link className="dropdown-item" to="/manufacturers/new">New Manufacturer</Link></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>

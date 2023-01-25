@@ -19,7 +19,7 @@ function TechniciansList({technicians, getTechnicians}) {
     return (
         <>
         <div className='p-5 text-center'>
-            <h1 className='mb-3'>Technicians List</h1>
+            <h1 className='mb-3'>List of Technicians</h1>
         </div>
         <table className="table table-striped">
         <thead>
