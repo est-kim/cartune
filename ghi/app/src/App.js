@@ -30,6 +30,7 @@ function App() {
 
   const getSalesPersons = async () => {
     const url = 'http://localhost:8090/api/salespersons/'
+    const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
       const salesPersons = data.sales_persons
@@ -150,7 +151,8 @@ function App() {
           </Route>
           <Route path="sales">
             <Route path="" element={<SalesRecordsList salesRecords={salesRecords}/>} />
-            <Route path="new" element={<SalesRecordForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
+            <Route path="new" element={<SalesRecordForm/>} />
+            {/* <Route path="new" element={<SalesRecordForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} /> */}
           </Route>
           <Route path="salespersons">
             <Route path="new" element={<SalesPersonForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />

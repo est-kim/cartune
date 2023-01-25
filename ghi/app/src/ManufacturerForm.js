@@ -15,7 +15,7 @@ function ManufacturerForm ({getManufacturers}) {
 
         data.name = name;
 
-        const url = 'http://localhost:810-/api/manufacturers/';
+        const url = 'http://localhost:8100/api/manufacturers/';
         const fetchConfig = {
         method: "post",
         body: JSON.stringify(data),

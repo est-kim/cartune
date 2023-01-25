@@ -34,10 +34,11 @@ function SalesRecordForm() {
 
         const data = {}
 
-        data.sales_price = parseFloat(salesPrice)
         data.automobile = automobile
         data.sales_person = salesPerson
         data.customer = customer
+        // data.sales_price = parseFloat(salesPrice)
+        data.sales_price = salesPrice
 
         console.log(data)
 
@@ -112,7 +113,7 @@ function SalesRecordForm() {
                             {automobiles.map(automobile => {
                                 if (automobile.sold === false) {
                                     return (
-                                        <option key={automobile.id} value={automobile.href}>
+                                        <option key={automobile.id} value={automobile.import_href}>
                                             {automobile.vin}
                                         </option>
                                     )
@@ -137,7 +138,7 @@ function SalesRecordForm() {
                             <option value=''>Choose a customer</option>
                             {customers.map(customer => {
                                 return (
-                                    <option key={customer.id} value={customer.id}>
+                                    <option key={customer.id} value={customer.name}>
                                         {customer.name}
                                     </option>
                             );
