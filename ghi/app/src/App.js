@@ -4,6 +4,7 @@ import MainPage from './MainPage';
 import Nav from './Nav';
 import SalesPersonsList from './SalesPersonsList';
 import SalesPersonForm from './SalesPersonForm';
+import NewCustomerForm from './NewCustomerForm';
 
 function App() {
   const [salesPersons, setSalesPersons] = useState([])
@@ -31,6 +32,9 @@ function App() {
       <div className="container">
         <Routes>
           <Route index element={<MainPage />} />
+          <Route path="customers">
+            <Route path="new" element={<NewCustomerForm/>} />
+          </Route>
           <Route path="salespersons">
             <Route path="" element={<SalesPersonsList salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
             <Route path="new" element={<SalesPersonForm getSalesPersons={getSalesPersons} />} />
