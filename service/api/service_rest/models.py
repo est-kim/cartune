@@ -8,9 +8,6 @@ class AutomobileVO(models.Model):
     def __str__(self):
         return str(self.vin)
 
-    # def get_api_url(self):
-    #     return reverse("api_automobile", kwargs={"pk": self.id})
-
 class Technician(models.Model):
     name = models.CharField(max_length=100)
     employee_number = models.PositiveIntegerField(unique=True)
