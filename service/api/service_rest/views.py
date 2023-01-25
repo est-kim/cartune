@@ -71,18 +71,19 @@ def api_appointments(request, vin=None):
                 {"appointments": appointments},
                 encoder=AppointmentEncoder,
             )
-        else:
-            try:
-                appointments = Appointment.objects.filter(vin=vin)
-                return JsonResponse(
-                    {"appointments": appointments},
-                    encdoer=AppointmentEncoder
-                )
-            except Appointment.DoesNotExist:
-                return JsonResponse(
-                    {"message": "Appointment does not exist"},
-                    status=400
-                )
+        # else:
+        #     try:
+        #         appointments_by_vin = Appointment.objects.filter(vin=vin)
+        #         return JsonResponse(
+        #             appointments_by_vin,
+        #             encdoer=AppointmentEncoder,
+        #             safe=False
+        #         )
+        #     except Appointment.DoesNotExist:
+        #         return JsonResponse(
+        #             {"message": "Appointment does not exist"},
+        #             status=404
+        #         )
     else: #POST
         content = json.loads(request.body)
         try:
@@ -145,10 +146,15 @@ def api_appointment(request, pk):
 @require_http_methods(["GET"])
 def api_appointments_by_vin(request, vin):
     if request.method == "GET":
-        # try:
-        appointments_by_vin = Appointment.objects.filter(vin=vin)
-        return JsonResponse(
-            appointments_by_vin,
-            encoder=AppointmentEncoder,
-            safe=False
-        )
+        try:
+            appointments_by_vin = Appointment.objects.filter(vin=vin)
+            return JsonResponse(
+                appointments_by_vin,
+                encoder=AppointmentEncoder,
+                safe=False
+            )
+        except Appointment.DoesNotExist:
+            return JsonResponse(
+                {"message": "Appointment does not exist"},
+                status=404
+            )
