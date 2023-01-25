@@ -143,8 +143,10 @@ def api_sales(request):
         )
     else:
         content = json.loads(request.body)
-        automobile = AutomobileVO.objects.get(import_href=content["automobile"])
-        
+        try:
+            automobile = AutomobileVO.objects.get(import_href=content["automobile"])
+        except:
+            print("Ahhhhhhhhhh")
         if automobile.sold is False:
             try:
                 content["automobile"] = AutomobileVO.objects.get(import_href=content["automobile"])
@@ -234,7 +236,7 @@ def api_automobiles(request):
     if request.method == "GET":
         automobiles = AutomobileVO.objects.all()
         return JsonResponse(
-            automobiles,
+            {"automobiles": automobiles},
             encoder = AutomobileVOEncoder,
             safe=False,
         )

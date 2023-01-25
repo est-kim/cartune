@@ -16,5 +16,5 @@ urlpatterns = [
     path("salespersons/", api_sales_persons, name="api_sales_persons"),
     path("customers/<int:id>/", api_customer, name="api_customer"),
     path("customers/", api_customers, name="api_customers"),
-    path("sales/automobiles/", api_automobiles, name="api_automobiles"),
+    path("automobiles/", api_automobiles, name="api_automobiles"),
 ]
