@@ -6,6 +6,7 @@ import SalesPersonForm from './SalesPersonForm';
 import NewCustomerForm from './NewCustomerForm';
 import SalesRecordForm from './SalesRecordForm';
 import SalesRecordsList from './SalesRecordsList';
+import SalesPersonsList from './SalesPersonsList';
 import SalesPersonSales from './SalesPersonSales';
 import AppointmentsList from './AppointmentsList';
 import ServiceHistory from './ServiceHistory';
@@ -152,9 +153,9 @@ function App() {
           <Route path="sales">
             <Route path="" element={<SalesRecordsList salesRecords={salesRecords}/>} />
             <Route path="new" element={<SalesRecordForm/>} />
-            {/* <Route path="new" element={<SalesRecordForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} /> */}
           </Route>
           <Route path="salespersons">
+            <Route path="" element={<SalesPersonsList salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
             <Route path="new" element={<SalesPersonForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
             <Route path="sales" element={<SalesPersonSales salesPersons={salesPersons} getSalesPersons={getSalesPersons} salesRecords={salesRecords} getSalesRecords={getSalesRecords} />} />
           </Route>
