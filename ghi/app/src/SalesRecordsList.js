@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SalesRecordsList({salesRecords, salesPersons}) {
+function SalesRecordsList({ salesRecords }) {
     if (salesRecords === undefined) {
         return null;
     }
@@ -20,10 +20,10 @@ function SalesRecordsList({salesRecords, salesPersons}) {
                 {salesRecords.map(salesRecord => {
                     return (
                         <tr key={salesRecord.id}>
-                            <td>{ salesRecord.sales_person }</td>
+                            <td>{ salesRecord.sales_person.name }</td>
                             <td>{ salesRecord.sales_person.employee_number }</td>
-                            <td>{ salesRecord.customer }</td>
-                            <td>{ salesRecord.automobile }</td>
+                            <td>{ salesRecord.customer.name }</td>
+                            <td>{ salesRecord.automobile.vin }</td>
                             <td>$ { salesRecord.sales_price }</td>
                         </tr>
                     );

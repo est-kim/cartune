@@ -2,15 +2,16 @@ import { useState, useEffect } from 'react';
 import React, { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Nav from './Nav';
-import SalesPersonsList from './SalesPersonsList';
 import SalesPersonForm from './SalesPersonForm';
 import NewCustomerForm from './NewCustomerForm';
 import SalesRecordForm from './SalesRecordForm';
 import SalesRecordsList from './SalesRecordsList';
+import SalesPersonSales from './SalesPersonSales';
 
 function App() {
   const [salesPersons, setSalesPersons] = useState([])
   const [salesRecords, setSalesRecords] = useState([])
+  const [customers, setCustomers] = useState([])
 
   const getSalesPersons = async () => {
     const url = 'http://localhost:8090/api/salespersons/'
@@ -34,12 +35,25 @@ function App() {
     }
   }
 
+  const getCustomers = async () => {
+    const url = 'http://localhost:8090/api/customers/'
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json();
+      const customers = data.customers
+      setCustomers(customers)
+    }
+  }
+
   useEffect( () => {
     getSalesPersons();
     getSalesRecords();
+    getCustomers();
   }, [
     setSalesPersons,
     setSalesRecords,
+    setCustomers,
   ])
 
   return (
@@ -51,12 +65,11 @@ function App() {
           <Route path="customers">
             <Route path="new" element={<NewCustomerForm/>} />
           </Route>
-          <Route path="sales" element={<SalesRecordsList salesRecords={salesRecords} getSalesRecords={getSalesRecords} />}>
-            <Route path="new" element={<SalesRecordForm/>} getSalesPersons={getSalesPersons}/>
-          </Route>
-          <Route path="salespersons">
-            <Route path="" element={<SalesPersonsList salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
-            <Route path="new" element={<SalesPersonForm getSalesPersons={getSalesPersons} />} />
+          <Route path="sales" element={<SalesRecordsList salesRecords={salesRecords}/>}/>
+          <Route path="sales/new" element={<SalesRecordForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
+          <Route path="salespersons" >
+            <Route path="new" element={<SalesPersonForm salesPersons={salesPersons} getSalesPersons={getSalesPersons} />} />
+            <Route path="sales" element={<SalesPersonSales salesPersons={salesPersons} getSalesPersons={getSalesPersons} salesRecords={salesRecords} getSalesRecords={getSalesRecords} />} />
           </Route>
         </Routes>
       </div>

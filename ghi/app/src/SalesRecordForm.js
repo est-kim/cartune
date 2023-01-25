@@ -112,7 +112,7 @@ function SalesRecordForm() {
                             {automobiles.map(automobile => {
                                 if (automobile.sold === false) {
                                     return (
-                                        <option key={automobile.id} value={automobile.vin}>
+                                        <option key={automobile.id} value={automobile.href}>
                                             {automobile.vin}
                                         </option>
                                     )
