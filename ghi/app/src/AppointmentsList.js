@@ -7,17 +7,17 @@ function AppointmentsList({appointments, getAppointments}) {
     }
 
     const cancelAppointment = async (appointment) => {
-        const appointmentUrl = `http://localhost:8080/api/appointments/${appointment.id}/`
+        const url = `http://localhost:8080/api/appointments/${appointment.id}/`
         const fetchConfig = {
             method: 'delete'
         }
-    const response = await fetch(appointmentUrl, fetchConfig);
+    const response = await fetch(url, fetchConfig);
     if (response.ok) {
         getAppointments()
     }
     }
     const completeAppointment = async (appointment) => {
-        const appointmentUrl = `http://localhost:8080/api/appointments/${appointment.id}/`
+        const url = `http://localhost:8080/api/appointments/${appointment.id}/`
         const fetchConfig = {
             method: 'put',
             body: JSON.stringify({ completed: true }),
@@ -25,7 +25,7 @@ function AppointmentsList({appointments, getAppointments}) {
                 "Content-Type": "application/json",
             }
         }
-    const response = await fetch(appointmentUrl, fetchConfig);
+    const response = await fetch(url, fetchConfig);
     if (response.ok) {
         getAppointments()
     }

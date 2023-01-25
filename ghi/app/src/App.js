@@ -11,6 +11,7 @@ import ManufacturersList from './ManufacturerList';
 import ManufacturerForm from './ManufacturerForm';
 import VehicleModelsList from './VehicleModelsList';
 import VehicleModelForm from './VehicleModelForm';
+import AutomobilesList from './AutomobilesList';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   const[technicians, setTechnicians] = useState([]);
   const[manufacturers, setManufacturers] = useState([]);
   const[vehicleModels, setVehicleModels] = useState([]);
+  const[automobiles, setAutomobiles] = useState([]);
 
 
   const getAppointments = async () => {
@@ -64,17 +66,31 @@ function App() {
     }
   }
 
+  const getAutomobiles = async () => {
+    const url = "http://localhost:8100/api/automobiles/"
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json()
+      const automobiles = data.autos
+      setAutomobiles(automobiles)
+    }
+  }
+
+
 
   useEffect( () => {
     getAppointments();
     getTechnicians();
     getManufacturers();
     getVehicleModels();
+    getAutomobiles();
   }, [
     setAppointments,
     setTechnicians,
     setManufacturers,
     setVehicleModels,
+    setAutomobiles,
   ]
   )
 
@@ -101,9 +117,13 @@ function App() {
               <Route path="" element={<ManufacturersList manufacturers={manufacturers} getManufacturers={getManufacturers} />} />
               <Route path="new" element={<ManufacturerForm getManufacturers={getManufacturers} />} />
           </Route>
-          <Route path="vehicles">
+          <Route path="models">
               <Route path="" element={<VehicleModelsList vehicleModels={vehicleModels} getVehicleModels={getVehicleModels} />} />
               <Route path="new" element={<VehicleModelForm getVehicleModels={getVehicleModels} />} />
+          </Route>
+          <Route path="automobiles">
+              <Route path="" element={<AutomobilesList automobiles={automobiles} getAutomobiles={getAutomobiles} />} />
+              {/* <Route path="new" element={<VehicleModelForm getAutomobiles={getAutomobiles} />} /> */}
           </Route>
         </Routes>
       </div>

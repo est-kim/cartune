@@ -44,7 +44,7 @@ function AppointmentForm ({getAppointments}) {
         data.technician = technician;
         data.reason = reason;
 
-        const appointmentUrl = 'http://localhost:8080/api/appointments/';
+        const url = 'http://localhost:8080/api/appointments/';
         const fetchConfig = {
         method: "post",
         body: JSON.stringify(data),
@@ -52,9 +52,9 @@ function AppointmentForm ({getAppointments}) {
             'Content-Type': 'application/json',
         },
         };
-        const appointmentResponse = await fetch(appointmentUrl, fetchConfig);
-        if (appointmentResponse.ok) {
-            const appointment = await appointmentResponse.json();
+        const response = await fetch(url, fetchConfig);
+        if (response.ok) {
+            const appointment = await response.json();
 
             setVin('');
             setCustomerName('');

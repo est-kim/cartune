@@ -57,8 +57,8 @@ function Nav() {
                     Vehicles
                   </a>
                   <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><Link className="dropdown-item" to="/vehicles">Vehicles List</Link></li>
-                    <li><Link className="dropdown-item" to="/vehicles/new">New Vehicle</Link></li>
+                    <li><Link className="dropdown-item" to="/models">Vehicles List</Link></li>
+                    <li><Link className="dropdown-item" to="/models/new">New Vehicle</Link></li>
                   </ul>
                 </li>
               </ul>
