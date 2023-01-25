@@ -9,14 +9,15 @@ import TechniciansList from './TechniciansList';
 import TechnicianForm from './TechnicianForm';
 import ManufacturersList from './ManufacturerList';
 import ManufacturerForm from './ManufacturerForm';
-import VehiclesList from './VehiclesList';
+import VehicleModelsList from './VehicleModelsList';
+import VehicleModelForm from './VehicleModelForm';
 
 
 function App() {
   const[appointments, setAppointments] = useState([]);
   const[technicians, setTechnicians] = useState([]);
   const[manufacturers, setManufacturers] = useState([]);
-  const[vehicles, setVehicles] = useState([]);
+  const[vehicleModels, setVehicleModels] = useState([]);
 
 
   const getAppointments = async () => {
@@ -52,14 +53,14 @@ function App() {
     }
   }
 
-  const getVehicles = async () => {
+  const getVehicleModels = async () => {
     const url = "http://localhost:8100/api/models"
     const response = await fetch(url);
 
     if (response.ok) {
       const data = await response.json()
-      const vehicles = data.models
-      setVehicles(vehicles)
+      const vehicleModels = data.models
+      setVehicleModels(vehicleModels)
     }
   }
 
@@ -68,12 +69,12 @@ function App() {
     getAppointments();
     getTechnicians();
     getManufacturers();
-    getVehicles();
+    getVehicleModels();
   }, [
     setAppointments,
     setTechnicians,
     setManufacturers,
-    setVehicles,
+    setVehicleModels,
   ]
   )
 
@@ -101,8 +102,8 @@ function App() {
               <Route path="new" element={<ManufacturerForm getManufacturers={getManufacturers} />} />
           </Route>
           <Route path="vehicles">
-              <Route path="" element={<VehiclesList vehicles={vehicles} getVehicles={getVehicles} />} />
-              {/* <Route path="new" element={<VehicleForm getVehicles={getVehicles} />} /> */}
+              <Route path="" element={<VehicleModelsList vehicleModels={vehicleModels} getVehicleModels={getVehicleModels} />} />
+              <Route path="new" element={<VehicleModelForm getVehicleModels={getVehicleModels} />} />
           </Route>
         </Routes>
       </div>

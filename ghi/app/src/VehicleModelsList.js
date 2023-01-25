@@ -1,19 +1,19 @@
 import React from 'react';
 import "./index.css";
 
-function VehiclesList({vehicles, getVehicles}) {
-    if (vehicles === undefined) {
+function VehicleModelsList({vehicleModels, getVehicleModels}) {
+    if (vehicleModels === undefined) {
         return null;
     }
 
-    const deleteVehicle = async (model) => {
+    const deleteVehicleModel = async (model) => {
         const url = `http://localhost:8100/api/models/${model.id}/`
         const fetchConfig = {
             method: 'delete'
         }
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
-        getVehicles()
+        getVehicleModels()
     }
     }
 
@@ -31,21 +31,22 @@ function VehiclesList({vehicles, getVehicles}) {
             </tr>
         </thead>
         <tbody>
-            {vehicles.map(vehicle => {
+            {vehicleModels.map(vehicleModel => {
                 return (
-                    <tr key={vehicle.id}>
-                        <td>{ vehicle.name }</td>
-                        <td>{ vehicle.manufacturer.name }</td>
+                    <tr key={vehicleModel.id}>
+                        <td>{ vehicleModel.name }</td>
+                        <td>{ vehicleModel.manufacturer.name }</td>
                         <td>
                             <img
-                                src={vehicle.picture_url}
+                                src={vehicleModel.picture_url}
+                                className="img-fluid"
                                 alt=""
                                 width="130px"
-                                height="80px"
+                                height="auto"
                             />
                         </td>
                         <td>
-                            <button id={ vehicle.id } onClick={() => deleteVehicle(vehicle)}
+                            <button id={ vehicleModel.id } onClick={() => deleteVehicleModel(vehicleModel)}
                             type="button" className="btn btn-danger">Delete</button>
                         </td>
                     </tr>
@@ -56,4 +57,4 @@ function VehiclesList({vehicles, getVehicles}) {
     </>
     );
 }
-export default VehiclesList;
+export default VehicleModelsList;
