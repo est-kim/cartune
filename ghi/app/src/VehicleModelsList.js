@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function VehicleModelsList({vehicleModels, getVehicleModels}) {
@@ -27,6 +28,11 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
                     Success! The vehicle model has been deleted.
                 </div>
             )}
+            <div className="add-models-container d-flex justify-content-end">
+                <Link to="/models/new">
+                    <button className="btn btn-success">Add New Vehicle</button>
+                </Link>
+            </div>
             <table className="table table-striped">
                 <thead>
                     <tr>

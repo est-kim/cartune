@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function SalesRecordsList({ salesRecords }) {
 
@@ -6,6 +7,11 @@ function SalesRecordsList({ salesRecords }) {
         <>
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>List of Sales Records</h1>
+            </div>
+            <div className="add-sales-container d-flex justify-content-end">
+                <Link to="/sales/new">
+                <button className="btn btn-success">Add New Sales Record</button>
+                </Link>
             </div>
             <table className="table table-striped">
                 <thead>

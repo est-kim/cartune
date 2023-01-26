@@ -50,10 +50,17 @@ function AppointmentsList({appointments, getAppointments}) {
                     Success! The appointment has been marked as complete.
                 </div>
             )}
-            <div className="add-sales-container d-flex justify-content-end">
-                <Link to="/appointments/history">
-                <button className="btn btn-outline-secondary">See Service History</button>
-                </Link>
+            <div className="add-appointment-container d-flex">
+                <div className="see-service-history d-flex justify-content-start">
+                    <Link to="/appointments/history">
+                        <button className="btn btn-outline-secondary">See Service History</button>
+                    </Link>
+                </div>
+                <div className="add-new-appointment d-flex justify-content-end" style={{ marginLeft: "auto" }}>
+                    <Link to="/appointments/new">
+                        <button className="btn btn-success">Add New Appointment</button>
+                    </Link>
+                </div>
             </div>
             <table className="table table-striped">
                 <thead>

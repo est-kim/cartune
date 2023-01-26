@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function ManufacturersList({manufacturers, getManufacturers}) {
@@ -27,6 +28,11 @@ function ManufacturersList({manufacturers, getManufacturers}) {
               Success! The manufacturer has been deleted.
           </div>
       )}
+      <div className="add-manufacturers-container d-flex justify-content-end">
+          <Link to="/manufacturers/new">
+            <button className="btn btn-success">Add New Manufacturer</button>
+          </Link>
+      </div>
       <table className="table table-striped">
         <thead>
           <tr>
