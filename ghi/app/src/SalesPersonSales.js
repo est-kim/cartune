@@ -9,8 +9,10 @@ function SalesPersonSales({salesRecords, salesPersons}) {
     }
 
     return (
-    <>
-        <h1>Sales Person History</h1>
+        <>
+        <div className='p-5 text-center'>
+            <h1 className='mb-3'>Sales Person History</h1>
+        </div>
         <div className="mb-3">
             <select value={name} onChange={handleNameChange} required id="name" name="name" className="form-select">
             <option value="">Choose a Sales Person</option>
@@ -34,7 +36,6 @@ function SalesPersonSales({salesRecords, salesPersons}) {
             </thead>
             <tbody>
                 {salesRecords.filter(salesRecord => salesRecord.sales_person.name === name).map(salesRecord => {
-                    console.log(salesRecords)
                     return (
                         <tr key={salesRecord.id}>
                             <td>{salesRecord.sales_person.name}</td>

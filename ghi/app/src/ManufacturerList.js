@@ -4,18 +4,19 @@ import "./index.css";
 function ManufacturersList({manufacturers, getManufacturers}) {
     if (manufacturers === undefined) {
         return null;
-      }
+    }
 
     const deleteManufacturer = async (manufacturer) => {
       const url = `http://localhost:8100/api/manufacturers/${manufacturer.id}/`
       const fetchConfig = {
         method: 'delete'
       }
-    const response = await fetch(url, fetchConfig);
-    if (response.ok) {
-      getManufacturers()
+
+      const response = await fetch(url, fetchConfig);
+      if (response.ok) {
+        getManufacturers()
+      }
     }
-  }
     return (
         <>
         <div className='p-5 text-center'>

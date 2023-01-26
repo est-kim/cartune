@@ -20,9 +20,9 @@ import VehicleModelForm from './VehicleModelForm';
 import AutomobilesList from './AutomobilesList';
 
 function App() {
-  const [salesPersons, setSalesPersons] = useState([])
-  const [salesRecords, setSalesRecords] = useState([])
-  const [customers, setCustomers] = useState([])
+  const [salesPersons, setSalesPersons] = useState([]);
+  const [salesRecords, setSalesRecords] = useState([]);
+  const [customers, setCustomers] = useState([]);
   const[appointments, setAppointments] = useState([]);
   const[technicians, setTechnicians] = useState([]);
   const[manufacturers, setManufacturers] = useState([]);
@@ -111,7 +111,7 @@ function App() {
 
     if (response.ok) {
       const data = await response.json()
-      const automobiles = data.autos
+      const automobiles = data.automobiles
       setAutomobiles(automobiles)
     }
   }

@@ -6,6 +6,10 @@ function SalesRecordsList({ salesRecords }) {
     }
 
     return (
+        <>
+        <div className='p-5 text-center'>
+            <h1 className='mb-3'>List of Sales Records</h1>
+        </div>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -30,6 +34,7 @@ function SalesRecordsList({ salesRecords }) {
                 })}
             </tbody>
         </table>
+        </>
     );
 }
 
