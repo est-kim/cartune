@@ -28,8 +28,6 @@ function NewCustomerForm() {
         data.address = address;
         data.phone_number = phoneNumber;
 
-        console.log(data)
-
         const url = 'http://localhost:8090/api/customers/'
         const fetchConfig = {
             method: "post",
@@ -40,8 +38,6 @@ function NewCustomerForm() {
         }
         const response = await fetch(url, fetchConfig)
         if (response.ok) {
-            const newCustomer = await response.json()
-            console.log(newCustomer)
             setName('');
             setAddress('');
             setPhoneNumber('');

@@ -24,12 +24,12 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
             <h1 className='mb-3'>List of Sales Persons</h1>
         </div>
         <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Employee Number</th>
-          </tr>
-        </thead>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Employee Number</th>
+            </tr>
+          </thead>
         <tbody>
           {salesPersons.map(salesPerson => {
             return (

@@ -25,7 +25,6 @@ function VehicleModelForm ({getVehicleModels}) {
         event.preventDefault();
 
         const data = {};
-
         data.name = vehicleModel;
         data.picture_url = pictureUrl;
         data.manufacturer_id = manufacturer;
@@ -40,22 +39,16 @@ function VehicleModelForm ({getVehicleModels}) {
         };
         const response = await fetch(url, fetchConfig);
         if (response.ok) {
-            const newVehicleModel = await response.json();
-
             setVehicleModel('');
             setPictureUrl('');
             setManufacturer('');
             getVehicleModels();
-
         }
-
       }
 
       const fetchData = async () => {
         const url = 'http://localhost:8100/api/manufacturers/';
-
         const response = await fetch(url);
-
         if (response.ok) {
           const data = await response.json();
           setManufacturers(data.manufacturers);

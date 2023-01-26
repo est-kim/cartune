@@ -33,13 +33,10 @@ function SalesRecordForm({getSalesRecords}) {
         event.preventDefault()
 
         const data = {}
-
         data.automobile = automobile
         data.sales_person = salesPerson
         data.customer = customer
         data.sales_price = parseFloat(salesPrice)
-
-        console.log(data)
 
         const salesUrl = "http://localhost:8090/api/sales/"
         const fetchConfig = {
@@ -50,9 +47,8 @@ function SalesRecordForm({getSalesRecords}) {
             }
         }
         const response = await fetch(salesUrl, fetchConfig)
-        console.log(response)
+
         if (response.ok) {
-            const newSales = await response.json()
             setPrice('');
             setAutomobile('');
             setSalesPerson('');
@@ -64,9 +60,7 @@ function SalesRecordForm({getSalesRecords}) {
 
     const fetchAutomobiles = async () => {
         const url = 'http://localhost:8090/api/automobiles/';
-
         const response = await fetch(url);
-
         if (response.ok) {
         const data = await response.json();
         setAutomobiles(data.automobiles)
@@ -75,9 +69,7 @@ function SalesRecordForm({getSalesRecords}) {
 
     const fetchSalesPersons = async () => {
         const url = 'http://localhost:8090/api/salespersons/';
-
         const response = await fetch(url);
-
         if (response.ok) {
         const data = await response.json();
         setSalesPersons(data.sales_persons)
@@ -86,9 +78,7 @@ function SalesRecordForm({getSalesRecords}) {
 
     const fetchCustomers = async () => {
         const url = 'http://localhost:8090/api/customers/';
-
         const response = await fetch(url);
-
         if (response.ok) {
         const data = await response.json();
         setCustomers(data.customers)

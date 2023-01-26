@@ -9,30 +9,25 @@ function ManufacturerForm ({getManufacturers}) {
     }
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
+      event.preventDefault();
 
-        const data = {};
+      const data = {};
+      data.name = name;
 
-        data.name = name;
-
-        const url = 'http://localhost:8100/api/manufacturers/';
-        const fetchConfig = {
+      const url = 'http://localhost:8100/api/manufacturers/';
+      const fetchConfig = {
         method: "post",
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json',
         },
-        };
-        const response = await fetch(url, fetchConfig);
-        if (response.ok) {
-            const newManufacturer = await response.json();
-
-            setName('');
-            getManufacturers();
-
-        }
-
+      };
+      const response = await fetch(url, fetchConfig);
+      if (response.ok) {
+        setName('');
+        getManufacturers();
       }
+    }
 
     return (
         <div className="row">

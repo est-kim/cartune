@@ -11,14 +11,14 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
         const fetchConfig = {
             method: 'delete'
         }
-    const response = await fetch(url, fetchConfig);
-    if (response.ok) {
-        getVehicleModels()
-    }
+        const response = await fetch(url, fetchConfig);
+        if (response.ok) {
+            getVehicleModels()
+        }
     }
 
     return (
-        <>
+    <>
         <div className='p-5 text-center'>
             <h1 className='mb-3'>List of Vehicles</h1>
         </div>
