@@ -93,11 +93,11 @@ function AppointmentsList({appointments, getAppointments}) {
                                     </td>
                                     <td>
                                         <button id={ appointment.id } onClick={() => cancelAppointment(appointment)}
-                                        type="button" className="btn btn-outline-danger">Cancel</button>
+                                        type="button" className="btn btn-danger">Cancel</button>
                                     </td>
                                     <td>
                                         <button id={ appointment.id } onClick={() => completeAppointment(appointment)}
-                                        type="button" className="btn btn-outline-primary">Completed</button>
+                                        type="button" className="btn btn-primary">Completed</button>
                                     </td>
                                 </tr>
                             );
