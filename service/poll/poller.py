@@ -14,10 +14,8 @@ from service_rest.models import AutomobileVO
 def get_automobiles():
     url = "http://inventory-api:8000/api/automobiles/"
     response = requests.get(url)
-    print(response)
     content = json.loads(response.content)
-    for auto in content['autos']:
-        print(auto)
+    for auto in content["automobiles"]:
         AutomobileVO.objects.update_or_create(
             import_href=auto["href"],
             defaults={
@@ -30,7 +28,6 @@ def poll():
         print('Service poller polling for data')
         try:
             get_automobiles()
-            print("Getting automobiles")
         except Exception as e:
             print(e, file=sys.stderr)
         time.sleep(60)
