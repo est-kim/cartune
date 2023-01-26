@@ -33,6 +33,7 @@ function App() {
   const getSalesPersons = async () => {
     const url = 'http://localhost:8090/api/salespersons/'
     const response = await fetch(url);
+
     if (response.ok) {
       const data = await response.json();
       const salesPersons = data.sales_persons
@@ -43,13 +44,13 @@ function App() {
   const getAppointments = async () => {
     const url = "http://localhost:8080/api/appointments"
     const response = await fetch(url);
+    
     if (response.ok) {
       const data = await response.json()
       const appointments = data.appointments
       setAppointments(appointments)
     }
   }
-
 
   const getSalesRecords = async () => {
     const url = 'http://localhost:8090/api/sales/'

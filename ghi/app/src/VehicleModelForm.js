@@ -35,16 +35,16 @@ function VehicleModelForm ({getVehicleModels}) {
       method: "post",
       body: JSON.stringify(data),
       headers: {
-          'Content-Type': 'application/json',
+        'Content-Type': 'application/json',
       },
     };
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
-        setVehicleModel('');
-        setPictureUrl('');
-        setManufacturer('');
-        getVehicleModels();
-        setSubmitted(true)
+      setVehicleModel('');
+      setPictureUrl('');
+      setManufacturer('');
+      getVehicleModels();
+      setSubmitted(true)
     }
   }
 

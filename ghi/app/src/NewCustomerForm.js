@@ -68,7 +68,6 @@ function NewCustomerForm() {
             </div>
         </div>
     )
-
 }
 
 export default NewCustomerForm;

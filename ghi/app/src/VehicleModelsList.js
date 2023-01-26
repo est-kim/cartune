@@ -62,4 +62,5 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
         </>
     );
 }
+
 export default VehicleModelsList;
