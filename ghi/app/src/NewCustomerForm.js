@@ -4,6 +4,8 @@ function NewCustomerForm() {
     const [name, setName] = useState('')
     const [address, setAddress] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
+    const [submitted, setSubmitted] = useState(false);
+    const [existing, setExisting] = useState(false);
 
     const handleNameChange = (event) => {
         const value = event.target.value;
@@ -41,6 +43,11 @@ function NewCustomerForm() {
             setName('');
             setAddress('');
             setPhoneNumber('');
+            setSubmitted(true);
+            setExisting(false);
+        } else {
+            setSubmitted(false);
+            setExisting(true);
         }
     }
 
@@ -64,6 +71,17 @@ function NewCustomerForm() {
                 </div>
                 <button className="btn btn-primary">Create</button>
                 </form>
+                <p></p>
+                {submitted && (
+                    <div className="alert alert-success mb-0" id="success-message">
+                        Success! Customer has been created.
+                    </div>
+                )}
+                {existing && (
+                    <div className="alert alert-danger mb-0" id="error-message">
+                        Oops! The phone number is already in use.
+                    </div>
+                )}
             </div>
             </div>
         </div>

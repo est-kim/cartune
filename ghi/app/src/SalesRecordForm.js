@@ -8,6 +8,7 @@ function SalesRecordForm({getSalesRecords}) {
     const [customer, setCustomer] = useState('')
     const [customers, setCustomers] = useState([])
     const [salesPrice, setPrice] = useState('')
+    const [submitted, setSubmitted] = useState(false);
 
     const handleAutomobileChange = (event) => {
         const value = event.target.value;
@@ -55,6 +56,7 @@ function SalesRecordForm({getSalesRecords}) {
             setCustomer('');
             getSalesRecords()
             fetchAutomobiles()
+            setSubmitted(true);
         }
     }
 
@@ -141,6 +143,12 @@ function SalesRecordForm({getSalesRecords}) {
                         </div>
                         <button className="btn btn-primary">Create</button>
                     </form>
+                    <p></p>
+                    {submitted && (
+                        <div className="alert alert-success mb-0" id="success-message">
+                            Success! The sales record has been created.
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

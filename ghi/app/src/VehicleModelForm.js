@@ -96,7 +96,7 @@ function VehicleModelForm ({getVehicleModels}) {
           <p></p>
           {submitted && (
             <div className="alert alert-success mb-0" id="success-message">
-              Vehicle model successfully created!
+              Succcess! Vehicle model has been created.
             </div>
           )}
         </div>

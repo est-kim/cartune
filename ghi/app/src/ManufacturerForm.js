@@ -53,7 +53,7 @@ function ManufacturerForm ({getManufacturers}) {
           <p></p>
           {submitted && (
             <div className="alert alert-success mb-0" id="success-message">
-              Success! The manufacturer has been created!
+              Success! The manufacturer has been created.
             </div>
           )}
           {existing && (

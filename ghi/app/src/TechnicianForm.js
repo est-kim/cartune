@@ -69,12 +69,12 @@ function TechnicianForm ({getTechnicians}) {
           <p></p>
           {submitted && (
               <div className="alert alert-success mb-0" id="success-message">
-                  Success! The technician has been created!
+                  Success! The technician has been created.
               </div>
           )}
           {existing && (
               <div className="alert alert-danger mb-0" id="error-message">
-                  Oops! The employee number already exists.
+                  Oops! The employee number is already in use.
               </div>
           )}
         </div>

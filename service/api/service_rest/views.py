@@ -54,7 +54,7 @@ def api_technician(request, pk):
             )
         except Technician.DoesNotExist:
             return JsonResponse(
-                {"message": "Delete could not be performed. The technician you are trying to delete does not exist."}
+                {"message": "Delete could not be performed. The technician you are trying to delete does not exist."},
                 status=404
             )
     else: #PUT
