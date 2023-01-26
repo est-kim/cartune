@@ -18,6 +18,7 @@ import ManufacturerForm from './ManufacturerForm';
 import VehicleModelsList from './VehicleModelsList';
 import VehicleModelForm from './VehicleModelForm';
 import AutomobilesList from './AutomobilesList';
+import AutomobileForm from './AutomobileForm';
 
 function App() {
   const [salesPersons, setSalesPersons] = useState([]);
@@ -178,7 +179,7 @@ function App() {
           </Route>
           <Route path="automobiles">
               <Route path="" element={<AutomobilesList automobiles={automobiles} getAutomobiles={getAutomobiles} />} />
-              {/* <Route path="new" element={<VehicleModelForm getAutomobiles={getAutomobiles} />} /> */}
+              <Route path="new" element={<AutomobileForm getAutomobiles={getAutomobiles} />} />
           </Route>
         </Routes>
       </div>
