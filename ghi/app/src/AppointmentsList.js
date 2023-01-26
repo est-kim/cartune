@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.css";
 
 function AppointmentsList({appointments, getAppointments}) {
+    const [completed, setCompleted] = useState(false);
+    const [cancelled, setCancelled] = useState(false);
+
     if (appointments === undefined) {
         return null;
     }
@@ -13,7 +16,9 @@ function AppointmentsList({appointments, getAppointments}) {
         }
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
-        getAppointments()
+        getAppointments();
+        setCancelled(true);
+        setCompleted(false);
     }
     }
     const completeAppointment = async (appointment) => {
@@ -27,7 +32,9 @@ function AppointmentsList({appointments, getAppointments}) {
         }
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
-        getAppointments()
+        getAppointments();
+        setCompleted(true);
+        setCancelled(false);
     }
 }
     return (
@@ -35,6 +42,16 @@ function AppointmentsList({appointments, getAppointments}) {
         <div className='p-5 text-center'>
             <h1 className='mb-3'>List of Appointments</h1>
         </div>
+        {cancelled && (
+            <div className='alert alert-success mb-0' id="success-message">
+                Success! The appointment has been cancelled.
+            </div>
+        )}
+        {completed && (
+            <div className='alert alert-success mb-0' id="success-message">
+                Success! The appointment has been marked as complete.
+            </div>
+        )}
         <table className="table table-striped">
         <thead>
             <tr>

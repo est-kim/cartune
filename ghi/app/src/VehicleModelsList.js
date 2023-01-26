@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.css";
 
 function VehicleModelsList({vehicleModels, getVehicleModels}) {
+    const [deleted, setDeleted] = useState(false);
+
     if (vehicleModels === undefined) {
         return null;
     }
@@ -14,6 +16,7 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
         getVehicleModels()
+        setDeleted(true)
     }
     }
 
@@ -22,6 +25,11 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
         <div className='p-5 text-center'>
             <h1 className='mb-3'>List of Vehicles</h1>
         </div>
+        {deleted && (
+            <div className='alert alert-success mb-0' id="success-message">
+                Success! The vehicle model has been deleted.
+            </div>
+        )}
         <table className="table table-striped">
         <thead>
             <tr>

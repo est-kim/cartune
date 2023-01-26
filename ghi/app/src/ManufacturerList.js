@@ -1,26 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.css";
 
 function ManufacturersList({manufacturers, getManufacturers}) {
+    const [deleted, setDeleted] = useState(false);
+
     if (manufacturers === undefined) {
         return null;
-      }
+    }
 
     const deleteManufacturer = async (manufacturer) => {
       const url = `http://localhost:8100/api/manufacturers/${manufacturer.id}/`
       const fetchConfig = {
         method: 'delete'
       }
-    const response = await fetch(url, fetchConfig);
-    if (response.ok) {
-      getManufacturers()
+        const response = await fetch(url, fetchConfig);
+        if (response.ok) {
+        getManufacturers()
+        setDeleted(true)
+        }
     }
-  }
+
     return (
         <>
         <div className='p-5 text-center'>
             <h1 className='mb-3'>List of Manufacturers</h1>
         </div>
+        {deleted && (
+            <div className='alert alert-success mb-0' id="success-message">
+                Success! The manufacturer has been deleted.
+            </div>
+        )}
         <table className="table table-striped">
         <thead>
           <tr>
