@@ -34,8 +34,12 @@ class Appointment(models.Model):
     in_progress = models.BooleanField(default=True, null=True)
     vip = models.BooleanField(default=False)
 
+
     def __str__(self):
         return f"{self.customer_name} on {self.date_time}"
 
     def get_api_url(self):
         return reverse("api_appointment", kwargs={"pk": self.id})
+
+    class Meta:
+        ordering = ['-date_time']
