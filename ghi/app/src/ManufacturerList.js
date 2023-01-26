@@ -2,10 +2,7 @@ import React from 'react';
 import "./index.css";
 
 function ManufacturersList({manufacturers, getManufacturers}) {
-    if (manufacturers === undefined) {
-        return null;
-    }
-
+  
     const deleteManufacturer = async (manufacturer) => {
       const url = `http://localhost:8100/api/manufacturers/${manufacturer.id}/`
       const fetchConfig = {

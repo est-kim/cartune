@@ -2,10 +2,6 @@ import React from 'react';
 import "./index.css";
 
 function AutomobilesList({automobiles, getAutomobiles}) {
-    if (automobiles === undefined) {
-        return null;
-    }
-
     const deleteAutomobile = async (automobile) => {
         const url = `http://localhost:8100/api/automobiles/${automobile.vin}/`
         const fetchConfig = {

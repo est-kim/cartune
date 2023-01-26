@@ -1,9 +1,6 @@
 import React from 'react'
 
 function SalesRecordsList({ salesRecords }) {
-    if (salesRecords === undefined) {
-        return null;
-    }
 
     return (
         <>

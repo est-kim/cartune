@@ -138,10 +138,6 @@ function App() {
   ]
   )
 
-  if (appointments === undefined) {
-    return null;
-  }
-
   return (
     <BrowserRouter>
       <Nav />
