@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function ServiceHistory({appointments, setAppointments}) {
-    const[searchVin, setSearchVin] = useState('')
+    const [searchVin, setSearchVin] = useState('')
 
     const handleSearch = async (event) => {
         if (searchVin.length !== 0) {
@@ -17,6 +17,16 @@ function ServiceHistory({appointments, setAppointments}) {
         const value = event.target.value;
         setSearchVin(value);
     };
+
+    const handleStatusChange = (id) => {
+        const updatedAppointments = appointments.map(appointment => {
+            if (appointment.id === id) {
+                appointment.completed = !appointment.completed;
+            }
+        return appointment;
+        });
+        setAppointments(updatedAppointments);
+    }
 
     return (
         <>
@@ -68,12 +78,16 @@ function ServiceHistory({appointments, setAppointments}) {
                                 src='https://cdn-icons-png.flaticon.com/512/5610/5610944.png'
                                 alt=""
                                 width="25px"
-                                height="25px"/> :
+                                height="25px"
+                                onClick={() => handleStatusChange(appointment.id)}
+                            /> :
                             <img
                                 src='https://cdn-icons-png.flaticon.com/512/463/463575.png'
                                 alt=""
                                 width="25px"
-                                height="25px"/>
+                                height="25px"
+                                onClick={() => handleStatusChange(appointment.id)}
+                            />
                             }
                         </td>
                     </tr>
