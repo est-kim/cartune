@@ -28,7 +28,7 @@ function SalesRecordsList({ salesRecords }) {
                             <td>{ salesRecord.sales_person.employee_number }</td>
                             <td>{ salesRecord.customer.name }</td>
                             <td>{ salesRecord.automobile.vin }</td>
-                            <td>$ { salesRecord.sales_price }</td>
+                            <td>${ salesRecord.sales_price }</td>
                         </tr>
                     );
                 })}

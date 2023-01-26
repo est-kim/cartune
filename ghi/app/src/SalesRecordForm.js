@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function SalesRecordForm() {
+function SalesRecordForm({getSalesRecords}) {
     const [automobile, setAutomobile] = useState('')
     const [automobiles, setAutomobiles] = useState([])
     const [salesPerson, setSalesPerson] = useState('')
@@ -37,8 +37,7 @@ function SalesRecordForm() {
         data.automobile = automobile
         data.sales_person = salesPerson
         data.customer = customer
-        // data.sales_price = parseFloat(salesPrice)
-        data.sales_price = salesPrice
+        data.sales_price = parseFloat(salesPrice)
 
         console.log(data)
 
@@ -54,11 +53,11 @@ function SalesRecordForm() {
         console.log(response)
         if (response.ok) {
             const newSales = await response.json()
-            console.log(newSales)
-            setPrice('')
-            setAutomobile('')
-            setSalesPerson('')
-            setCustomer('')
+            setPrice('');
+            setAutomobile('');
+            setSalesPerson('');
+            setCustomer('');
+            getSalesRecords()
         }
     }
 
