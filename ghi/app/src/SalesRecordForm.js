@@ -58,6 +58,7 @@ function SalesRecordForm({getSalesRecords}) {
             setSalesPerson('');
             setCustomer('');
             getSalesRecords()
+            fetchAutomobiles()
         }
     }
 

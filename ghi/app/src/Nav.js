@@ -34,7 +34,7 @@ function Nav() {
                     <li><Link className="dropdown-item" to="/customers/new">New Customer</Link></li>
                     <li><Link className="dropdown-item" to="/sales">Sales Records List</Link></li>
                     <li><Link className="dropdown-item" to="/sales/new">New Sales Record</Link></li>
-                    <li><Link className="dropdown-item" to="/salespersons/sales">Sales Persons Sales</Link></li>
+                    <li><Link className="dropdown-item" to="/salespersons/sales">Sales Persons History</Link></li>
                   </ul>
                 </li>
               </ul>

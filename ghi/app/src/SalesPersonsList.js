@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function SalesPersonsList({salesPersons, getSalesPersons}) {
@@ -15,7 +16,8 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
     if (response.ok) {
       getSalesPersons()
     }
-  }
+    }
+
     return (
         <>
         <div className='p-5 text-center'>
@@ -43,6 +45,11 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
           })}
           </tbody>
       </table>
+      <div>
+        <Link to="/salespersons/new">
+          <button className="btn btn-success">Add a New Sales Person</button>
+        </Link>
+      </div>
       </>
     );
 }
