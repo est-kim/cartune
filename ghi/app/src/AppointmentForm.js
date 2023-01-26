@@ -121,7 +121,7 @@ function AppointmentForm ({getAppointments}) {
               className="form-control"/>
               <label htmlFor="reason">Reason for service</label>
             </div>
-            <button className="btn btn-primary">Create</button>
+            <button className="btn btn-outline-primary">Create</button>
           </form>
           <p></p>
           {submitted && (

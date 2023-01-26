@@ -23,6 +23,11 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
       <div className='p-5 text-center'>
           <h1 className='mb-3'>List of Sales Persons</h1>
       </div>
+      <div className="add-sales-container d-flex justify-content-end">
+        <Link to="/salespersons/new">
+          <button className="btn btn-success">Add a New Sales Person</button>
+        </Link>
+      </div>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -45,11 +50,6 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
         })}
         </tbody>
       </table>
-      <div>
-        <Link to="/salespersons/new">
-          <button className="btn btn-success">Add a New Sales Person</button>
-        </Link>
-      </div>
     </>
   );
 }

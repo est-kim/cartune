@@ -97,7 +97,7 @@ function SalesRecordForm({getSalesRecords}) {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                <h1>Record a new sale</h1>
+                <h1>Record a New Sale</h1>
                     <form onSubmit={handleSubmit} id="create-sale-form">
                         <div className="mb-3">
                             <select value={automobile} onChange={handleAutomobileChange} required id="automobile" name="automobile" className="form-select">

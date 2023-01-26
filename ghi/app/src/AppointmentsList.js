@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function AppointmentsList({appointments, getAppointments}) {
@@ -49,6 +50,11 @@ function AppointmentsList({appointments, getAppointments}) {
                     Success! The appointment has been marked as complete.
                 </div>
             )}
+            <div className="add-sales-container d-flex justify-content-end">
+                <Link to="/appointments/history">
+                <button className="btn btn-outline-secondary">See Service History</button>
+                </Link>
+            </div>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -87,11 +93,11 @@ function AppointmentsList({appointments, getAppointments}) {
                                     </td>
                                     <td>
                                         <button id={ appointment.id } onClick={() => cancelAppointment(appointment)}
-                                        type="button" className="btn btn-danger">Cancel</button>
+                                        type="button" className="btn btn-outline-danger">Cancel</button>
                                     </td>
                                     <td>
                                         <button id={ appointment.id } onClick={() => completeAppointment(appointment)}
-                                        type="button" className="btn btn-primary">Completed</button>
+                                        type="button" className="btn btn-outline-primary">Completed</button>
                                     </td>
                                 </tr>
                             );

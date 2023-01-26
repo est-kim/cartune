@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function TechniciansList({technicians, getTechnicians}) {
@@ -18,6 +19,11 @@ function TechniciansList({technicians, getTechnicians}) {
     <>
       <div className='p-5 text-center'>
           <h1 className='mb-3'>List of Technicians</h1>
+      </div>
+      <div className="add-sales-container d-flex justify-content-end">
+        <Link to="/technicians/new">
+          <button className="btn btn-success">Add a New Technician</button>
+        </Link>
       </div>
       <table className="table table-striped">
       <thead>
