@@ -36,7 +36,8 @@ function AppointmentsList({appointments, getAppointments}) {
         setCompleted(true);
         setCancelled(false);
     }
-}
+    }
+
     return (
         <>
         <div className='p-5 text-center'>

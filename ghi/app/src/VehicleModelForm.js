@@ -41,7 +41,6 @@ function VehicleModelForm ({getVehicleModels}) {
         };
         const response = await fetch(url, fetchConfig);
         if (response.ok) {
-            const newVehiceModel = await response.json();
 
             setVehicleModel('');
             setPictureUrl('');
