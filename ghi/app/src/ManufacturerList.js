@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import "./index.css";
 
 function ManufacturersList({manufacturers, getManufacturers}) {
-    const [deleted, setDeleted] = useState(false);
 
-    if (manufacturers === undefined) {
-        return null;
-    }
+    const [deleted, setDeleted] = useState(false);
 
     const deleteManufacturer = async (manufacturer) => {
       const url = `http://localhost:8100/api/manufacturers/${manufacturer.id}/`

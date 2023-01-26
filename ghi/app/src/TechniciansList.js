@@ -2,9 +2,6 @@ import React from 'react';
 import "./index.css";
 
 function TechniciansList({technicians, getTechnicians}) {
-    if (technicians === undefined) {
-        return null;
-      }
 
     const deleteTechnician = async (technician) => {
       const url = `http://localhost:8080/api/technicians/${technician.id}/`
@@ -15,7 +12,8 @@ function TechniciansList({technicians, getTechnicians}) {
     if (response.ok) {
       getTechnicians()
     }
-  }
+    }
+
     return (
         <>
         <div className='p-5 text-center'>

@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import "./index.css";
 
 function VehicleModelsList({vehicleModels, getVehicleModels}) {
-    const [deleted, setDeleted] = useState(false);
 
-    if (vehicleModels === undefined) {
-        return null;
-    }
+    const [deleted, setDeleted] = useState(false);
 
     const deleteVehicleModel = async (model) => {
         const url = `http://localhost:8100/api/models/${model.id}/`

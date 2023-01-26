@@ -5,10 +5,6 @@ function AppointmentsList({appointments, getAppointments}) {
     const [completed, setCompleted] = useState(false);
     const [cancelled, setCancelled] = useState(false);
 
-    if (appointments === undefined) {
-        return null;
-    }
-
     const cancelAppointment = async (appointment) => {
         const url = `http://localhost:8080/api/appointments/${appointment.id}/`
         const fetchConfig = {
