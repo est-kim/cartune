@@ -5,6 +5,7 @@ function VehicleModelForm ({getVehicleModels}) {
     const [pictureUrl, setPictureUrl] = useState('');
     const [manufacturer, setManufacturer] = useState('');
     const [manufacturers, setManufacturers] = useState([]);
+    const [submitted, setSubmitted] = useState(false);
 
     const handleVehicleModelChange = (event) => {
         const value = event.target.value;
@@ -46,6 +47,7 @@ function VehicleModelForm ({getVehicleModels}) {
             setPictureUrl('');
             setManufacturer('');
             getVehicleModels();
+            setSubmitted(true)
 
         }
 
@@ -98,6 +100,12 @@ function VehicleModelForm ({getVehicleModels}) {
               </div>
               <button className="btn btn-primary">Create</button>
             </form>
+            <p></p>
+            {submitted && (
+                <div className="alert alert-success mb-0" id="success-message">
+                    Vehicle model successfully created!
+                </div>
+            )}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ function AppointmentForm ({getAppointments}) {
     const [technician, setTechnician] = useState('');
     const [technicians, setTechnicians] = useState([]);
     const [reason, setReason] = useState('');
+    const [submitted, setSubmitted] = useState(false);
 
     const handleVinChange = (event) => {
         const value = event.target.value;
@@ -62,7 +63,7 @@ function AppointmentForm ({getAppointments}) {
             setTechnician('');
             setReason('');
             getAppointments();
-
+            setSubmitted(true);
         }
 
       }
@@ -126,6 +127,12 @@ function AppointmentForm ({getAppointments}) {
               </div>
               <button className="btn btn-primary">Create</button>
             </form>
+            <p></p>
+            {submitted && (
+                <div className="alert alert-success mb-0" id="success-message">
+                    Success! The appointment has been created.
+                </div>
+            )}
           </div>
         </div>
       </div>

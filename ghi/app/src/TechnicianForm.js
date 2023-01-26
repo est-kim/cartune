@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 function TechnicianForm ({getTechnicians}) {
     const [name, setName] = useState('');
     const [employeeNumber, setEmployeeNumber] = useState('');
+    const [submitted, setSubmitted] = useState(false);
+    const [existing, setExisting] = useState(false);
 
     const handleNameChange = (event) => {
         const value = event.target.value;
@@ -37,7 +39,12 @@ function TechnicianForm ({getTechnicians}) {
             setName('');
             setEmployeeNumber('');
             getTechnicians();
+            setSubmitted(true);
+            setExisting(false);
 
+        } else {
+            setSubmitted(false);
+            setExisting(true);
         }
 
       }
@@ -62,6 +69,17 @@ function TechnicianForm ({getTechnicians}) {
               </div>
               <button className="btn btn-primary">Create</button>
             </form>
+            <p></p>
+            {submitted && (
+                <div className="alert alert-success mb-0" id="success-message">
+                    Success! The technician has been created!
+                </div>
+            )}
+            {existing && (
+                <div className="alert alert-danger mb-0" id="error-message">
+                    Oops! The employee number already exists.
+                </div>
+            )}
           </div>
         </div>
       </div>

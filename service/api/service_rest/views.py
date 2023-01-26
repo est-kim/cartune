@@ -18,14 +18,19 @@ def api_technicians(request):
             encoder=TechnicianEncoder,
                 )
     else: #POST
-        content = json.loads(request.body)
-        technician = Technician.objects.create(**content)
-
-        return JsonResponse(
-            technician,
-            encoder=TechnicianEncoder,
-            safe=False,
-        )
+        try:
+            content = json.loads(request.body)
+            technician = Technician.objects.create(**content)
+            return JsonResponse(
+                technician,
+                encoder=TechnicianEncoder,
+                safe=False,
+            )
+        except:
+            return JsonResponse(
+                {"message": "Employee Number is already in use."},
+                status=400
+            )
 
 @require_http_methods(["GET", "DELETE", "PUT"])
 def api_technician(request, pk):
@@ -53,14 +58,20 @@ def api_technician(request, pk):
                 {"message": "Technician does not exist"}
             )
     else: #PUT
-        content = json.loads(request.body)
-        Technician.objects.filter(id=pk).update(**content)
-        technician = Technician.objects.get(id=pk)
-        return JsonResponse(
-            technician,
-            encoder=TechnicianEncoder,
-            safe=False,
-        )
+        try:
+            content = json.loads(request.body)
+            Technician.objects.filter(id=pk).update(**content)
+            technician = Technician.objects.get(id=pk)
+            return JsonResponse(
+                technician,
+                encoder=TechnicianEncoder,
+                safe=False,
+            )
+        except Technician.DoesNotExist:
+            return JsonResponse(
+                {"message":"Technician does not exist"},
+                status=404
+            )
 
 @require_http_methods(["GET", "POST"])
 def api_appointments(request, vin=None):
@@ -71,19 +82,6 @@ def api_appointments(request, vin=None):
                 {"appointments": appointments},
                 encoder=AppointmentEncoder,
             )
-        # else:
-        #     try:
-        #         appointments_by_vin = Appointment.objects.filter(vin=vin)
-        #         return JsonResponse(
-        #             appointments_by_vin,
-        #             encdoer=AppointmentEncoder,
-        #             safe=False
-        #         )
-        #     except Appointment.DoesNotExist:
-        #         return JsonResponse(
-        #             {"message": "Appointment does not exist"},
-        #             status=404
-        #         )
     else: #POST
         content = json.loads(request.body)
         try:

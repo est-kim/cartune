@@ -22,14 +22,16 @@ function App() {
   const [salesPersons, setSalesPersons] = useState([])
   const [salesRecords, setSalesRecords] = useState([])
   const [customers, setCustomers] = useState([])
-  const[appointments, setAppointments] = useState([]);
-  const[technicians, setTechnicians] = useState([]);
-  const[manufacturers, setManufacturers] = useState([]);
-  const[vehicleModels, setVehicleModels] = useState([]);
-  const[automobiles, setAutomobiles] = useState([]);
+  const [appointments, setAppointments] = useState([]);
+  const [technicians, setTechnicians] = useState([]);
+  const [manufacturers, setManufacturers] = useState([]);
+  const [vehicleModels, setVehicleModels] = useState([]);
+  const [automobiles, setAutomobiles] = useState([]);
 
   const getSalesPersons = async () => {
     const url = 'http://localhost:8090/api/salespersons/'
+    const response = await fetch(url);
+
     if (response.ok) {
       const data = await response.json();
       const salesPersons = data.sales_persons

@@ -40,7 +40,7 @@ function AutomobilesList({automobiles, getAutomobiles}) {
                         <td>{ automobile.color }</td>
                         <td>{ automobile.year }</td>
                         <td>{ automobile.model.name }</td>
-                        {/* <td>{ automobile.manufacturer.name }</td> */}
+                        <td>{ automobile.manufacturer.name }</td>
                         <td>
                             <button id={ automobile.id } onClick={() => deleteAutomobile(automobile)}
                             type="button" className="btn btn-danger">Cancel</button>
