@@ -6,7 +6,6 @@ from .models import Technician, Appointment, AutomobileVO
 from.encoders import (
     TechnicianEncoder,
     AppointmentEncoder,
-    AutomobileVOEncoder,
     )
 
 @require_http_methods(["GET", "POST"])
@@ -28,7 +27,7 @@ def api_technicians(request):
             )
         except:
             return JsonResponse(
-                {"message": "Employee Number is already in use."},
+                {"message": "Technician could not be created. The employee number you are trying to use is already in use."},
                 status=400
             )
 
@@ -44,7 +43,7 @@ def api_technician(request, pk):
             )
         except Technician.DoesNotExist:
             return JsonResponse(
-                {"message": "Technician does not exist"},
+                {"message": "Invalid request. The technician you are looking for does not exist."},
                 status=404
             )
     elif request.method == "DELETE":
@@ -55,7 +54,8 @@ def api_technician(request, pk):
             )
         except Technician.DoesNotExist:
             return JsonResponse(
-                {"message": "Technician does not exist"}
+                {"message": "Delete could not be performed. The technician you are trying to delete does not exist."}
+                status=404
             )
     else: #PUT
         try:
@@ -69,7 +69,7 @@ def api_technician(request, pk):
             )
         except Technician.DoesNotExist:
             return JsonResponse(
-                {"message":"Technician does not exist"},
+                {"message":"Update could not be performed. The technician you are trying to update does not exist."},
                 status=404
             )
 
@@ -90,7 +90,7 @@ def api_appointments(request, vin=None):
             content["technician"] = technician
         except Technician.DoesNotExist:
             return JsonResponse(
-                {"message": "Invalid technician name"},
+                {"message": "The appointment could not be created. The technician that you are using does not exist."},
                 status=400
             )
         if AutomobileVO.objects.filter(vin=content["vin"]).exists():
@@ -118,7 +118,7 @@ def api_appointment(request, pk):
             )
         except Appointment.DoesNotExist:
             return JsonResponse(
-                {"message": "Appointment does not exist"},
+                {"message": "Invalid request. The appointment you are looking for does not exist."},
                 status=404
             )
     elif request.method == "DELETE":
@@ -129,17 +129,24 @@ def api_appointment(request, pk):
             )
         except Appointment.DoesNotExist:
             return JsonResponse(
-                {"message": "Appointment does not exist"}
+                {"message": "Delete could not be performed. The appointment you are trying to delete does not exist."},
+                status=404
             )
     else: #PUT
-        content = json.loads(request.body)
-        Appointment.objects.filter(id=pk).update(**content)
-        appointment = Appointment.objects.get(id=pk)
-        return JsonResponse(
-            appointment,
-            encoder=AppointmentEncoder,
-            safe=False,
-        )
+        try:
+            content = json.loads(request.body)
+            Appointment.objects.filter(id=pk).update(**content)
+            appointment = Appointment.objects.get(id=pk)
+            return JsonResponse(
+                appointment,
+                encoder=AppointmentEncoder,
+                safe=False,
+            )
+        except Appointment.DoesNotExist:
+            return JsonResponse(
+                {"message":"Update could not be performed. The appointment you are trying to update does not exist."},
+                status=404
+            )
 
 @require_http_methods(["GET"])
 def api_appointments_by_vin(request, vin):
@@ -153,6 +160,6 @@ def api_appointments_by_vin(request, vin):
             )
         except Appointment.DoesNotExist:
             return JsonResponse(
-                {"message": "Appointment does not exist"},
+                {"message": "Invalid request. The appointment you are trying to looking for by VIN number does not exist."},
                 status=404
             )
