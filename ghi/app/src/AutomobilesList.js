@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./index.css";
 
 function AutomobilesList({automobiles, getAutomobiles}) {
@@ -18,6 +19,11 @@ function AutomobilesList({automobiles, getAutomobiles}) {
         <>
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>List of Automobiles</h1>
+            </div>
+            <div className="add-automobiles-container d-flex justify-content-end">
+                <Link to="/automobiles/new">
+                    <button className="btn btn-success">Add New Automobile</button>
+                </Link>
             </div>
             <table className="table table-striped">
                 <thead>

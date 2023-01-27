@@ -31,7 +31,6 @@ class Appointment(models.Model):
 
     reason = models.CharField(max_length=100)
     completed = models.BooleanField(default=False, null=True)
-    in_progress = models.BooleanField(default=True, null=True)
     vip = models.BooleanField(default=False)
 
 

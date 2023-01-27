@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ServiceHistory({appointments, setAppointments}) {
     const [searchVin, setSearchVin] = useState('')
@@ -36,6 +37,11 @@ function ServiceHistory({appointments, setAppointments}) {
             </form>
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>Service Appointment History</h1>
+            </div>
+            <div className="add-appointments-history-container d-flex justify-content-end">
+                <Link to="/appointments/">
+                <button className="btn btn-outline-secondary">See Active Appointments</button>
+                </Link>
             </div>
             <table className="table table-striped">
                 <thead>

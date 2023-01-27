@@ -6,6 +6,8 @@ function AutomobileForm ({getAutomobiles}) {
     const [vin, setVin] = useState('');
     const [vehicleModel, setVehicleModel] = useState('');
     const [vehicleModels, setVehicleModels] = useState([]);
+    const [submitted, setSubmitted] = useState(false);
+    const [existing, setExisting] = useState(false);
 
     const handleColorChange = (event) => {
         const value = event.target.value;
@@ -53,6 +55,11 @@ function AutomobileForm ({getAutomobiles}) {
             setVin('');
             setVehicleModel('');
             getAutomobiles();
+            setSubmitted(true);
+            setExisting(false);
+        } else {
+            setSubmitted(false);
+            setExisting(true);
         }
     }
 
@@ -75,7 +82,7 @@ function AutomobileForm ({getAutomobiles}) {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Add a New Automobile to Inventory</h1>
+                    <h1>Add a New Automobile</h1>
                     <form onSubmit={handleSubmit} id="create-automobile-form">
                         <div className="form-floating mb-3">
                             <input onChange={handleColorChange} placeholder="Color"
@@ -109,6 +116,17 @@ function AutomobileForm ({getAutomobiles}) {
                         </div>
                         <button className="btn btn-primary">Create</button>
                     </form>
+                    <p></p>
+                    {submitted && (
+                        <div className="alert alert-success mb-0" id="success-message">
+                            Success! The automobile has been added to the inventory.
+                        </div>
+                    )}
+                    {existing && (
+                        <div className="alert alert-danger mb-0" id="error-message">
+                            Oops! The VIN number is already in use.
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
