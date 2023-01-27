@@ -108,6 +108,9 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 
+<details>
+  <summary markdown="span">POST request to api/manufacturers/</summary>
+
 <b>POST request to api/manufacturers/
 
 Request body:
@@ -125,6 +128,12 @@ Returns:
 }
 ```
 
+</details>
+
+<details>
+  <summary markdown="span">GET request to api/manufacturers/</summary>
+
+
 <b>GET request to api/manufacturers/
 
 ```
@@ -139,6 +148,8 @@ Returns:
 }
 ```
 
+</details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List automobiles | GET  | http://<span></span>localhost:8100/api/models/    |
@@ -146,6 +157,9 @@ Returns:
 | Get a specific automobile | GET  | http://<span></span>localhost:8100/api/models/:id/   |
 | Update a specific automobile | PUT  | http://<span></span>localhost:8100/api/models/:id/   |
 | Delete a specific automobile | DELETE  | http://<span></span>localhost:8100/api/models/:id/   |
+
+<details>
+  <summary markdown="span">POST request to api/models/</summary>
 
 <b>POST request to api/models/
 
@@ -171,6 +185,10 @@ Returns:
 	}
 }
 ```
+</details>
+
+<details>
+  <summary markdown="span">GET request to api/models/</summary>
 
 <b>GET request to api/models/
 
@@ -191,6 +209,7 @@ Returns:
     ]
 }
 ```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -199,6 +218,9 @@ Returns:
 | Get a specific vehicle model | GET  | http://<span></span>localhost:8100/api/automobiles/:vin/   |
 | Update a specific vehicle model | PUT  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
 | Delete a specific vehicle model | DELETE  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
+
+<details>
+  <summary markdown="span">POST request to api/automobiles/</summary>
 
 <b>POST request to api/automobiles/
 
@@ -233,6 +255,8 @@ Returns:
 	}
 }
 ```
+<details>
+  <summary markdown="span">GET request to api/automobiles/</summary>
 
 <b>GET request to api/automobiles/
 
@@ -260,6 +284,7 @@ Returns:
     ]
 }
 ```
+</details>
 </details>
 
 <details>
