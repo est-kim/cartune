@@ -31,12 +31,12 @@ The sales microservice follows RESTful API standards to allows users to create n
      docker-compose up
      ```
 4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more. Once Docker is fully up and running, it should look like the following:
-**(insert image here)**
+![Running Docker Containers](https://imgur.com/3tXKxct.jpg)
 5. The web application can be accessed at **localhost:3000**
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
 ## Application Diagram
-![Diagram](https://imgur.com/c59J7Zl.jpg)
+![Diagram](https://imgur.com/o1BTELo.jpg)
 
 ## API Overviews
 #### Inventory API
