@@ -453,17 +453,17 @@ Returns:
 
 ```
 {
-	"sales_persons": [
-		{
-			"name": "Josh Elder",
-			"employee_number": 1,
-			"id": 1
-		},
-		{
-			"name": "Bill Horst",
-			"employee_number": 2,
-			"id": 2
-		}
+    "sales_persons": [
+        {
+            "name": "Josh Elder",
+            "employee_number": 1,
+            "id": 1
+        },
+        {
+            "name": "Bill Horst",
+            "employee_number": 2,
+            "id": 2
+        }
     ]
 }
 ```
