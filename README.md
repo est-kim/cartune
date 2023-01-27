@@ -95,6 +95,10 @@ The services API uses RESTful standards to create new technicians, view a list o
 ## CRUD Routes / API Documentation
 
 ## API Endpoints
+
+<details>
+  <summary markdown="span">Inventory API</summary>
+
 #### Inventory API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -256,6 +260,7 @@ Returns:
     ]
 }
 ```
+</details>
 
 #### Service API
 |      Action     |    Method    |       URL       |
