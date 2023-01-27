@@ -96,8 +96,7 @@ The services API uses RESTful methods to create new technicians, view a list of 
     - If the automobile being serviced is an automobile that was sold from our inventory, the customer is marked to receive VIP treatment from the concierge
     - View an appointment or multiple appointments by typing in the VIN in the search bar
 
-## CRUD Routes / API Documentation
-
+## API Endpoints
 
 <details>
   <summary markdown="span">Inventory API</summary>
