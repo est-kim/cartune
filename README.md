@@ -105,12 +105,12 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 <details>
   <summary markdown="span">POST request to api/manufacturers</summary>
-```json
+```
 {
   "name": "Chrysler"
 }
-```
 </details>
+```
 
 
 |      Action     |    Method    |       URL       |
