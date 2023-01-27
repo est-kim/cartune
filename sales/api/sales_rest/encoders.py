@@ -41,7 +41,6 @@ class SalesRecordEncoder(ModelEncoder):
         "automobile"
     ]
 
-
     encoders = {
         "sales_person": SalesPersonEncoder(),
         "customer": CustomerEncoder(),

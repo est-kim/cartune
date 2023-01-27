@@ -145,10 +145,10 @@ def api_sales(request):
     else:
         content = json.loads(request.body)
         automobile = AutomobileVO.objects.get(import_href=content["automobile"])
-
+        
         if automobile.sold is False:
             try:
-                content["automobile"] = AutomobileVO.objects.get(import_href=content["automobile"])
+                content["automobile"] = automobile
             except AutomobileVO.DoesNotExist:
                 return JsonResponse(
                     {"message": "Automobile does not exist"},

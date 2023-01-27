@@ -96,8 +96,7 @@ The services API uses RESTful methods to create new technicians, view a list of 
     - If the automobile being serviced is an automobile that was sold from our inventory, the customer is marked to receive VIP treatment from the concierge
     - View an appointment or multiple appointments by typing in the VIN in the search bar
 
-## CRUD Routes / API Documentation
-
+## API Endpoints
 
 <details>
   <summary markdown="span">Inventory API</summary>
@@ -453,7 +452,20 @@ Returns:
   <summary markdown="span">GET request to api/salespersons/</summary>
 
 ```
-Add return here
+{
+	"sales_persons": [
+		{
+			"name": "Josh Elder",
+			"employee_number": 1,
+			"id": 1
+		},
+		{
+			"name": "Bill Horst",
+			"employee_number": 2,
+			"id": 2
+		}
+    ]
+}
 ```
 </details>
 
@@ -620,4 +632,4 @@ The sales microservice was designed to have 4 models:
 - `Customer`: contains `name`, `address`, and `phone_number` properties to store customer information in the database.
 - `SalesPerson`: contains `name` and `employee_number` properties to store sales person employee information in the database.
 - `SalesRecord`: contains a `sales_person` property as a foreign key to the `SalesPerson` model as there can be many sales records for one sales person. This model also contains a `customer` property as a foreign key to the `Customer` model because of the one to many relationship indicating that one customer can have many sales records. The `automobile` property is also a foreign key to the `AutomobileVO` model as one automobile can have many sales_records if sold more than once. Lastly, there is a `sales_price` property to keep track of the price the automobile was sold for.
-- `AutomobileVO`: contains the `vin`, `import_href`, and `sold` properties. This model serves as a value object to periodically poll automobile data from the `inventory-api` and integrate it into the `sales-api` database without modifying the `inventory-api` database. This enables the data to be used as needed within the `sales-api` microservice.
+- `AutomobileVO`: contains the `vin`, `import_href`, and `sold` properties. The `sold` property is set to a default status of false upon automobile creation, but switches to true upon creation of a sales record. This model serves as a value object to periodically poll automobile data from the `inventory-api` and integrate it into the `sales-api` database without modifying the `inventory-api` database. This enables the data to be used as needed within the `sales-api` microservice.
