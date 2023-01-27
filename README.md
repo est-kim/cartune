@@ -266,6 +266,40 @@ Returns:
 | Update a specific technician | PUT  | http://<span></span>localhost:8080/api/technicians/:id/   |
 | Delete a specific technician | DELETE  | http://<span></span>localhost:8080/api/technicians/:id/   |
 
+<b>POST request to api/technicians/
+
+Request body:
+```
+{
+    "name": "Bill Horst",
+    "employee_number": "1337"
+}
+```
+Returns:
+```
+{
+	"href": "/api/technicians/1/",
+	"id": 1,
+	"name": "Bill Horst",
+	"employee_number": "1337"
+}
+```
+
+<b>GET request to api/technicians/
+
+```
+{
+	"technicians": [
+		{
+			"href": "/api/technicians/1/",
+			"id": 1,
+			"name": "Bill Horst",
+			"employee_number": 1337
+		}
+    ]
+}
+```
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List appointments | GET  | http://<span></span>localhost:8080/api/appointments/ |
@@ -274,9 +308,89 @@ Returns:
 | Update a specific appointment | PUT  | http://<span></span>localhost:8080/api/appointments/:id/   |
 | Delete a specific appointment | DELETE  | http://<span></span>localhost:8080/api/appointments/:id/   |
 
+<b>POST request to api/appointments/
+
+Request body:
+```
+{
+	"vin": "1C3CC5FB2AN120174",
+	"customer_name": "Paul Nnaoji",
+	"date_time": "2023-01-24 01:49:00+00:00",
+	"technician": "Bill Horst",
+	"reason": "Oil Change"
+}
+```
+Returns:
+```
+{
+	"href": "/api/appointments/1/",
+	"id": 1,
+	"vin": "1C3CC5FB2AN120174",
+	"customer_name": "Paul Nnaoji",
+	"date_time": "2023-01-24 01:49:00+00:00",
+	"technician": {
+		"href": "/api/technicians/1/",
+		"id": 1,
+		"name": "Bill Horst",
+		"employee_number": 1337
+	},
+	"reason": "Oil Change",
+	"vip": true,
+	"completed": false
+}
+```
+
+<b>GET request to api/appointments/
+
+```
+{
+	"appointments": [
+		{
+			"href": "/api/appointments/1/",
+			"id": 1,
+			"vin": "1C3CC5FB2AN120174",
+			"customer_name": "Paul Nnaoji",
+			"date_time": "2023-01-24T01:49:00+00:00",
+			"technician": {
+				"href": "/api/technicians/1/",
+				"id": 1,
+				"name": "Bill Horst",
+				"employee_number": 1337
+			},
+			"reason": "Oil Change",
+			"vip": true,
+			"completed": false
+		}
+    ]
+}
+```
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List appointments by VIN | GET  | http://<span></span>localhost:8080/api/appointments/:vin |
+
+<b>GET request to api/appointments/:vin
+
+```
+[
+	{
+		"href": "/api/appointments/1/",
+		"id": 1,
+		"vin": "1C3CC5FB2AN120174",
+		"customer_name": "Paul Nnaoji",
+		"date_time": "2023-01-24T01:49:00+00:00",
+		"technician": {
+			"href": "/api/technicians/1/",
+			"id": 1,
+			"name": "Bill Horst",
+			"employee_number": 1337
+		},
+		"reason": "Oil Change",
+		"vip": true,
+		"completed": false
+	}
+]
+```
 
 #### Sales API
 

@@ -29,7 +29,6 @@ class AppointmentEncoder(ModelEncoder):
         "reason",
         "vip",
         "completed",
-        "in_progress",
     ]
 
     encoders = {
