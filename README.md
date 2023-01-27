@@ -136,11 +136,11 @@ Returns:
 ```
 {
     "manufacturers": [
-		{
-			"href": "/api/manufacturers/1/",
-			"id": 1,
-			"name": "Ferrari"
-		}
+        {
+            "href": "/api/manufacturers/1/",
+            "id": 1,
+            "name": "Ferrari"
+        }
     ]
 }
 ```
