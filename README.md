@@ -97,10 +97,13 @@ The services API uses RESTful standards to create new technicians, view a list o
 
 ## API Endpoints
 #### Inventory API
-| Action | Method | URL  |
-|:---------------:|--------------|:---------------:|
-| List manufacturers | GET  | <a>!http://localhost:8100/api/manufacturers/</a>    |
-| Create a manufacturer | POST  | <a>!http://localhost:8100/api/manufacturers/</a>    |
+|      Action     |    Method    |       URL       |
+|:---------------:|:------------:|:---------------:|
+| List manufacturers | GET  | <span>http://localhost:8100/api/manufacturers/</span>    |
+| Create a manufacturer | POST  | <span>http://localhost:8100/api/manufacturers/</span>    |
+| Get a specific manufacturer | GET  | <span>http://localhost:8100/api/manufacturers/:id/</span>    |
+| Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
+| Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 
 
 ## Service microservice
