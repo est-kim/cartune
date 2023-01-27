@@ -38,7 +38,7 @@ The sales microservice follows RESTful API standards to allows users to create n
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
 ## Application Diagram
-![Diagram](https://imgur.com/PB62Ngd.jpg)
+![Diagram](https://imgur.com/TWmkPFH.jpg)
 
 ## API Overviews
 #### Inventory API
