@@ -109,19 +109,32 @@ The services API uses RESTful standards to create new technicians, view a list o
 Request body:
 ```
 {
-"name": "Ferrari",
+    "name": "Ferrari",
 }
 ```
 Returns (status code 200):
 ```
 {
-"href": "api/manufacturers/1/",
-"id": 1,
-"name": "Ferrari
+    "href": "api/manufacturers/1/",
+    "id": 1,
+    "name": "Ferrari
 }
 ```
 
+<b>GET request to api/manufacturers/
 
+Returns:
+```
+{
+	"manufacturers": [
+		{
+			"href": "/api/manufacturers/1/",
+			"id": 1,
+			"name": "Toyota"
+		}
+    ]
+}
+```
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
