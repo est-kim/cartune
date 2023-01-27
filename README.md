@@ -11,13 +11,13 @@
 ----
 
 ## Design
-CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
+CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. While utilizing PostgreSQL for relational database management, Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
 
 The inventory microservice is responsible for managing the inventory of vehicles in the system. It provides RESTful API endpoints for the Manufacturer, VehicleModel, and Automobile models to allow users to create, read, update, and delete any of those models.
 
 The services microservice follows RESTful API standards to allows users to create new technicians, see the list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view a history of service appointments, cancel appointments, mark appointments as completed, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.This microservice periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
 
-The sales microservice follows RESTful API standards to allows users to create new sales persons, view a list of sales records, create a new sales record for available automobiles in the inventory, and view specific sales history of a sales person. This microservice also periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
+The sales microservice follows RESTful API standards to allows users to create a new customer, create a new sales person, view a list of all sales persons, view a list of sales records, create a new sales record from the available automobiles in the inventory, and view specific sales history of a sales person. This microservice also periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
 
 ## How to Run this Application
 1. Clone the repository to your local machine
@@ -42,7 +42,7 @@ The sales microservice follows RESTful API standards to allows users to create n
 
 ## API Overviews
 #### Inventory API
-The inventory API uses RESTful standards to allow users to add new manufacturers, view all manufacturers, add new vehicles models, view all vehicle models, add new automobiles, and view all automobiles.
+The inventory API uses RESTful methods to allow users to add new manufacturers, view all manufacturers, add new vehicles models, view all vehicle models, add new automobiles, and view all automobiles.
 
 - **View all manufacturers**: http://localhost:3000/manufacturers
     - View all existing car manufacturers in the database
@@ -61,7 +61,7 @@ The inventory API uses RESTful standards to allow users to add new manufacturers
     - Create a new automobile by adding the color, year, VIN, and selecting an existing vehicle model from the dropdown to add to the database
 
 #### Sales API
-The sales API uses RESTful standards to allow users to create a new customer, create new sales persons, view a list of sales records, create a new sales record for available automobiles in the inventory, and view specific sales history of a sales person.
+The sales API uses RESTful methods to allow users to create a new customer, create a new sales person, view a list of sales persons, view a list of sales records, create a new sales record from the available automobiles in the inventory, and view specific sales history of a sales person.
 
 - **New customer**: http://localhost:3000/customers/new
     - Create a new customer by adding the name, address, and unique phone number to successfully add to the database
@@ -78,7 +78,7 @@ The sales API uses RESTful standards to allow users to create a new customer, cr
     - View a specific sales person’s sales history by choosing a sales person from the dropdown who has made sales
 
 #### Services API
-The services API uses RESTful standards to create new technicians, view a list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view service appointment history, cancel appointments, complete appointments, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.
+The services API uses RESTful methods to create new technicians, view a list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view service appointment history, cancel appointments, complete appointments, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.
 - **New technician**: http://localhost:3000/technicians/new
     - Create a new technician by adding the name and unique employee number to successfuly add to the database
 - **View all technicians**: http://localhost:3000/technicians
@@ -426,7 +426,6 @@ Returns:
   <summary markdown="span">Sales API</summary>
 
 #### Sales API
-
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List salespersons | GET  | http://<span></span>localhost:8080/api/salespersons/ |
@@ -440,18 +439,18 @@ Returns:
 
 Request body:
 ```
-
+{
+    "name": "Josh Elder",
+    "employee_number": 1
+}
 ```
 Returns:
 ```
-
-```
-</details>
-<details>
-  <summary markdown="span">GET request to api/salespersons/</summary>
-
-```
-
+{
+    "name": "Josh Elder",
+    "employee_number": 1,
+    "id": 1
+}
 ```
 </details>
 
@@ -468,18 +467,37 @@ Returns:
 
 Request body:
 ```
-
+{
+    "sales_price": 100000.99,
+    "sales_person": "Filamer Doronio",
+    "customer": "Ching Cheng",
+    "automobile": "/api/automobiles/1/"
+}
 ```
 Returns:
 ```
-
-```
-</details>
-<details>
-  <summary markdown="span">GET request to api/sales/</summary>
-
-```
-
+{
+	"id": 1,
+	"sales_price": 100000.99,
+	"sales_person": {
+		"name": "Filamer Doronio",
+		"employee_number": 1,
+		"id": 1
+	},
+	"customer": {
+		"href": "/api/customers/1/",
+		"name": "Ching Cheng",
+		"address": "123 Guava Lane, San Jose, CA",
+		"phone_number": "123-123-1234",
+		"id": 1
+	},
+	"automobile": {
+		"id": 2,
+		"vin": "1YVGF22D825285555",
+		"sold": true,
+		"import_href": "/api/automobiles/1/"
+	}
+}
 ```
 </details>
 
@@ -496,18 +514,21 @@ Returns:
 
 Request body:
 ```
-
+{
+    "name": "Filamer Doronio",
+    "address": "123 Coding Lane, San Francisco, CA",
+    "phone_number": "123-456-7890",
+    "id": 1
+}
 ```
 Returns:
 ```
-
-```
-</details>
-<details>
-  <summary markdown="span">GET request to api/customers/</summary>
-
-```
-
+{
+    "name": "Filamer Doronio",
+    "address": "123 Coding Lane, San Francisco, CA",
+    "phone_number": "123-456-7890",
+    "id": 1
+}
 ```
 </details>
 
@@ -530,6 +551,8 @@ Explain your models and integration with the inventory
 microservice, here.
 
 ## Sales microservice
-
-Explain your models and integration with the inventory
-microservice, here.
+The sales microservice was designed to have 4 models:
+- `Customer`: contains `name`, `address`, and `phone_number` properties to store customer information in the database.
+- `SalesPerson`: contains `name` and `employee_number` properties to store sales person employee information in the database.
+- `SalesRecord`: contains a `sales_person` property as a foreign key to the `SalesPerson` model as there can be many sales records for one sales person. This model also contains a `customer` property as a foreign key to the `Customer` model because of the one to many relationship indicating that one customer can have many sales records. The `automobile` property is also a foreign key to the `AutomobileVO` model as one automobile can have many sales_records if sold more than once. Lastly, there is a `sales_price` property to keep track of the price the automobile was sold for.
+- `AutomobileVO`: contains the `vin`, `import_href`, and `sold` properties. This model was intentionally designed to be a value object to periodically poll automobile data from the `inventory-api`. In doing so, we can integrate this data into the `sales-api` database without manipulating the `inventory-api`'s database, thus allowing us to use this data as needed within the `sales-api` microservice.
