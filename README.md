@@ -369,26 +369,26 @@ Returns:
   <summary markdown="span">GET request to api/appointments/</summary>
 
 ```
-    {
-	   "appointments": [
-		   {
-			   "href": "/api/appointments/1/",
-			   "id": 1,
-			   "vin": "1C3CC5FB2AN120174",
-			   "customer_name": "Paul Nnaoji",
-			   "date_time": "2023-01-24T01:49:00+00:00",
-			   "technician": {
-				   "href": "/api/technicians/1/",
-				   "id": 1,
-				   "name": "Bill Horst",
-				   "employee_number": 1337
-			   },
-			   "reason": "Oil Change",
-			   "vip": true,
-			   "completed": false
-		   }
-       ]
-   }
+{
+	"appointments": [
+		{
+			"href": "/api/appointments/1/",
+			"id": 1,
+			"vin": "1C3CC5FB2AN120174",
+			"customer_name": "Paul Nnaoji",
+			"date_time": "2023-01-24T01:49:00+00:00",
+			"technician": {
+				"href": "/api/technicians/1/",
+				"id": 1,
+				"name": "Bill Horst",
+				"employee_number": 1337
+			},
+			"reason": "Oil Change",
+			"vip": true,
+			"completed": false
+		}
+    ]
+}
 ```
 </details>
 
@@ -426,7 +426,6 @@ Returns:
   <summary markdown="span">Sales API</summary>
 
 #### Sales API
-
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List salespersons | GET  | http://<span></span>localhost:8080/api/salespersons/ |
@@ -434,6 +433,25 @@ Returns:
 | Get a specific salesperson | GET  | http://<span></span>localhost:8080/api/salespersons/:id/  |
 | Update a specific salesperson | PUT  | http://<span></span>localhost:8080/api/salespersons/:id/   |
 | Delete a specific salesperson | DELETE  | http://<span></span>localhost:8080/api/salespersons/:id/   |
+<details>
+  <summary markdown="span">POST request to api/salespersons/</summary>
+  Request body:
+  ```
+  {
+    "name": Josh Elder",
+    "employee_number": 1
+  }
+  ```
+  Returns:
+  ```
+  {
+    "name": Josh Elder",
+    "employee_number": 1,
+    "id": 1
+  }
+
+  ```
+
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
