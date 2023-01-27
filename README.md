@@ -1,7 +1,6 @@
 # CarTel
 
-Team:
-
+#### Team:
 * Jason Dai - Service
 * Esther Kim - Sales
 
