@@ -369,26 +369,26 @@ Returns:
   <summary markdown="span">GET request to api/appointments/</summary>
 
 ```
-{
-	"appointments": [
-		{
-			"href": "/api/appointments/1/",
-			"id": 1,
-			"vin": "1C3CC5FB2AN120174",
-			"customer_name": "Paul Nnaoji",
-			"date_time": "2023-01-24T01:49:00+00:00",
-			"technician": {
-				"href": "/api/technicians/1/",
-				"id": 1,
-				"name": "Bill Horst",
-				"employee_number": 1337
-			},
-			"reason": "Oil Change",
-			"vip": true,
-			"completed": false
-		}
-    ]
-}
+    {
+	   "appointments": [
+		   {
+			   "href": "/api/appointments/1/",
+			   "id": 1,
+			   "vin": "1C3CC5FB2AN120174",
+			   "customer_name": "Paul Nnaoji",
+			   "date_time": "2023-01-24T01:49:00+00:00",
+			   "technician": {
+				   "href": "/api/technicians/1/",
+				   "id": 1,
+				   "name": "Bill Horst",
+				   "employee_number": 1337
+			   },
+			   "reason": "Oil Change",
+			   "vip": true,
+			   "completed": false
+		   }
+       ]
+   }
 ```
 </details>
 
