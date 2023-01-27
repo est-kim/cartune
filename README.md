@@ -1,4 +1,4 @@
-# CarTel
+# carEgiver
 
 #### Team:
 * Jason Dai - Service
@@ -6,7 +6,8 @@
 ----
 
 ## Table of Contents
-- TOC
+[TOC]
+#
 {:toc}
 
 ----
@@ -35,7 +36,7 @@ The sales microservice follows RESTful API standards to allows users to create n
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
 ## Application Diagram
-(insert image here)
+![Diagram](https://imgur.com/c59J7Zl.jpg)
 
 ## API Overviews
 #### Inventory API
