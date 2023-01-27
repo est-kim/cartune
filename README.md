@@ -435,6 +435,26 @@ Returns:
 | Update a specific salesperson | PUT  | http://<span></span>localhost:8080/api/salespersons/:id/   |
 | Delete a specific salesperson | DELETE  | http://<span></span>localhost:8080/api/salespersons/:id/   |
 
+<details>
+  <summary markdown="span">POST request to api/salespersons/</summary>
+
+Request body:
+```
+
+```
+Returns:
+```
+
+```
+</details>
+<details>
+  <summary markdown="span">GET request to api/salespersons/</summary>
+
+```
+
+```
+</details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List sales | GET  | http://<span></span>localhost:8080/api/sales/ |
@@ -442,6 +462,26 @@ Returns:
 | Get a specific sales | GET  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Update a specific sales | PUT  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Delete a specific sales | DELETE  | http://<span></span>localhost:8080/api/sales/:id/   |
+
+<details>
+  <summary markdown="span">POST request to api/sales/</summary>
+
+Request body:
+```
+
+```
+Returns:
+```
+
+```
+</details>
+<details>
+  <summary markdown="span">GET request to api/sales/</summary>
+
+```
+
+```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -451,10 +491,37 @@ Returns:
 | Update a specific customer | PUT  | http://<span></span>localhost:8080/api/customers/:id/  |
 | Delete a specific customer | DELETE  | http://<span></span>localhost:8080/api/customers/:id/   |
 
+<details>
+  <summary markdown="span">POST request to api/customers/</summary>
+
+Request body:
+```
+
+```
+Returns:
+```
+
+```
+</details>
+<details>
+  <summary markdown="span">GET request to api/customers/</summary>
+
+```
+
+```
+</details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List all automobiles | GET  | http://<span></span>localhost:8080/api/automobiles/ |
 
+<details>
+  <summary markdown="span">GET request to api/automobiles/</summary>
+
+```
+
+```
+</details>
 </details>
 
 ## Service microservice
