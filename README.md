@@ -11,13 +11,13 @@
 ----
 
 ## Design
-CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
+CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. While utilizing PostgreSQL for relational database management, Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
 
 The inventory microservice is responsible for managing the inventory of vehicles in the system. It provides RESTful API endpoints for the Manufacturer, VehicleModel, and Automobile models to allow users to create, read, update, and delete any of those models.
 
 The services microservice follows RESTful API standards to allows users to create new technicians, see the list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view a history of service appointments, cancel appointments, mark appointments as completed, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.This microservice periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
 
-The sales microservice follows RESTful API standards to allows users to create new sales persons, view a list of sales records, create a new sales record for available automobiles in the inventory, and view specific sales history of a sales person. This microservice also periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
+The sales microservice follows RESTful API standards to allows users to create a new customer, create a new sales person, view a list of all sales persons, view a list of sales records, create a new sales record from the available automobiles in the inventory, and view specific sales history of a sales person. This microservice also periodically polls data from the Inventory API so that the data in Inventory is not manipulated or altered.
 
 ## How to Run this Application
 1. Clone the repository to your local machine
@@ -42,7 +42,7 @@ The sales microservice follows RESTful API standards to allows users to create n
 
 ## API Overviews
 #### Inventory API
-The inventory API uses RESTful standards to allow users to add new manufacturers, view all manufacturers, add new vehicles models, view all vehicle models, add new automobiles, and view all automobiles.
+The inventory API uses RESTful methods to allow users to add new manufacturers, view all manufacturers, add new vehicles models, view all vehicle models, add new automobiles, and view all automobiles.
 
 - **View all manufacturers**: http://localhost:3000/manufacturers
     - View all existing car manufacturers in the database
@@ -61,7 +61,7 @@ The inventory API uses RESTful standards to allow users to add new manufacturers
     - Create a new automobile by adding the color, year, VIN, and selecting an existing vehicle model from the dropdown to add to the database
 
 #### Sales API
-The sales API uses RESTful standards to allow users to create a new customer, create new sales persons, view a list of sales records, create a new sales record for available automobiles in the inventory, and view specific sales history of a sales person.
+The sales API uses RESTful methods to allow users to create a new customer, create a new sales person, view a list of sales persons, view a list of sales records, create a new sales record from the available automobiles in the inventory, and view specific sales history of a sales person.
 
 - **New customer**: http://localhost:3000/customers/new
     - Create a new customer by adding the name, address, and unique phone number to successfully add to the database
@@ -78,7 +78,7 @@ The sales API uses RESTful standards to allow users to create a new customer, cr
     - View a specific sales person’s sales history by choosing a sales person from the dropdown who has made sales
 
 #### Services API
-The services API uses RESTful standards to create new technicians, view a list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view service appointment history, cancel appointments, complete appointments, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.
+The services API uses RESTful methods to create new technicians, view a list of technicians, schedule service appointments for their vehicles, view upcoming appointments, view service appointment history, cancel appointments, complete appointments, and see which users receive VIP treatment for servicing if the automobile was purchased from the company.
 - **New technician**: http://localhost:3000/technicians/new
     - Create a new technician by adding the name and unique employee number to successfuly add to the database
 - **View all technicians**: http://localhost:3000/technicians
