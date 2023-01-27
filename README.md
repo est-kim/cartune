@@ -104,7 +104,8 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 
-<b>POST request to api/manufacturers:
+<b>POST request to api/manufacturers/
+
 Request body:
 ```
 {
