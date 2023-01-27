@@ -612,9 +612,12 @@ Returns:
 </details>
 
 ## Service microservice
+The service microservice was designed to haev 3 models:
+- `Technician`: contains `name` and `employee_number` properties to store technician employee information in the database.
+- `Appointment`: contains `vin`, `customer_name`, `date_time`, `technician`, `reason`, `completed`, and `vip` properties to store appointment information in the database. The `vin` field is used to store the VIN number of the vehicle associated with the appointment. This is not a foreign key because it is not related to any other model in the database as customers who did not purchase cars from the dealership would be allowed to schedule appointments. The `technician` property is a foreign key to the `Technician` model as there can be many appointments for one technician. The `completed` and `vip` properties are used to keep track of the status of the appointment and whether the customer is a VIP or not. The VIP status of a customer will be determined by cross-referencing the VIN number of the vehicle with the inventory records of purchased vehicles.
+- `AutomobileVO`: contains the `vin` and `import_href`. This model serves as a value object to periodically poll automobile data from the `inventory-api` and itegrate it into the `service-api` database without manipulating the `inventory-api`'s database. This allows the data to be used as needed within the `service-api` microservice.
 
-Explain your models and integration with the inventory
-microservice, here.
+
 
 ## Sales microservice
 The sales microservice was designed to have 4 models:
