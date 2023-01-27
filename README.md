@@ -30,7 +30,7 @@ The sales microservice follows RESTful API standards to allows users to create n
      ```
 4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more.
 <details>
-  <summary markdown="span">Once Docker is fully up and running, it should look like the following:/</summary>
+  <summary markdown="span">Once Docker is fully up and running, it should look like the following:</summary>
     ![Running Docker Containers](https://imgur.com/3tXKxct.jpg)
 </details>
 
@@ -288,7 +288,7 @@ Returns:
 | Delete a specific technician | DELETE  | http://<span></span>localhost:8080/api/technicians/:id/   |
 
 <details>
-  <summary markdown="span">POST request to api/technicians/</summary
+  <summary markdown="span">POST request to api/technicians/</summary>
 
 Request body:
 ```
@@ -308,7 +308,7 @@ Returns:
 ```
 </details>
 <details>
-  <summary markdown="span">GET request to api/technicians/</summary
+  <summary markdown="span">GET request to api/technicians/</summary>
 
 ```
 {
@@ -333,7 +333,7 @@ Returns:
 | Delete a specific appointment | DELETE  | http://<span></span>localhost:8080/api/appointments/:id/   |
 
 <details>
-  <summary markdown="span">POST request to api/appointments/</summary
+  <summary markdown="span">POST request to api/appointments/</summary>
 
 Request body:
 ```
@@ -366,7 +366,7 @@ Returns:
 ```
 </details>
 <details>
-  <summary markdown="span">GET request to api/appointments/</summary
+  <summary markdown="span">GET request to api/appointments/</summary>
 
 ```
 {
@@ -397,7 +397,7 @@ Returns:
 | List appointments by VIN | GET  | http://<span></span>localhost:8080/api/appointments/:vin |
 
 <details>
-  <summary markdown="span">GET request to api/appointments/:vin</summary
+  <summary markdown="span">GET request to api/appointments/:vin</summary>
 
 ```
 [
