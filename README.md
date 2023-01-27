@@ -127,12 +127,9 @@ Returns:
     "name": "Ferrari
 }
 ```
-
 </details>
-
 <details>
   <summary markdown="span">GET request to api/manufacturers/</summary>
-
 
 <b>GET request to api/manufacturers/
 
@@ -147,7 +144,6 @@ Returns:
     ]
 }
 ```
-
 </details>
 
 |      Action     |    Method    |       URL       |
@@ -186,7 +182,6 @@ Returns:
 }
 ```
 </details>
-
 <details>
   <summary markdown="span">GET request to api/models/</summary>
 
@@ -255,6 +250,7 @@ Returns:
 	}
 }
 ```
+</details>
 <details>
   <summary markdown="span">GET request to api/automobiles/</summary>
 
