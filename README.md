@@ -457,7 +457,20 @@ Returns:
   <summary markdown="span">GET request to api/salespersons/</summary>
 
 ```
-Add return here
+{
+	"sales_persons": [
+		{
+			"name": "Josh Elder",
+			"employee_number": 1,
+			"id": 1
+		},
+		{
+			"name": "Bill Horst",
+			"employee_number": 2,
+			"id": 2
+		}
+    ]
+}
 ```
 </details>
 
