@@ -4,8 +4,11 @@
 * Jason Dai - Service
 * Esther Kim - Sales
 ----
+
 ## Table of Contents
-- TOC {:toc}
+- TOC
+{:toc}
+
 ----
 
 ## Design
@@ -91,6 +94,14 @@ The services API uses RESTful standards to create new technicians, view a list o
     - View an appointment or multiple appointments by typing in the VIN in the search bar
 
 ## CRUD Routes / API Documentation
+
+## API Endpoints
+#### Inventory API
+| Action | Method | URL  |
+|:---------------:|--------------|:---------------:|
+| List manufacturers | GET  | <a>!http://localhost:8100/api/manufacturers/</a>    |
+| Create a manufacturer | POST  | <a>!http://localhost:8100/api/manufacturers/</a>    |
+
 
 ## Service microservice
 
