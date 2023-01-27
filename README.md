@@ -1,4 +1,5 @@
-# CarTune
+###<i class="fa-solid fa-car" style="color:rgb(240,109,70); font-size:.85em" aria-hidden="true"></i> CarTune
+{: #cartune-orange}
 
 #### Team:
 * Jason Dai - Service
