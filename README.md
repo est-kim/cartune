@@ -1,4 +1,4 @@
-# carEgiver
+# CarTune
 
 #### Team:
 * Jason Dai - Service
@@ -7,8 +7,6 @@
 
 ## Table of Contents
 [TOC]
-#
-{:toc}
 
 ----
 
@@ -36,7 +34,7 @@ The sales microservice follows RESTful API standards to allows users to create n
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
 ## Application Diagram
-![Diagram](https://imgur.com/o1BTELo.jpg)
+![Diagram](https://imgur.com/PB62Ngd.jpg)
 
 ## API Overviews
 #### Inventory API
@@ -105,6 +103,15 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Get a specific manufacturer | GET  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
+<details>
+  <summary markdown="span">POST request to api/manufacturers</summary>
+```
+{
+  "name": "Chrysler"
+}
+```
+</details>
+
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
