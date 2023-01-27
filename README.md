@@ -433,8 +433,10 @@ Returns:
 | Get a specific salesperson | GET  | http://<span></span>localhost:8080/api/salespersons/:id/  |
 | Update a specific salesperson | PUT  | http://<span></span>localhost:8080/api/salespersons/:id/   |
 | Delete a specific salesperson | DELETE  | http://<span></span>localhost:8080/api/salespersons/:id/   |
+
 <details>
   <summary markdown="span">POST request to api/salespersons/</summary>
+
 Request body:
 ```
 {
@@ -451,6 +453,7 @@ Returns:
 }
 ```
 </details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List sales | GET  | http://<span></span>localhost:8080/api/sales/ |
@@ -458,8 +461,10 @@ Returns:
 | Get a specific sales | GET  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Update a specific sales | PUT  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Delete a specific sales | DELETE  | http://<span></span>localhost:8080/api/sales/:id/   |
+
 <details>
   <summary markdown="span">POST request to api/sales/</summary>
+
 Request body:
 ```
 {
@@ -495,6 +500,7 @@ Returns:
 }
 ```
 </details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List customer | GET  | http://<span></span>localhost:8080/api/customers/ |
@@ -502,8 +508,10 @@ Returns:
 | Get a specific customer | GET  | http://<span></span>localhost:8080/api/customers/:id/ |
 | Update a specific customer | PUT  | http://<span></span>localhost:8080/api/customers/:id/  |
 | Delete a specific customer | DELETE  | http://<span></span>localhost:8080/api/customers/:id/   |
+
 <details>
   <summary markdown="span">POST request to api/customers/</summary>
+
 Request body:
 ```
 {
@@ -523,6 +531,7 @@ Returns:
 }
 ```
 </details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List all automobiles | GET  | http://<span></span>localhost:8080/api/automobiles/ |
@@ -539,4 +548,4 @@ The sales microservice was designed to have 4 models:
 - `Customer`: contains `name`, `address`, and `phone_number` properties to store customer information in the database.
 - `SalesPerson`: contains `name` and `employee_number` properties to store sales person employee information in the database.
 - `SalesRecord`: contains a `sales_person` property as a foreign key to the `SalesPerson` model as there can be many sales records for one sales person. This model also contains a `customer` property as a foreign key to the `Customer` model because of the one to many relationship indicating that one customer can have many sales records. The `automobile` property is also a foreign key to the `AutomobileVO` model as one automobile can have many sales_records if sold more than once. Lastly, there is a `sales_price` property to keep track of the price the automobile was sold for.
-- `AutomobileVO`: contains the `vin`, `import_href`, and `sold` properties. This model was intentionally designed to be a value object to periodically poll automobile data from the `inventory-api`. In doing so, we can integrate this data into the `sales-api` database without manipulating the `inventory-api`'s database, and allowing us to use this data as needed within the `sales-api` microservice.
+- `AutomobileVO`: contains the `vin`, `import_href`, and `sold` properties. This model was intentionally designed to be a value object to periodically poll automobile data from the `inventory-api`. In doing so, we can integrate this data into the `sales-api` database without manipulating the `inventory-api`'s database, thus allowing us to use this data as needed within the `sales-api` microservice.
