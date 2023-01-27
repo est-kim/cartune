@@ -3,6 +3,11 @@
 #### Team:
 * Jason Dai - Service
 * Esther Kim - Sales
+----
+## Table of Contents
+- TOC
+{:toc}
+----
 
 ## Design
 CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
@@ -24,7 +29,7 @@ The sales microservice follows RESTful API standards to allows users to create n
      ```
 4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more. Once Docker is fully up and running, it should look like the following:
 (insert image here)
-5. The web application can be accessed at localhost:3000
+5. The web application can be accessed at **localhost:3000**
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
 ## Application Diagram
