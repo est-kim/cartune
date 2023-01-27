@@ -126,11 +126,11 @@ Returns (status code 200):
 Returns:
 ```
 {
-	"manufacturers": [
+    "manufacturers": [
 		{
 			"href": "/api/manufacturers/1/",
 			"id": 1,
-			"name": "Toyota"
+			"name": "Ferrari"
 		}
     ]
 }
@@ -144,6 +144,52 @@ Returns:
 | Update a specific automobile | PUT  | http://<span></span>localhost:8100/api/models/:id/   |
 | Delete a specific automobile | DELETE  | http://<span></span>localhost:8100/api/models/:id/   |
 
+<b>POST request to api/models/
+
+Request body:
+```
+{
+	"name": "California",
+	"picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
+	"manufacturer_id": 1
+}
+```
+Returns (status code 200):
+```
+{
+	"href": "/api/models/1/",
+	"id": 1,
+	"name": "California",
+	"picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
+	"manufacturer": {
+		"href": "/api/manufacturers/1/",
+		"id": 1,
+		"name": "Ferrari"
+	}
+}
+```
+
+<b>GET request to api/manufacturers/
+
+Returns:
+```
+{
+	"models": [
+		{
+			"href": "/api/models/1/",
+			"id": 1,
+			"name": "California",
+			"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+			"manufacturer": {
+				"href": "/api/manufacturers/1/",
+				"id": 1,
+				"name": "Ferrari"
+			}
+		}
+    ]
+}
+```
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List vehicle models | GET  | http://<span></span>localhost:8100/api/automobiles/    |
@@ -152,7 +198,67 @@ Returns:
 | Update a specific vehicle model | PUT  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
 | Delete a specific vehicle model | DELETE  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
 
+<b>POST request to api/automobiles/
 
+Request body:
+```
+{
+  "color": "Red",
+  "year": 2022,
+  "vin": "1C3CC5FB2AN120174",
+  "model_id": 1
+}
+
+```
+Returns (status code 200):
+```
+{
+	"href": "/api/automobiles/1C3CC5FB2AN120174/",
+	"id": 1,
+	"color": "Red",
+	"year": 2022,
+	"vin": "1C3CC5FB2AN120174",
+	"model": {
+		"href": "/api/models/1/",
+		"id": 1,
+		"name": "California",
+		"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+		"manufacturer": {
+			"href": "/api/manufacturers/1/",
+			"id": 1,
+			"name": "Ferrari"
+		}
+	}
+}
+```
+
+<b>GET request to api/manufacturers/
+
+Returns:
+```
+{
+	"automobiles": [
+		{
+			"href": "/api/automobiles/1C3CC5FB2AN120174/",
+			"id": 1,
+			"color": "Red",
+			"year": 2022,
+			"vin": "ZFF65LHA6C0821264",
+			"model": {
+				"href": "/api/models/1/",
+				"id": 1,
+				"name": "California",
+				"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+				"manufacturer": {
+					"href": "/api/manufacturers/1/",
+					"id": 1,
+					"name": "Ferrari"
+				}
+			}
+		}
+    ]
+}
+```
 
 #### Service API
 |      Action     |    Method    |       URL       |
