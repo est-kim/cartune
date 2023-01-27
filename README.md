@@ -262,6 +262,9 @@ Returns:
 ```
 </details>
 
+<details>
+  <summary markdown="span">Service API</summary>
+
 #### Service API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -396,6 +399,10 @@ Returns:
 	}
 ]
 ```
+</details>
+
+<details>
+  <summary markdown="span">Sales API</summary>
 
 #### Sales API
 
@@ -426,6 +433,8 @@ Returns:
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List all automobiles | GET  | http://<span></span>localhost:8080/api/automobiles/ |
+
+</details>
 
 ## Service microservice
 
