@@ -24,7 +24,7 @@ The sales microservice follows RESTful API standards to allows users to create a
 2. Install and run Docker by clicking [here](https://docs.docker.com/get-docker/)
 3. Cd into the project directory and run the following commands in VS Code or your terminal. Note: if you are on macOS, you will see a warning about an environment variable named OS being missing. You can safely ignore this warning.
      ```
-     docker-volume create beta-data
+     docker volume create beta-data
      docker-compose build
      docker-compose up
      ```
