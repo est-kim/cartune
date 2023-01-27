@@ -99,12 +99,36 @@ The services API uses RESTful standards to create new technicians, view a list o
 #### Inventory API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
-| List manufacturers | GET  | <span>http://localhost:8100/api/manufacturers/</span>    |
-| Create a manufacturer | POST  | <span>http://localhost:8100/api/manufacturers/</span>    |
-| Get a specific manufacturer | GET  | <span>http://localhost:8100/api/manufacturers/:id/</span>    |
+| List manufacturers | GET  | http://<span></span>localhost:8100/api/manufacturers/    |
+| Create a manufacturer | POST  | http://<span></span>localhost:8100/api/manufacturers/    |
+| Get a specific manufacturer | GET  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 
+|      Action     |    Method    |       URL       |
+|:---------------:|:------------:|:---------------:|
+| List vehicle models | GET  | http://<span></span>localhost:8100/api/automobiles/    |
+| Create a vehicle model | POST  | http://<span></span>localhost:8100/api/automobiles/  |
+| Get a specific vehicle model | GET  | http://<span></span>localhost:8100/api/automobiles/:vin/   |
+| Update a specific vehicle model | PUT  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
+| Delete a specific vehicle model | DELETE  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
+
+|      Action     |    Method    |       URL       |
+|:---------------:|:------------:|:---------------:|
+| List automobiles | GET  | http://<span></span>localhost:8100/api/models/    |
+| Create an automobile | POST  | http://<span></span>localhost:8100/api/models/    |
+| Get a specific automobile | GET  | http://<span></span>localhost:8100/api/models/:id/   |
+| Update a specific automobile | PUT  | http://<span></span>localhost:8100/api/models/:id/   |
+| Delete a specific automobile | DELETE  | http://<span></span>localhost:8100/api/models/:id/   |
+
+#### Service API
+|      Action     |    Method    |       URL       |
+|:---------------:|:------------:|:---------------:|
+| List technicians | GET  | http://<span></span>localhost:8080/api/technicians/ |
+| Create a technician | POST  | http://<span></span>localhost:8080/api/technicians/   |
+| Get a specific technician | GET  | http://<span></span>localhost:8080/api/technicians/:id/  |
+| Update a specific technician | PUT  | http://<span></span>localhost:8080/api/technicians/:id/   |
+| Delete a specific technician | DELETE  | http://<span></span>localhost:8080/api/technicians/:id/   |
 
 ## Service microservice
 
