@@ -511,7 +511,20 @@ Returns:
   <summary markdown="span">GET request to api/customers/</summary>
 
 ```
-Add return here
+{
+	"sales_persons": [
+		{
+			"name": "Esther Kim",
+			"employee_number": 5,
+			"id": 5
+		},
+		{
+			"name": "Jason Dai",
+			"employee_number": 6,
+			"id": 6
+		}
+    ]
+}
 ```
 </details>
 
@@ -549,7 +562,24 @@ Returns:
   <summary markdown="span">GET request to api/customers/</summary>
 
 ```
-Add return here
+{
+	"customers": [
+		{
+			"href": "/api/customers/1/",
+			"name": "Filamer Doronio",
+			"address": "123 Coding Lane, San Francisco, CA",
+			"phone_number": "123-456-7890",
+			"id": 1
+		},
+        {
+			"href": "/api/customers/2/",
+			"name": "Don Julio",
+			"address": "2 Tequila Lane, Newport, CA 90201",
+			"phone_number": "111-111-1111",
+			"id": 2
+		}
+    ]
+}
 ```
 </details>
 
@@ -561,7 +591,22 @@ Add return here
   <summary markdown="span">GET request to api/automobiles/</summary>
 
 ```
-Add return here
+{
+	"automobiles": [
+		{
+			"id": 13,
+			"vin": "1",
+			"sold": true,
+			"import_href": "/api/automobiles/1/"
+		},
+		{
+			"id": 14,
+			"vin": "2",
+			"sold": true,
+			"import_href": "/api/automobiles/2/"
+		}
+    ]
+}
 ```
 </details>
 </details>

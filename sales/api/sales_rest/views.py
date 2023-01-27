@@ -179,7 +179,7 @@ def api_sales(request):
         else:
             return JsonResponse(
             {"message": "This car is no longer available."},
-            status=400,
+            status=404,
         )
 
 @require_http_methods(["DELETE", "GET", "PUT"])
