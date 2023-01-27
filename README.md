@@ -28,8 +28,12 @@ The sales microservice follows RESTful API standards to allows users to create n
      docker-compose build
      docker-compose up
      ```
-4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more. Once Docker is fully up and running, it should look like the following:
-![Running Docker Containers](https://imgur.com/3tXKxct.jpg)
+4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more.
+<details>
+  <summary markdown="span">Once Docker is fully up and running, it should look like the following:/</summary>
+    ![Running Docker Containers](https://imgur.com/3tXKxct.jpg)
+</details>
+
 5. The web application can be accessed at **localhost:3000**
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
@@ -111,8 +115,6 @@ The services API uses RESTful standards to create new technicians, view a list o
 <details>
   <summary markdown="span">POST request to api/manufacturers/</summary>
 
-<b>POST request to api/manufacturers/
-
 Request body:
 ```
 {
@@ -130,8 +132,6 @@ Returns:
 </details>
 <details>
   <summary markdown="span">GET request to api/manufacturers/</summary>
-
-<b>GET request to api/manufacturers/
 
 ```
 {
@@ -156,8 +156,6 @@ Returns:
 
 <details>
   <summary markdown="span">POST request to api/models/</summary>
-
-<b>POST request to api/models/
 
 Request body:
 ```
@@ -184,8 +182,6 @@ Returns:
 </details>
 <details>
   <summary markdown="span">GET request to api/models/</summary>
-
-<b>GET request to api/models/
 
 ```
 {
@@ -216,8 +212,6 @@ Returns:
 
 <details>
   <summary markdown="span">POST request to api/automobiles/</summary>
-
-<b>POST request to api/automobiles/
 
 Request body:
 ```
@@ -253,8 +247,6 @@ Returns:
 </details>
 <details>
   <summary markdown="span">GET request to api/automobiles/</summary>
-
-<b>GET request to api/automobiles/
 
 ```
 {
@@ -295,7 +287,8 @@ Returns:
 | Update a specific technician | PUT  | http://<span></span>localhost:8080/api/technicians/:id/   |
 | Delete a specific technician | DELETE  | http://<span></span>localhost:8080/api/technicians/:id/   |
 
-<b>POST request to api/technicians/
+<details>
+  <summary markdown="span">POST request to api/technicians/</summary
 
 Request body:
 ```
@@ -313,8 +306,9 @@ Returns:
 	"employee_number": "1337"
 }
 ```
-
-<b>GET request to api/technicians/
+</details>
+<details>
+  <summary markdown="span">GET request to api/technicians/</summary
 
 ```
 {
@@ -328,6 +322,7 @@ Returns:
     ]
 }
 ```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -337,7 +332,8 @@ Returns:
 | Update a specific appointment | PUT  | http://<span></span>localhost:8080/api/appointments/:id/   |
 | Delete a specific appointment | DELETE  | http://<span></span>localhost:8080/api/appointments/:id/   |
 
-<b>POST request to api/appointments/
+<details>
+  <summary markdown="span">POST request to api/appointments/</summary
 
 Request body:
 ```
@@ -368,8 +364,9 @@ Returns:
 	"completed": false
 }
 ```
-
-<b>GET request to api/appointments/
+</details>
+<details>
+  <summary markdown="span">GET request to api/appointments/</summary
 
 ```
 {
@@ -393,12 +390,14 @@ Returns:
     ]
 }
 ```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List appointments by VIN | GET  | http://<span></span>localhost:8080/api/appointments/:vin |
 
-<b>GET request to api/appointments/:vin
+<details>
+  <summary markdown="span">GET request to api/appointments/:vin</summary
 
 ```
 [
@@ -420,6 +419,7 @@ Returns:
 	}
 ]
 ```
+</details>
 </details>
 
 <details>
