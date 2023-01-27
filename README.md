@@ -103,30 +103,7 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Get a specific manufacturer | GET  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
-<details>
-  <summary markdown="span">POST to api/manufacturers</summary>
-    Request body:
-    ```
-    {
-    "name": "Ferrari"
-    }
-    ```
-</details>
-<details>
-  <summary markdown="span">GET request to api/manufacturers</summary>
-    Returns
-    ```
-    {
-    "manufacturers": [
-        {
-        "href": "/api/manufacturers/1/",
-        "id": 1,
-        "name": "Ferrari"
-        }
-      ]
-    }
-    ```
-</details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List automobiles | GET  | http://<span></span>localhost:8100/api/models/    |
@@ -134,38 +111,7 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Get a specific automobile | GET  | http://<span></span>localhost:8100/api/models/:id/   |
 | Update a specific automobile | PUT  | http://<span></span>localhost:8100/api/models/:id/   |
 | Delete a specific automobile | DELETE  | http://<span></span>localhost:8100/api/models/:id/   |
-<details>
-  <summary markdown="span">POST to api/models</summary>
-    Request body:
-     ```
-    {
-    "name": "California",
-    "picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
-    "manufacturer_id": 1
-    }
-    ```
-</details>
-<details>
-  <summary markdown="span">GET request to api/models</summary>
-    Returns:
-     ```
-    {
-    "models": [
-    {
-        "href": "/api/models/1/",
-        "id": 1,
-        "name": "California",
-        "picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
-        "manufacturer": {
-            "href": "/api/manufacturers/1/",
-            "id": 1,
-            "name": "Ferrari"
-        }
-       }
-      ]
-    }
-     ```
-</details>
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List vehicle models | GET  | http://<span></span>localhost:8100/api/automobiles/    |
@@ -173,42 +119,9 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Get a specific vehicle model | GET  | http://<span></span>localhost:8100/api/automobiles/:vin/   |
 | Update a specific vehicle model | PUT  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
 | Delete a specific vehicle model | DELETE  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
-<details>
-  <summary markdown="span">POST to api/automobiles</summary>
-    Request body:
-     ```
-    {
-    "color": "red",
-    "year": 2022,
-    "vin": "1C3CC5FB2AN120174",
-    "model_id": 1
-    }
-    ```
-</details>
-<details>
-  <summary markdown="span">GET request to api/automobiles</summary>
-    Returns:
-     ```
-    {
-    "href": "/api/automobiles/1C3CC5FB2AN120174/",
-    "id": 1,
-    "color": "red",
-    "year": 2022,
-    "vin": "1C3CC5FB2AN120174",
-    "model": {
-        "href": "/api/models/1/",
-        "id": 1,
-        "name": "California",
-        "picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
-        "manufacturer": {
-        "href": "/api/manufacturers/1/",
-        "id": 1,
-        "name": "Ferrari"
-        }
-    }
-    }
-     ```
-</details>
+
+
+
 #### Service API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
