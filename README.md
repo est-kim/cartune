@@ -1,4 +1,4 @@
-# CarTune
+### 🚘 CarTune
 
 #### Team:
 * Jason Dai - Service
@@ -98,12 +98,10 @@ The services API uses RESTful methods to create new technicians, view a list of 
 
 ## CRUD Routes / API Documentation
 
-## API Endpoints
 
 <details>
   <summary markdown="span">Inventory API</summary>
 
-#### Inventory API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List manufacturers | GET  | http://<span></span>localhost:8100/api/manufacturers/    |
@@ -278,7 +276,6 @@ Returns:
 <details>
   <summary markdown="span">Service API</summary>
 
-#### Service API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List technicians | GET  | http://<span></span>localhost:8080/api/technicians/ |
@@ -425,7 +422,6 @@ Returns:
 <details>
   <summary markdown="span">Sales API</summary>
 
-#### Sales API
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List salespersons | GET  | http://<span></span>localhost:8080/api/salespersons/ |
