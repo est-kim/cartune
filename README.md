@@ -5,8 +5,7 @@
 * Esther Kim - Sales
 ----
 ## Table of Contents
-- TOC
-{:toc}
+- TOC {:toc}
 ----
 
 ## Design
