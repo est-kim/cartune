@@ -30,7 +30,7 @@ The sales microservice follows RESTful API standards to allows users to create n
      docker-compose up
      ```
 4. Open Docker desktop and wait for Docker to build the images and containers. This could take up to 5 minutes or more. Once Docker is fully up and running, it should look like the following:
-(insert image here)
+**(insert image here)**
 5. The web application can be accessed at **localhost:3000**
 6. Once finished using the application, simply stop the running containers by clicking the stop button next to project-beta on Docker desktop or by typing `control + C` in the terminal
 
@@ -97,7 +97,6 @@ The services API uses RESTful standards to create new technicians, view a list o
 
 ## API Endpoints
 #### Inventory API
-Manufacturers
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List manufacturers | GET  | http://<span></span>localhost:8100/api/manufacturers/    |
@@ -105,7 +104,7 @@ Manufacturers
 | Get a specific manufacturer | GET  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
-<br>
+
 Vehicle Models
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -114,8 +113,7 @@ Vehicle Models
 | Get a specific vehicle model | GET  | http://<span></span>localhost:8100/api/automobiles/:vin/   |
 | Update a specific vehicle model | PUT  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
 | Delete a specific vehicle model | DELETE  | http://<span></span>localhost:8100/api/automobiles/:vin/    |
-<br>
-Automobiles
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List automobiles | GET  | http://<span></span>localhost:8100/api/models/    |
@@ -125,7 +123,6 @@ Automobiles
 | Delete a specific automobile | DELETE  | http://<span></span>localhost:8100/api/models/:id/   |
 
 #### Service API
-Technicians
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List technicians | GET  | http://<span></span>localhost:8080/api/technicians/ |
@@ -133,8 +130,7 @@ Technicians
 | Get a specific technician | GET  | http://<span></span>localhost:8080/api/technicians/:id/  |
 | Update a specific technician | PUT  | http://<span></span>localhost:8080/api/technicians/:id/   |
 | Delete a specific technician | DELETE  | http://<span></span>localhost:8080/api/technicians/:id/   |
-<br>
-Appointments
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List appointments | GET  | http://<span></span>localhost:8080/api/appointments/ |
@@ -142,14 +138,13 @@ Appointments
 | Get a specific appointment | GET  | http://<span></span>localhost:8080/api/appointments/:id/  |
 | Update a specific appointment | PUT  | http://<span></span>localhost:8080/api/appointments/:id/   |
 | Delete a specific appointment | DELETE  | http://<span></span>localhost:8080/api/appointments/:id/   |
-<br>
-Appoints by VIN
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List appointments by VIN | GET  | http://<span></span>localhost:8080/api/appointments/:vin |
 
 #### Sales API
-Sales Persons
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List salespersons | GET  | http://<span></span>localhost:8080/api/salespersons/ |
@@ -157,8 +152,7 @@ Sales Persons
 | Get a specific salesperson | GET  | http://<span></span>localhost:8080/api/salespersons/:id/  |
 | Update a specific salesperson | PUT  | http://<span></span>localhost:8080/api/salespersons/:id/   |
 | Delete a specific salesperson | DELETE  | http://<span></span>localhost:8080/api/salespersons/:id/   |
-<br>
-Sales
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List sales | GET  | http://<span></span>localhost:8080/api/sales/ |
@@ -166,8 +160,7 @@ Sales
 | Get a specific sales | GET  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Update a specific sales | PUT  | http://<span></span>localhost:8080/api/sales/:id/  |
 | Delete a specific sales | DELETE  | http://<span></span>localhost:8080/api/sales/:id/   |
-<br>
-Customers
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List customer | GET  | http://<span></span>localhost:8080/api/customers/ |
@@ -175,8 +168,7 @@ Customers
 | Get a specific customer | GET  | http://<span></span>localhost:8080/api/customers/:id/ |
 | Update a specific customer | PUT  | http://<span></span>localhost:8080/api/customers/:id/  |
 | Delete a specific customer | DELETE  | http://<span></span>localhost:8080/api/customers/:id/   |
-<br>
-Automobiles
+
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List all automobiles | GET  | http://<span></span>localhost:8080/api/automobiles/ |
