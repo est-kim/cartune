@@ -105,7 +105,6 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 
-Vehicle Models
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
 | List vehicle models | GET  | http://<span></span>localhost:8100/api/automobiles/    |
