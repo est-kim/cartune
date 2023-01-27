@@ -104,14 +104,26 @@ The services API uses RESTful standards to create new technicians, view a list o
 | Update a specific manufacturer | PUT  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 | Delete a specific manufacturer | DELETE  | http://<span></span>localhost:8100/api/manufacturers/:id/   |
 <details>
-  <summary markdown="span">POST request to api/manufacturers</summary>
-```
-{
-  "name": "Chrysler"
-}
+  <summary markdown="span">POST to api/manufacturers</summary>
 </details>
 ```
-
+{
+  "name": "Ferrari"
+}
+```
+<details>
+  <summary markdown="span">Return value for GET request to api/manufacturers/:id</summary>
+</details>
+```
+{
+  "href": "/api/manufacturers/1/",
+  "id": 1,
+  "name": "Chrysler"
+}
+```
+<details>
+  <summary markdown="span">Return value for GET request to api/manufacturers</summary>
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
