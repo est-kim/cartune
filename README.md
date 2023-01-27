@@ -453,6 +453,13 @@ Returns:
 }
 ```
 </details>
+<details>
+  <summary markdown="span">GET request to api/salespersons/</summary>
+
+```
+Add return here
+```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -500,6 +507,13 @@ Returns:
 }
 ```
 </details>
+<details>
+  <summary markdown="span">GET request to api/customers/</summary>
+
+```
+Add return here
+```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -531,6 +545,13 @@ Returns:
 }
 ```
 </details>
+<details>
+  <summary markdown="span">GET request to api/customers/</summary>
+
+```
+Add return here
+```
+</details>
 
 |      Action     |    Method    |       URL       |
 |:---------------:|:------------:|:---------------:|
@@ -540,7 +561,7 @@ Returns:
   <summary markdown="span">GET request to api/automobiles/</summary>
 
 ```
-
+Add return here
 ```
 </details>
 </details>
