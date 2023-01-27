@@ -1,6 +1,9 @@
 ###<i class="fa-solid fa-car" style="color:rgb(240,109,70); font-size:.85em" aria-hidden="true"></i> CarTune
 {: #cartune-orange}
 
+### <i class="fab fa-gitlab fa-fw" style="color:rgb(107,79,187); font-size:.85em" aria-hidden="true"></i> Purple GitLab Tanuki
+{: #tanuki-purple}
+
 #### Team:
 * Jason Dai - Service
 * Esther Kim - Sales
