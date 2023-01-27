@@ -112,7 +112,7 @@ Request body:
     "name": "Ferrari",
 }
 ```
-Returns (status code 200):
+Returns:
 ```
 {
     "href": "api/manufacturers/1/",
@@ -123,7 +123,6 @@ Returns (status code 200):
 
 <b>GET request to api/manufacturers/
 
-Returns:
 ```
 {
     "manufacturers": [
@@ -154,7 +153,7 @@ Request body:
 	"manufacturer_id": 1
 }
 ```
-Returns (status code 200):
+Returns:
 ```
 {
 	"href": "/api/models/1/",
@@ -169,9 +168,8 @@ Returns (status code 200):
 }
 ```
 
-<b>GET request to api/manufacturers/
+<b>GET request to api/models/
 
-Returns:
 ```
 {
 	"models": [
@@ -210,7 +208,7 @@ Request body:
 }
 
 ```
-Returns (status code 200):
+Returns:
 ```
 {
 	"href": "/api/automobiles/1C3CC5FB2AN120174/",
@@ -232,9 +230,8 @@ Returns (status code 200):
 }
 ```
 
-<b>GET request to api/manufacturers/
+<b>GET request to api/automobiles/
 
-Returns:
 ```
 {
 	"automobiles": [
