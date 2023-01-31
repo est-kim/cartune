@@ -130,7 +130,7 @@ function AutomobileForm ({getAutomobiles}) {
                     )}
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     )
 }
