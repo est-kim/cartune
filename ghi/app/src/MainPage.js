@@ -31,8 +31,9 @@ function MainPage() {
         className='p-5 text-center bg-image'
         style={{
           backgroundImage: "url('https://wallpaperaccess.com/full/1670957.jpg')",
-          height: 550,
-          backgroundPosition: "30% 70%"
+          height: 750,
+          backgroundPosition: "30% 70%",
+          backgroundSize: "cover"
           // backgroundRepeat: "no-repeat"
         }}
       >
@@ -43,8 +44,8 @@ function MainPage() {
         }}> */}
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
-              <h1 className='mb-3'><img src="./cartune_transparent.png" alt="CarTune Logo"/></h1>
-              <h4 className='mb-3'><img src="./cartune_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
+              <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
+              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
               <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
                 Call to action
               </a>
@@ -65,19 +66,19 @@ function MainPage() {
                 <MDBCarouselItem
                   className='w-100 d-block'
                   itemId={1}
-                  src='https://mdbootstrap.com/img/new/slides/041.jpg'
+                  src='https://www.cyberleadinc.com/wp-content/uploads/2019/01/Auto-Salesman-Training.jpeg'
                   alt='...'
                 />
                 <MDBCarouselItem
                   className='w-100 d-block'
                   itemId={2}
-                  src='https://mdbootstrap.com/img/new/slides/042.jpg'
+                  src='https://www.thebalancemoney.com/thmb/IPHh3p7BKzF2xQqRmdESQTs2Mzk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/car-saleswoman-showing-to-male-customer-car-performance-on-tablet-1284963732-dd46e48a4c31401984bb33457aaea313.jpg'
                   alt='...'
                 />
                 <MDBCarouselItem
                   className='w-100 d-block'
                   itemId={3}
-                  src='https://mdbootstrap.com/img/new/slides/043.jpg'
+                  src='https://images.unsplash.com/photo-1560250084-db7634c63f8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80'
                   alt='...'
                 />
               </MDBCarousel>
@@ -96,19 +97,19 @@ function MainPage() {
                     <MDBCarouselItem
                       className='w-100 d-block'
                       itemId={1}
-                      src='https://mdbootstrap.com/img/new/slides/041.jpg'
+                      src='https://images.unsplash.com/photo-1632823471565-1ecf94f8799a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80'
                       alt='...'
                     />
                     <MDBCarouselItem
                       className='w-100 d-block'
                       itemId={2}
-                      src='https://mdbootstrap.com/img/new/slides/042.jpg'
+                      src='https://images.unsplash.com/photo-1652987086612-d948b775d358?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
                       alt='...'
                     />
                     <MDBCarouselItem
                       className='w-100 d-block'
                       itemId={3}
-                      src='https://mdbootstrap.com/img/new/slides/043.jpg'
+                      src='https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
                       alt='...'
                     />
                   </MDBCarousel>
