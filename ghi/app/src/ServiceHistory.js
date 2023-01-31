@@ -19,7 +19,7 @@ function ServiceHistory({appointments, setAppointments}) {
         setSearchVin(value);
     };
 
-    const handleStatusChange = (id) => {
+    const handleStatusChange = async (id) => {
         const updatedAppointments = appointments.map(appointment => {
             if (appointment.id === id) {
                 appointment.completed = !appointment.completed;
@@ -27,6 +27,17 @@ function ServiceHistory({appointments, setAppointments}) {
             return appointment;
         });
         setAppointments(updatedAppointments);
+
+        const appointment = appointments.find(appointment => appointment.id === id);
+        const url = `http://localhost:8080/api/appointments/${id}/`
+        const fetchConfig = {
+            method: 'put',
+            body: JSON.stringify({ completed: appointment.completed }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }
+        await fetch(url, fetchConfig);
     }
 
     return (
