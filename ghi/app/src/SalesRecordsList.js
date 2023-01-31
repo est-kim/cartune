@@ -5,7 +5,8 @@ function SalesRecordsList({ salesRecords }) {
 
     return (
         <>
-            <div className='p-5 text-center'>
+        <div className="container">
+        <div className='p-5 text-center'>
                 <h1 className='mb-3'>List of Sales Records</h1>
             </div>
             <div className="add-sales-container d-flex justify-content-end">
@@ -37,6 +38,8 @@ function SalesRecordsList({ salesRecords }) {
                     })}
                 </tbody>
             </table>
+        </div>
+
         </>
     );
 }
