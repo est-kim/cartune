@@ -44,7 +44,7 @@ function App() {
   const getAppointments = async () => {
     const url = "http://localhost:8080/api/appointments"
     const response = await fetch(url);
-    
+
     if (response.ok) {
       const data = await response.json()
       const appointments = data.appointments
@@ -142,7 +142,6 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <div className="container">
         <Routes>
           <Route index element={<MainPage />} />
           <Route path="customers">
@@ -179,7 +178,6 @@ function App() {
               <Route path="new" element={<AutomobileForm getAutomobiles={getAutomobiles} />} />
           </Route>
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }

@@ -96,7 +96,7 @@ The services API uses RESTful methods to create new technicians, view a list of 
     - If the automobile being serviced is an automobile that was sold from our inventory, the customer is marked to receive VIP treatment from the concierge
     - View an appointment or multiple appointments by typing in the VIN in the search bar
 
-## API Endpoints
+## API Endpoints - Sample Inputs/Outputs
 
 <details>
   <summary markdown="span">Inventory API</summary>
@@ -157,23 +157,23 @@ Returns:
 Request body:
 ```
 {
-	"name": "California",
-	"picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
-	"manufacturer_id": 1
+    "name": "California",
+    "picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
+    "manufacturer_id": 1
 }
 ```
 Returns:
 ```
 {
-	"href": "/api/models/1/",
-	"id": 1,
-	"name": "California",
-	"picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
-	"manufacturer": {
-		"href": "/api/manufacturers/1/",
-		"id": 1,
-		"name": "Ferrari"
-	}
+    "href": "/api/models/1/",
+    "id": 1,
+    "name": "California",
+    "picture_url": "https://www.pngplay.com/wp-content/uploads/13/Ferrari-California-T-Background-PNG-Image.png",
+    "manufacturer": {
+        "href": "/api/manufacturers/1/",
+        "id": 1,
+        "name": "Ferrari"
+    }
 }
 ```
 </details>
@@ -182,18 +182,18 @@ Returns:
 
 ```
 {
-	"models": [
-		{
-			"href": "/api/models/1/",
-			"id": 1,
-			"name": "California",
-			"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
-			"manufacturer": {
-				"href": "/api/manufacturers/1/",
-				"id": 1,
-				"name": "Ferrari"
-			}
-		}
+    "models": [
+        {
+            "href": "/api/models/1/",
+            "id": 1,
+            "name": "California",
+            "picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+            "manufacturer": {
+                "href": "/api/manufacturers/1/",
+                "id": 1,
+                "name": "Ferrari"
+            }
+        }
     ]
 }
 ```
@@ -213,32 +213,32 @@ Returns:
 Request body:
 ```
 {
-  "color": "Red",
-  "year": 2022,
-  "vin": "1C3CC5FB2AN120174",
-  "model_id": 1
+    "color": "Red",
+    "year": 2022,
+    "vin": "1C3CC5FB2AN120174",
+    "model_id": 1
 }
 
 ```
 Returns:
 ```
 {
-	"href": "/api/automobiles/1C3CC5FB2AN120174/",
-	"id": 1,
-	"color": "Red",
-	"year": 2022,
-	"vin": "1C3CC5FB2AN120174",
-	"model": {
-		"href": "/api/models/1/",
-		"id": 1,
-		"name": "California",
-		"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
-		"manufacturer": {
-			"href": "/api/manufacturers/1/",
-			"id": 1,
-			"name": "Ferrari"
-		}
-	}
+    "href": "/api/automobiles/1C3CC5FB2AN120174/",
+    "id": 1,
+    "color": "Red",
+    "year": 2022,
+    "vin": "1C3CC5FB2AN120174",
+    "model": {
+        "href": "/api/models/1/",
+        "id": 1,
+        "name": "California",
+        "picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+        "manufacturer": {
+            "href": "/api/manufacturers/1/",
+            "id": 1,
+            "name": "Ferrari"
+        }
+    }
 }
 ```
 </details>
@@ -247,25 +247,25 @@ Returns:
 
 ```
 {
-	"automobiles": [
-		{
-			"href": "/api/automobiles/1C3CC5FB2AN120174/",
-			"id": 1,
-			"color": "Red",
-			"year": 2022,
-			"vin": "ZFF65LHA6C0821264",
-			"model": {
-				"href": "/api/models/1/",
-				"id": 1,
-				"name": "California",
-				"picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
-				"manufacturer": {
-					"href": "/api/manufacturers/1/",
-					"id": 1,
-					"name": "Ferrari"
-				}
-			}
-		}
+    "automobiles": [
+        {
+            "href": "/api/automobiles/1C3CC5FB2AN120174/",
+            "id": 1,
+            "color": "Red",
+            "year": 2022,
+            "vin": "ZFF65LHA6C0821264",
+            "model": {
+                "href": "/api/models/1/",
+                "id": 1,
+                "name": "California",
+                "picture_url": "https://www.motortrend.com/uploads/sites/10/2017/11/2015-ferrari-california-t-convertible-angular-front.png",
+                "manufacturer": {
+                    "href": "/api/manufacturers/1/",
+                    "id": 1,
+                    "name": "Ferrari"
+                }
+            }
+        }
     ]
 }
 ```
@@ -296,10 +296,10 @@ Request body:
 Returns:
 ```
 {
-	"href": "/api/technicians/1/",
-	"id": 1,
-	"name": "Bill Horst",
-	"employee_number": "1337"
+    "href": "/api/technicians/1/",
+    "id": 1,
+    "name": "Bill Horst",
+    "employee_number": "1337"
 }
 ```
 </details>
@@ -308,13 +308,13 @@ Returns:
 
 ```
 {
-	"technicians": [
-		{
-			"href": "/api/technicians/1/",
-			"id": 1,
-			"name": "Bill Horst",
-			"employee_number": 1337
-		}
+    "technicians": [
+        {
+            "href": "/api/technicians/1/",
+            "id": 1,
+            "name": "Bill Horst",
+            "employee_number": 1337
+        }
     ]
 }
 ```
@@ -334,30 +334,30 @@ Returns:
 Request body:
 ```
 {
-	"vin": "1C3CC5FB2AN120174",
-	"customer_name": "Paul Nnaoji",
-	"date_time": "2023-01-24 01:49:00+00:00",
-	"technician": "Bill Horst",
-	"reason": "Oil Change"
+    "vin": "1C3CC5FB2AN120174",
+    "customer_name": "Paul Nnaoji",
+    "date_time": "2023-01-24 01:49:00+00:00",
+    "technician": "Bill Horst",
+    "reason": "Oil Change"
 }
 ```
 Returns:
 ```
 {
-	"href": "/api/appointments/1/",
-	"id": 1,
-	"vin": "1C3CC5FB2AN120174",
-	"customer_name": "Paul Nnaoji",
-	"date_time": "2023-01-24 01:49:00+00:00",
-	"technician": {
-		"href": "/api/technicians/1/",
-		"id": 1,
-		"name": "Bill Horst",
-		"employee_number": 1337
-	},
-	"reason": "Oil Change",
-	"vip": true,
-	"completed": false
+    "href": "/api/appointments/1/",
+    "id": 1,
+    "vin": "1C3CC5FB2AN120174",
+    "customer_name": "Paul Nnaoji",
+    "date_time": "2023-01-24 01:49:00+00:00",
+    "technician": {
+        "href": "/api/technicians/1/",
+        "id": 1,
+        "name": "Bill Horst",
+        "employee_number": 1337
+    },
+    "reason": "Oil Change",
+    "vip": true,
+    "completed": false
 }
 ```
 </details>
@@ -366,23 +366,23 @@ Returns:
 
 ```
 {
-	"appointments": [
-		{
-			"href": "/api/appointments/1/",
-			"id": 1,
-			"vin": "1C3CC5FB2AN120174",
-			"customer_name": "Paul Nnaoji",
-			"date_time": "2023-01-24T01:49:00+00:00",
-			"technician": {
-				"href": "/api/technicians/1/",
-				"id": 1,
-				"name": "Bill Horst",
-				"employee_number": 1337
-			},
-			"reason": "Oil Change",
-			"vip": true,
-			"completed": false
-		}
+    "appointments": [
+        {
+            "href": "/api/appointments/1/",
+            "id": 1,
+            "vin": "1C3CC5FB2AN120174",
+            "customer_name": "Paul Nnaoji",
+            "date_time": "2023-01-24T01:49:00+00:00",
+            "technician": {
+                "href": "/api/technicians/1/",
+                "id": 1,
+                "name": "Bill Horst",
+                "employee_number": 1337
+            },
+            "reason": "Oil Change",
+            "vip": true,
+            "completed": false
+        }
     ]
 }
 ```
@@ -397,22 +397,22 @@ Returns:
 
 ```
 [
-	{
-		"href": "/api/appointments/1/",
-		"id": 1,
-		"vin": "1C3CC5FB2AN120174",
-		"customer_name": "Paul Nnaoji",
-		"date_time": "2023-01-24T01:49:00+00:00",
-		"technician": {
-			"href": "/api/technicians/1/",
-			"id": 1,
-			"name": "Bill Horst",
-			"employee_number": 1337
-		},
-		"reason": "Oil Change",
-		"vip": true,
-		"completed": false
-	}
+    {
+        "href": "/api/appointments/1/",
+        "id": 1,
+        "vin": "1C3CC5FB2AN120174",
+        "customer_name": "Paul Nnaoji",
+        "date_time": "2023-01-24T01:49:00+00:00",
+        "technician": {
+            "href": "/api/technicians/1/",
+            "id": 1,
+            "name": "Bill Horst",
+            "employee_number": 1337
+        },
+        "reason": "Oil Change",
+        "vip": true,
+        "completed": false
+    }
 ]
 ```
 </details>
@@ -453,17 +453,17 @@ Returns:
 
 ```
 {
-	"sales_persons": [
-		{
-			"name": "Josh Elder",
-			"employee_number": 1,
-			"id": 1
-		},
-		{
-			"name": "Bill Horst",
-			"employee_number": 2,
-			"id": 2
-		}
+    "sales_persons": [
+        {
+            "name": "Josh Elder",
+            "employee_number": 1,
+            "id": 1
+        },
+        {
+            "name": "Bill Horst",
+            "employee_number": 2,
+            "id": 2
+        }
     ]
 }
 ```
@@ -492,26 +492,26 @@ Request body:
 Returns:
 ```
 {
-	"id": 1,
-	"sales_price": 100000.99,
-	"sales_person": {
-		"name": "Filamer Doronio",
-		"employee_number": 1,
-		"id": 1
-	},
-	"customer": {
-		"href": "/api/customers/1/",
-		"name": "Ching Cheng",
-		"address": "123 Guava Lane, San Jose, CA",
-		"phone_number": "123-123-1234",
-		"id": 1
-	},
-	"automobile": {
-		"id": 2,
-		"vin": "1YVGF22D825285555",
-		"sold": true,
-		"import_href": "/api/automobiles/1/"
-	}
+    "id": 1,
+    "sales_price": 100000.99,
+    "sales_person": {
+        "name": "Filamer Doronio",
+        "employee_number": 1,
+        "id": 1
+    },
+    "customer": {
+        "href": "/api/customers/1/",
+        "name": "Ching Cheng",
+        "address": "123 Guava Lane, San Jose, CA",
+        "phone_number": "123-123-1234",
+        "id": 1
+    },
+    "automobile": {
+        "id": 2,
+        "vin": "1YVGF22D825285555",
+        "sold": true,
+        "import_href": "/api/automobiles/1/"
+    }
 }
 ```
 </details>
@@ -520,17 +520,17 @@ Returns:
 
 ```
 {
-	"sales_persons": [
-		{
-			"name": "Esther Kim",
-			"employee_number": 5,
-			"id": 5
-		},
-		{
-			"name": "Jason Dai",
-			"employee_number": 6,
-			"id": 6
-		}
+    "sales_persons": [
+        {
+            "name": "Esther Kim",
+            "employee_number": 5,
+            "id": 5
+        },
+        {
+            "name": "Jason Dai",
+            "employee_number": 6,
+            "id": 6
+        }
     ]
 }
 ```
@@ -571,21 +571,21 @@ Returns:
 
 ```
 {
-	"customers": [
-		{
-			"href": "/api/customers/1/",
-			"name": "Filamer Doronio",
-			"address": "123 Coding Lane, San Francisco, CA",
-			"phone_number": "123-456-7890",
-			"id": 1
-		},
+    "customers": [
         {
-			"href": "/api/customers/2/",
-			"name": "Don Julio",
-			"address": "2 Tequila Lane, Newport, CA 90201",
-			"phone_number": "111-111-1111",
-			"id": 2
-		}
+            "href": "/api/customers/1/",
+            "name": "Filamer Doronio",
+            "address": "123 Coding Lane, San Francisco, CA",
+            "phone_number": "123-456-7890",
+            "id": 1
+        },
+        {
+            "href": "/api/customers/2/",
+            "name": "Don Julio",
+            "address": "2 Tequila Lane, Newport, CA 90201",
+            "phone_number": "111-111-1111",
+            "id": 2
+        }
     ]
 }
 ```
@@ -600,19 +600,19 @@ Returns:
 
 ```
 {
-	"automobiles": [
-		{
-			"id": 13,
-			"vin": "1",
-			"sold": true,
-			"import_href": "/api/automobiles/1/"
-		},
-		{
-			"id": 14,
-			"vin": "2",
-			"sold": true,
-			"import_href": "/api/automobiles/2/"
-		}
+    "automobiles": [
+        {
+            "id": 13,
+            "vin": "1",
+            "sold": true,
+            "import_href": "/api/automobiles/1/"
+        },
+        {
+            "id": 14,
+            "vin": "2",
+            "sold": true,
+            "import_href": "/api/automobiles/2/"
+        }
     ]
 }
 ```
