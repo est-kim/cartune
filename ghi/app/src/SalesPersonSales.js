@@ -10,6 +10,7 @@ function SalesPersonSales({salesRecords, salesPersons}) {
 
     return (
         <>
+        <div className="container">
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>Sales Person History</h1>
             </div>
@@ -47,6 +48,7 @@ function SalesPersonSales({salesRecords, salesPersons}) {
                     })}
                 </tbody>
             </table>
+        </div>
         </>
     )
 }

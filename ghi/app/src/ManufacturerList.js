@@ -20,6 +20,7 @@ function ManufacturersList({manufacturers, getManufacturers}) {
 
   return (
     <>
+    <div className="container">
       <div className='p-5 text-center'>
           <h1 className='mb-3'>List of Manufacturers</h1>
       </div>
@@ -53,6 +54,7 @@ function ManufacturersList({manufacturers, getManufacturers}) {
           })}
         </tbody>
       </table>
+    </div>
     </>
   );
 }

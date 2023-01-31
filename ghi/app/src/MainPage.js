@@ -41,8 +41,8 @@ function MainPage() {
         }}> */}
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
-              <h1 className='mb-3'><img src="./cartune_transparent.png" alt="CarTune logo"/></h1>
-              <h4 className='mb-3'>Tune in to your next car.</h4>
+              <h1 className='mb-3'><img src="./cartune_transparent.png" alt="CarTune Logo"/></h1>
+              <h4 className='mb-3'><img src="./cartune_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
               <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
                 Call to action
               </a>

@@ -94,6 +94,7 @@ function SalesRecordForm({getSalesRecords}) {
     }, []);
 
     return (
+        <div className="container">
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
@@ -151,6 +152,7 @@ function SalesRecordForm({getSalesRecords}) {
                     )}
                 </div>
             </div>
+        </div>
         </div>
     )
 }

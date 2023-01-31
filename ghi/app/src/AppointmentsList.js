@@ -37,6 +37,7 @@ function AppointmentsList({appointments, getAppointments}) {
 
     return (
         <>
+        <div className="container">
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>List of Appointments</h1>
             </div>
@@ -50,6 +51,7 @@ function AppointmentsList({appointments, getAppointments}) {
                     Success! The appointment has been marked as complete.
                 </div>
             )}
+            <p></p>
             <div className="add-appointment-container d-flex">
                 <div className="see-service-history d-flex justify-content-start">
                     <Link to="/appointments/history">
@@ -112,6 +114,7 @@ function AppointmentsList({appointments, getAppointments}) {
                     })}
                 </tbody>
             </table>
+        </div>
         </>
     );
 }

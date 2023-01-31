@@ -52,6 +52,7 @@ function NewCustomerForm() {
     }
 
     return (
+        <div className="container">
         <div className="row">
             <div className="offset-3 col-6">
             <div className="shadow p-4 mt-4">
@@ -84,6 +85,7 @@ function NewCustomerForm() {
                 )}
             </div>
             </div>
+        </div>
         </div>
     )
 }

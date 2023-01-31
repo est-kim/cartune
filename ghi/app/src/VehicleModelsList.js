@@ -20,6 +20,7 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
 
     return (
         <>
+        <div className="container">
             <div className='p-5 text-center'>
                 <h1 className='mb-3'>List of Vehicles</h1>
             </div>
@@ -65,6 +66,7 @@ function VehicleModelsList({vehicleModels, getVehicleModels}) {
                     })}
                 </tbody>
             </table>
+        </div>
         </>
     );
 }

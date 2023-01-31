@@ -20,6 +20,7 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
 
   return (
     <>
+    <div className="container">
       <div className='p-5 text-center'>
           <h1 className='mb-3'>List of Sales Persons</h1>
       </div>
@@ -50,6 +51,7 @@ function SalesPersonsList({salesPersons, getSalesPersons}) {
         })}
         </tbody>
       </table>
+    </div>
     </>
   );
 }

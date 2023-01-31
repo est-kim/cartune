@@ -42,6 +42,7 @@ function ServiceHistory({appointments, setAppointments}) {
 
     return (
         <>
+        <div className="container">
             <form onSubmit={handleSearch} className="input-group mb-0 mt-5">
                 <input onChange={handleInputChange} type="search" className="form-control rounded" placeholder="Search by VIN" aria-label="Search" aria-describedby="search-addon" />
                 <button type="submit" className="btn btn-outline-secondary">Search</button>
@@ -112,6 +113,7 @@ function ServiceHistory({appointments, setAppointments}) {
                     })}
                 </tbody>
             </table>
+        </div>
         </>
     );
 }
