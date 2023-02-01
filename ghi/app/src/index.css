@@ -29,6 +29,14 @@ tbody tr:hover {
   background-color: rgb(255, 255, 255);
 }
 
+.btn {
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 ::after,
 ::before {
   margin: 0;
@@ -67,6 +75,17 @@ Carousel
 */
 .container-2 {
   padding: 25px;
+}
+
+.card {
+  transition: transform 0.3s ease-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 /*
