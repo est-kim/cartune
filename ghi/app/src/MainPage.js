@@ -15,17 +15,6 @@ import { Link } from 'react-router-dom';
 
 
 function MainPage() {
-  // return (
-  //   <div className="px-4 py-5 my-5 text-center">
-  //     <h1 className="display-5 fw-bold">CarCar</h1>
-  //     <div className="col-lg-6 mx-auto">
-  //       <p className="lead mb-4">
-  //         The premiere solution for automobile dealership
-  //         management!
-  //       </p>
-  //     </div>
-  //   </div>
-  // );
   return (
     <header style={{ paddingLeft: 0 }}>
       <div
@@ -35,14 +24,14 @@ function MainPage() {
           height: 750,
           backgroundPosition: "30% 70%",
           backgroundSize: "cover"
-          // backgroundRepeat: "no-repeat"
         }}
       >
         {/* <div
-        className='mask'
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.6)'
-        }}> */}
+          className='mask'
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.9)'
+          }}>
+        </div> */}
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
@@ -56,7 +45,14 @@ function MainPage() {
         <div className="container">
           <br></br>
           <p class="fs-2 fw-bold text-center">Welcome to CarTune</p>
-          <p class="text-center">Tune in to your next favorite car where we service and sell premium automobiles.</p>
+          <p class="text-center">
+            At CarTune, we're revolutionizing the car dealership and service experience with our one-stop shop.
+            Whether you're in the market for a new set of wheels or need to keep your current ride running smoothly,
+            we've got you covered. With a wide selection of quality vehicles and expert technicians on hand, you can
+            be confident that your car will be in tip-top shape. Our team is dedicated to making car ownership a breeze,
+            so you can hit the road with confidence. Come visit CarTune today and take the fast lane to car
+            happiness with the best in sales and service, all in one convenient location!
+          </p>
           <br></br>
         </div>
         <div className="container-2">
@@ -193,7 +189,7 @@ function MainPage() {
             price. The financing process was smooth and stress-free, and I appreciated the transparency
             throughout the entire process. I highly recommend this dealership to anyone in the market
             for a new vehicle. The professional staff and quality care for me and my car has made me
-            a lifelong customer. Thank you for making my car buying experience a positive one!
+            a lifelong customer. Thank you for making my car buying experience a positive one!"
           </p>
           {/* <!-- prev next buttons--> */}
           <div className="button-container">
