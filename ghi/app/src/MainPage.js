@@ -171,9 +171,10 @@ function MainPage() {
           <h4 id="author">Robin Frost</h4>
           <p id="job">Reporter</p>
           <p id="info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
-            Iste, doloremque nihil?
+            "The CarTune team went above and beyond in getting me a great
+            deal on my dream car. The professional staff and quality care for
+            me and my car has made me a lifelong customer. I highly
+            reccomend this establishment for all your car's needs!"
           </p>
           {/* <!-- prev next buttons--> */}
           <div className="button-container">
