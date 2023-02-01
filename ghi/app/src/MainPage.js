@@ -32,7 +32,7 @@ function MainPage() {
       <div
         className='p-5 text-center bg-image'
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),url('https://wallpaperaccess.com/full/1670957.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.75)),url('https://wallpaperaccess.com/full/1670957.jpg')`,
           height: 750,
           backgroundPosition: "30% 70%",
           backgroundSize: "cover"
@@ -41,8 +41,8 @@ function MainPage() {
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
-              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
-              <a className='btn btn-outline-light' href='/appointments/new' role='button'>
+              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px" className="wave"/></h4>
+              <a className='book-appointment-button btn btn-outline-light' href='/appointments/new' role='button'>
                 Book Appointment
               </a>
             </div>

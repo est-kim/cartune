@@ -25,16 +25,17 @@ code {
 Global Styles
 ===============
 */
-tbody tr:hover {
-  background-color: rgb(255, 255, 255);
-}
-
 .btn {
-  transition: transform 0.2s;
+  transition: transform 0.5s;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+tbody tr:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 ::after,
@@ -67,6 +68,38 @@ h4 {
   margin-bottom: 1.25rem;
   color: gray;
 } */
+
+/*
+===============
+Hero Image Area
+===============
+*/
+.wave {
+  animation: wave 8s ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(5000px);
+  }
+  40% {
+    transform: translateX(200px);
+  }
+  65% {
+    transform: translateX(50px);
+  }
+}
+
+.book-appointment-button {
+  transition: transform 0.5s;
+}
+
+.book-appointment-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(253, 140, 58);
+  color:rgb(226, 102, 0);
+}
+
 
 /*
 ===============
