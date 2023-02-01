@@ -188,9 +188,11 @@ main {
   transition: background 0.3s linear, color 0.3s linear;
   border: 1px solid #f0804494;
   cursor: pointer;
-  font-size: 15px
+  font-size: 15px;
+  font-weight: 600;
 }
-.random-btn:hover {
-  background: white;
-  color: black;
+.orange-link-btn:hover {
+  background: #ff7328;
+  color: white;
+  font-weight: 600;
 }

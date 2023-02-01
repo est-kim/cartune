@@ -92,7 +92,7 @@ function MainPage() {
                 />
               </MDBCarousel>
                 <MDBCardBody>
-                  <MDBCardTitle className="fw-bold" >Sales</MDBCardTitle>
+                  <MDBCardTitle>Sales</MDBCardTitle>
                   <MDBCardText>
                     Meet our experienced and friendly car sales team, dedicated to making your car-buying experience a success.
                     With a passion for automobiles and a commitment to customer satisfaction, our team will work with you every
