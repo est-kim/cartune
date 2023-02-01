@@ -143,7 +143,7 @@ function App() {
     <BrowserRouter>
       <Nav />
         <Routes>
-          <Route index element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="customers">
             <Route path="new" element={<NewCustomerForm/>} />
           </Route>

@@ -87,7 +87,8 @@ function MainPage() {
                   <MDBCardText>
                     With supporting text below as a natural lead-in to additional content.
                   </MDBCardText>
-                  <MDBBtn href='#'>Go somewhere</MDBBtn>
+                  {/* <MDBBtn href='#'>Go somewhere</MDBBtn> */}
+                  <button className="btn btn-primary">Create</button>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
