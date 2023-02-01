@@ -1,4 +1,3 @@
-import "./mainpage.css";
 import {
   MDBCard,
   MDBCardBody,
@@ -8,6 +7,7 @@ import {
   MDBCol,
   MDBBtn,
   MDBCardImage,
+  MDBIcon,
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
@@ -15,6 +15,18 @@ import { Link } from 'react-router-dom';
 
 
 function MainPage() {
+  // return (
+  //   <div className="px-4 py-5 my-5 text-center">
+  //     <h1 className="display-5 fw-bold">CarCar</h1>
+  //     <div className="col-lg-6 mx-auto">
+  //       <p className="lead mb-4">
+  //         The premiere solution for automobile dealership
+  //         management!
+  //       </p>
+  //     </div>
+  //   </div>
+  // );
+
   return (
     <header style={{ paddingLeft: 0 }}>
       <div
@@ -36,7 +48,7 @@ function MainPage() {
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
               <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
-              <a className='btn btn-outline-light btn-lg' href='/appointments/new' role='button'>
+              <a className='btn btn-outline-light' href='/appointments/new' role='button'>
                 Book Appointment
               </a>
             </div>
@@ -80,7 +92,7 @@ function MainPage() {
                 />
               </MDBCarousel>
                 <MDBCardBody>
-                  <MDBCardTitle>Sales</MDBCardTitle>
+                  <MDBCardTitle className="fw-bold" >Sales</MDBCardTitle>
                   <MDBCardText>
                     Meet our experienced and friendly car sales team, dedicated to making your car-buying experience a success.
                     With a passion for automobiles and a commitment to customer satisfaction, our team will work with you every
@@ -172,7 +184,7 @@ function MainPage() {
         <section className="container">
         {/* <!-- title --> */}
         <div className="title">
-          <h2>our reviews</h2>
+          <p className="fs-2 fw-bold text-center">Our Reviews</p>
           <div className="underline"></div>
         </div>
         {/* <!-- review --> */}
@@ -181,7 +193,15 @@ function MainPage() {
             <img src="https://www.yourtango.com/sites/default/files/styles/header_slider/public/image_blog/7-year-cycle.jpg?itok=AxoJqMrp" id="person-img" alt="" />
           </div>
           <h4 id="author">Robin Frost</h4>
-          <p id="job">Reporter</p>
+          {/* <p id="job">Reporter</p> */}
+          <p>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+
           <p id="info">
             "I recently had the pleasure of purchasing a new car from this dealership and I
             couldn't be happier with my experience! The CarTune sales team was knowledgeable,

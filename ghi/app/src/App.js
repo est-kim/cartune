@@ -19,6 +19,7 @@ import VehicleModelsList from './VehicleModelsList';
 import VehicleModelForm from './VehicleModelForm';
 import AutomobilesList from './AutomobilesList';
 import AutomobileForm from './AutomobileForm';
+import Footer from './Footer';
 
 function App() {
   const [salesPersons, setSalesPersons] = useState([])
@@ -178,6 +179,7 @@ function App() {
               <Route path="new" element={<AutomobileForm getAutomobiles={getAutomobiles} />} />
           </Route>
         </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
