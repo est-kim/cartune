@@ -187,12 +187,13 @@ function MainPage() {
           <h4 id="author">Robin Frost</h4>
           <p id="job">Reporter</p>
           <p id="info">
-            I recently had the pleasure of purchasing a new car from this dealership and I
-            couldn't be happier with my experience! The sales team was knowledgeable, friendly,
-            and went above and beyond to ensure I got the car of my dreams at a great price. The
-            financing process was smooth and stress-free, and I appreciated the transparency
+            "I recently had the pleasure of purchasing a new car from this dealership and I
+            couldn't be happier with my experience! The CarTune sales team was knowledgeable,
+            friendly,and went above and beyond to ensure I got the car of my dreams at a great
+            price. The financing process was smooth and stress-free, and I appreciated the transparency
             throughout the entire process. I highly recommend this dealership to anyone in the market
-            for a new vehicle. Thank you for making my car buying experience a positive one!
+            for a new vehicle. The professional staff and quality care for me and my car has made me
+            a lifelong customer. Thank you for making my car buying experience a positive one!
           </p>
           {/* <!-- prev next buttons--> */}
           <div className="button-container">
