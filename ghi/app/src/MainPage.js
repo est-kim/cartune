@@ -32,7 +32,7 @@ function MainPage() {
       <div
         className='p-5 text-center bg-image'
         style={{
-          backgroundImage: "url('https://wallpaperaccess.com/full/1670957.jpg')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),url('https://wallpaperaccess.com/full/1670957.jpg')`,
           height: 750,
           backgroundPosition: "30% 70%",
           backgroundSize: "cover"
