@@ -25,21 +25,17 @@ code {
 Global Styles
 ===============
 */
-tbody tr:hover {
-  background-color: rgb(255, 255, 255);
-}
-
 .btn {
   transition: transform 0.5s;
 }
 
 .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgb(253, 140, 58);
-  color:rgb(226, 102, 0);
-  /* font-weight:bold; */
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
 
-
+tbody tr:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 ::after,
@@ -75,7 +71,7 @@ h4 {
 
 /*
 ===============
-Cartune Slogan
+Hero Image Area
 ===============
 */
 .wave {
@@ -92,6 +88,16 @@ Cartune Slogan
   65% {
     transform: translateX(50px);
   }
+}
+
+.book-appointment-button {
+  transition: transform 0.5s;
+}
+
+.book-appointment-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(253, 140, 58);
+  color:rgb(226, 102, 0);
 }
 
 
