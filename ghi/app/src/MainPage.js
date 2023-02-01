@@ -11,6 +11,7 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 
 function MainPage() {
@@ -46,8 +47,8 @@ function MainPage() {
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
               <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
-              <a className='btn btn-outline-light btn-lg' href='#!' role='button'>
-                Call to action
+              <a className='btn btn-outline-light btn-lg' href='/appointments/new' role='button'>
+                Book Appointment
               </a>
             </div>
           </div>
@@ -85,9 +86,51 @@ function MainPage() {
                 <MDBCardBody>
                   <MDBCardTitle>Sales</MDBCardTitle>
                   <MDBCardText>
-                    With supporting text below as a natural lead-in to additional content.
+                    Meet our experienced and friendly car sales team, dedicated to making your car-buying experience a success.
+                    With a passion for automobiles and a commitment to customer satisfaction, our team will work with you every
+                    step of the way to find the perfect car for your needs and budget. Whether you're in the market for a new or
+                    pre-owned vehicle, our sales team has the expertise to help you tune in to the right choice.
                   </MDBCardText>
-                  <MDBBtn href='#'>Go somewhere</MDBBtn>
+                  <Link to="/salespersons">
+                    <button className="btn btn-primary">Meet Our Sales Team</button>
+                  </Link>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+            <MDBCol>
+              <MDBCard>
+                  <MDBCarousel showControls fade>
+                    <MDBCarouselItem
+                      className='w-100 d-block'
+                      itemId={1}
+                      src='https://images.unsplash.com/photo-1592853625601-bb9d23da12fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+                      alt='...'
+                    />
+                    <MDBCarouselItem
+                      className='w-100 d-block'
+                      itemId={2}
+                      src='https://images.unsplash.com/photo-1625773049545-fb23fc4f4538?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+                      alt='...'
+                    />
+                    <MDBCarouselItem
+                      className='w-100 d-block'
+                      itemId={3}
+                      src='https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+                      alt='...'
+                    />
+                  </MDBCarousel>
+                <MDBCardBody>
+                  <MDBCardTitle>Inventory</MDBCardTitle>
+                  <MDBCardText>
+                    Discover our unbeatable selection of high-quality cars, trucks, SUVs, and more, all tuned up and
+                    ready to hit the road. Our inventory is constantly being updated with the latest makes and models
+                    to meet your needs and exceed your expectations. Don't see exactly what you're looking for? Let us
+                    know and our team will work to source it for you, ensuring you get behind the wheel of the perfect
+                    vehicle in no time.
+                  </MDBCardText>
+                  <Link to="/models">
+                    <button className="btn btn-primary">See Our Vehicles</button>
+                  </Link>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
@@ -116,40 +159,14 @@ function MainPage() {
                 <MDBCardBody>
                   <MDBCardTitle>Services</MDBCardTitle>
                   <MDBCardText>
-                    With supporting text below as a natural lead-in to additional content.
+                    Keep your vehicle in top condition with our comprehensive car service. Our experienced technicians
+                    use the latest technology and equipment to tune up your ride and keep it running smoothly. From routine
+                    maintenance to complex repairs, we've got you covered. With our transparent pricing and exceptional customer
+                    service, you'll never have to worry about being taken for a ride.
                   </MDBCardText>
-                  <MDBBtn href='#'>Go somewhere</MDBBtn>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
-            <MDBCol>
-              <MDBCard>
-                  <MDBCarousel showControls fade>
-                    <MDBCarouselItem
-                      className='w-100 d-block'
-                      itemId={1}
-                      src='https://mdbootstrap.com/img/new/slides/041.jpg'
-                      alt='...'
-                    />
-                    <MDBCarouselItem
-                      className='w-100 d-block'
-                      itemId={2}
-                      src='https://mdbootstrap.com/img/new/slides/042.jpg'
-                      alt='...'
-                    />
-                    <MDBCarouselItem
-                      className='w-100 d-block'
-                      itemId={3}
-                      src='https://mdbootstrap.com/img/new/slides/043.jpg'
-                      alt='...'
-                    />
-                  </MDBCarousel>
-                <MDBCardBody>
-                  <MDBCardTitle>Services</MDBCardTitle>
-                  <MDBCardText>
-                    With supporting text below as a natural lead-in to additional content.
-                  </MDBCardText>
-                  <MDBBtn href='#'>Go somewhere</MDBBtn>
+                  <Link to="/technicians">
+                    <button className="btn btn-primary">Meet Our Technicians</button>
+                  </Link>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
@@ -170,9 +187,12 @@ function MainPage() {
           <h4 id="author">Robin Frost</h4>
           <p id="job">Reporter</p>
           <p id="info">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
-            Iste, doloremque nihil?
+            I recently had the pleasure of purchasing a new car from this dealership and I
+            couldn't be happier with my experience! The sales team was knowledgeable, friendly,
+            and went above and beyond to ensure I got the car of my dreams at a great price. The
+            financing process was smooth and stress-free, and I appreciated the transparency
+            throughout the entire process. I highly recommend this dealership to anyone in the market
+            for a new vehicle. Thank you for making my car buying experience a positive one!
           </p>
           {/* <!-- prev next buttons--> */}
           <div className="button-container">
