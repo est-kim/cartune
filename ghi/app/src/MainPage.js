@@ -7,6 +7,7 @@ import {
   MDBCol,
   MDBBtn,
   MDBCardImage,
+  MDBIcon,
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
@@ -25,6 +26,7 @@ function MainPage() {
   //     </div>
   //   </div>
   // );
+
   return (
     <header style={{ paddingLeft: 0 }}>
       <div
@@ -46,7 +48,7 @@ function MainPage() {
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
               <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
-              <a className='btn btn-outline-light btn-lg' href='/appointments/new' role='button'>
+              <a className='btn btn-outline-light' href='/appointments/new' role='button'>
                 Book Appointment
               </a>
             </div>
@@ -184,7 +186,15 @@ function MainPage() {
             <img src="https://www.yourtango.com/sites/default/files/styles/header_slider/public/image_blog/7-year-cycle.jpg?itok=AxoJqMrp" id="person-img" alt="" />
           </div>
           <h4 id="author">Robin Frost</h4>
-          <p id="job">Reporter</p>
+          {/* <p id="job">Reporter</p> */}
+          <p>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </p>
+
           <p id="info">
             "I recently had the pleasure of purchasing a new car from this dealership and I
             couldn't be happier with my experience! The CarTune sales team was knowledgeable,
