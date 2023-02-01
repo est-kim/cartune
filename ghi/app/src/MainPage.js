@@ -214,8 +214,10 @@ function MainPage() {
               <i className="fas fa-chevron-right"></i>
             </button>
           </div>
-          {/* <!-- random button --> */}
-          <button className="orange-link-btn">Sign Up</button>
+          {/* <!-- sign up button --> */}
+          <Link to="/customers/new">
+            <button className="orange-link-btn">Sign Up</button>
+          </Link>
         </article>
       </section>
       <br></br>
