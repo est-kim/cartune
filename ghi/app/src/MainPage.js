@@ -41,7 +41,7 @@ function MainPage() {
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
-              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px"/></h4>
+              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px" className="wave"/></h4>
               <a className='btn btn-outline-light' href='/appointments/new' role='button'>
                 Book Appointment
               </a>
