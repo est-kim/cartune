@@ -85,7 +85,8 @@ main {
 .underline {
   height: 0.25rem;
   width: 5rem;
-  background: #2364d2;
+  /* background: #2364d2; */
+  background: #ec7627;
   margin-left: auto;
   margin-right: auto;
 }
@@ -133,14 +134,16 @@ main {
   place-items: center;
   border-radius: 50%;
   transform: translateY(25%);
-  background: #2364d2;
+  /* background: #2364d2; */
+  background: #f07f44;
   color: white;
 }
 .img-container::before {
   content: "";
   width: 100%;
   height: 100%;
-  background: #2364d2;
+  /* background: #2364d2; */
+  background: #f07f44;
   position: absolute;
   top: -0.25rem;
   right: -0.5rem;
@@ -160,7 +163,8 @@ main {
 }
 .prev-btn,
 .next-btn {
-  color: #2364d2;
+  /* color: #2364d2; */
+  color: #f07f44;
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
@@ -172,16 +176,17 @@ main {
 .next-btn:hover {
   color: black;
 }
-.random-btn {
+.orange-link-btn {
   margin-top: 0.5rem;
-  background: #2364d2;
+  background: #f07f44;
   color: white;
   padding: 0.25rem 0.5rem;
   text-transform: capitalize;
   border-radius: 5px;
   transition: background 0.3s linear, color 0.3s linear;
-  border: 2px solid black;
+  border: 1px solid #f0804494;
   cursor: pointer;
+  font-size: 15px
 }
 .random-btn:hover {
   background: white;

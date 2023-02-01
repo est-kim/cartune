@@ -100,7 +100,7 @@ function MainPage() {
                     pre-owned vehicle, our sales team has the expertise to help you tune in to the right choice.
                   </MDBCardText>
                   <Link to="/salespersons">
-                    <button className="btn btn-primary">Meet Our Sales Team</button>
+                    <button className="orange-link-btn">Meet Our Sales Team</button>
                   </Link>
                 </MDBCardBody>
               </MDBCard>
@@ -137,7 +137,7 @@ function MainPage() {
                     vehicle in no time.
                   </MDBCardText>
                   <Link to="/models">
-                    <button className="btn btn-primary">See Our Vehicles</button>
+                    <button className="orange-link-btn">See Our Vehicles</button>
                   </Link>
                 </MDBCardBody>
               </MDBCard>
@@ -173,7 +173,7 @@ function MainPage() {
                     service, you'll never have to worry about being taken for a ride.
                   </MDBCardText>
                   <Link to="/technicians">
-                    <button className="btn btn-primary">Meet Our Technicians</button>
+                    <button className="orange-link-btn">Meet Our Technicians</button>
                   </Link>
                 </MDBCardBody>
               </MDBCard>
@@ -221,7 +221,7 @@ function MainPage() {
             </button>
           </div>
           {/* <!-- random button --> */}
-          <button className="random-btn">Sign Up</button>
+          <button className="orange-link-btn">Sign Up</button>
         </article>
       </section>
       <br></br>
