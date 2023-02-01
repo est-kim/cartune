@@ -55,8 +55,8 @@ function MainPage() {
         </div>
         <div className="container">
           <br></br>
-          <p class="fs-2 fw-bold text-center">Welcome to CarTune</p>
-          <p class="text-center">Tune in to your next favorite car where we service and sell premium automobiles.</p>
+          <p className="fs-2 fw-bold text-center">Welcome to CarTune</p>
+          <p className="fs-6 text-center">Tune in to your next favorite car where we service and sell premium automobiles.</p>
           <br></br>
         </div>
         <div className="container-2">
@@ -176,7 +176,7 @@ function MainPage() {
         <section className="container">
         {/* <!-- title --> */}
         <div className="title">
-          <h2>our reviews</h2>
+          <p className="fs-2 fw-bold text-center">Our Reviews</p>
           <div className="underline"></div>
         </div>
         {/* <!-- review --> */}
