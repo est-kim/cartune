@@ -38,12 +38,6 @@ function MainPage() {
           backgroundSize: "cover"
         }}
       >
-        {/* <div
-          className='mask'
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.9)'
-          }}>
-        </div> */}
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
               <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
@@ -70,7 +64,7 @@ function MainPage() {
         <div className="container-2">
           <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
             <MDBCol>
-              <MDBCard>
+              <MDBCard className="card">
               <MDBCarousel showControls fade>
                 <MDBCarouselItem
                   className='w-100 d-block'
@@ -106,7 +100,7 @@ function MainPage() {
               </MDBCard>
             </MDBCol>
             <MDBCol>
-              <MDBCard>
+              <MDBCard className="card">
                   <MDBCarousel showControls fade>
                     <MDBCarouselItem
                       className='w-100 d-block'
@@ -143,7 +137,7 @@ function MainPage() {
               </MDBCard>
             </MDBCol>
             <MDBCol>
-              <MDBCard>
+              <MDBCard className="card">
                   <MDBCarousel showControls fade>
                     <MDBCarouselItem
                       className='w-100 d-block'
@@ -170,7 +164,7 @@ function MainPage() {
                     Keep your vehicle in top condition with our comprehensive car service. Our experienced technicians
                     use the latest technology and equipment to tune up your ride and keep it running smoothly. From routine
                     maintenance to complex repairs, we've got you covered. With our transparent pricing and exceptional customer
-                    service, you'll never have to worry about being taken for a ride.
+                    service, you'll never have to worry about being taken for a ride. Satisfaction guaranteed.
                   </MDBCardText>
                   <Link to="/technicians">
                     <button className="btn btn-primary">Meet Our Technicians</button>
