@@ -25,7 +25,9 @@ code {
 Global Styles
 ===============
 */
-
+tbody tr:hover {
+  background-color: rgb(255, 255, 255);
+}
 
 ::after,
 ::before {
