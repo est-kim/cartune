@@ -228,6 +228,26 @@ function MainPage() {
           </MDBRow>
         </div>
         <br></br>
+
+        <section className="container">
+        <div className="title">
+          <p className="fs-2 fw-bold text-center">Our Team</p>
+          <div className="underline"></div>
+        </div>
+          <MDBRow>
+            <MDBCol>
+              <div className='img-container'>
+                <img src="./EstherKim.png" id="person-img" alt="" />
+              </div>
+            </MDBCol>
+            <MDBCol>
+              <div className='img-container'>
+                <img src="./JasonDai.png" id="person-img" alt="" />
+              </div>
+            </MDBCol>
+          </MDBRow>
+        </section>
+
         <section className="container">
         {/* <!-- title --> */}
         <div className="title">
