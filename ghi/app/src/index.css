@@ -22,6 +22,40 @@ code {
 
 /*
 ===============
+Light/Dark Mode
+===============
+*/
+.App{
+  --background-color: #f0eeeb;
+  --text-color: #000;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.App.dark {
+  --background-color: rgb(60, 60, 60);
+  --text-color: rgb(45, 45, 45);
+  color: var(--text-color)
+}
+
+.mode-toggle {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.mode-toggle i {
+  color: var(--text-color);
+  font-size: 28px;
+}
+/*
+===============
 Global Styles
 ===============
 */
@@ -81,13 +115,16 @@ Hero Image Area
 
 @keyframes wave {
   0% {
-    transform: translateX(5000px);
+    transform: translateX(3000px);
   }
-  40% {
+  20% {
     transform: translateX(200px);
   }
-  65% {
-    transform: translateX(50px);
+  35% {
+    transform: translateX(10px);
+  }
+  36% {
+    transform: translateX(0px);
   }
 }
 

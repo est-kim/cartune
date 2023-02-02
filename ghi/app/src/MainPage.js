@@ -32,7 +32,21 @@ const reviews = [
     img:
       "./KCassiday.png",
     text:
-      `I had an amazing experience with this car service! From the moment I made the reservation, the staff were professional and accommodating. The vehicle was spotless and well-maintained, and the driver was friendly and knowledgeable. The ride was smooth and comfortable, and I arrived at my destination on time and stress-free. I would highly recommend this car service to anyone looking for a reliable and top-notch transportation experience.`,
+      `I recently had the pleasure of working with CarTune for my car repair needs, and I must say,
+      I was thoroughly impressed! From the moment I walked into their shop, the staff were incredibly
+      professional and accommodating. They took the time to explain the issues with my car and provided
+      me with a comprehensive estimate for the repairs.
+
+      The team at CarTune did an outstanding job fixing my car, and I was pleasantly surprised at how
+      quickly the work was completed. The vehicle was returned to me in excellent condition, running
+      smoothly and efficiently. The team took all the necessary precautions to ensure that my car was
+      returned to me in the best possible condition.
+
+      Overall, my experience with CarTune was amazing, and I would highly recommend this car service
+      company to anyone looking for a reliable and top-notch automotive repair experience. Whether you
+      need routine maintenance, a major repair, or anything in between, CarTune is the perfect solution
+      for all your automotive needs. Trust them with your vehicle today, and experience the difference
+      for yourself!`,
   },
   {
     id: 3,
@@ -40,11 +54,20 @@ const reviews = [
     img:
       "./ChingCheng.png",
     text:
-      `I recently had the privilege of taking my car to CarTune for some repairs, and I was blown away by the quality of service I received. The technicians were knowledgeable, friendly and took the time to explain the issues with my car and what needed to be done to fix them. They went above and beyond to ensure my car was running smoothly and safely, and I appreciated their honesty and transparency throughout the entire process.
+      `I recently had the privilege of taking my car to CarTune for some repairs, and I was blown away by
+      the quality of service I received. The technicians were knowledgeable, friendly and took the time to
+      explain the issues with my car and what needed to be done to fix them. They went above and beyond to
+      ensure my car was running smoothly and safely, and I appreciated their honesty and transparency
+      throughout the entire process.
 
-      The pricing was fair, and I felt confident that I was getting a great value for my money. The team at CarTune took care of my car as if it was their own, and I was impressed by the attention to detail and quality of workmanship. I also appreciated the quick turnaround time, as I was able to have my car back on the road in no time.
+      The pricing was fair, and I felt confident that I was getting a great value for my money. The team at
+      CarTune took care of my car as if it was their own, and I was impressed by the attention to detail and
+      quality of workmanship. I also appreciated the quick turnaround time, as I was able to have my car back
+      on the road in no time.
 
-      I highly recommend CarTune to anyone in need of car repairs. The professional staff and exceptional care for both me and my car has earned them a lifelong customer. Thank you, CarTune, for making my car repair experience a positive one!`,
+      I highly recommend CarTune to anyone in need of car repairs. The professional staff and exceptional
+      care for both me and my car has earned them a lifelong customer. Thank you, CarTune, for making my
+      car repair experience a positive one!`,
   },
   {
     id: 4,
@@ -52,9 +75,18 @@ const reviews = [
     img:
       "./AnthonyPham.jpeg",
     text:
-      `Recently, I had the pleasure of visiting CarTune for the purpose of purchasing a new vehicle. From start to finish, the experience was nothing short of exceptional.
-      Upon arrival, I was greeted by a friendly sales representative who was eager to assist me in finding the perfect car for my needs. The sales representative took the time to listen to my requirements, understand my budget, and show me a variety of options that met my criteria. He was knowledgeable, professional, and patient, and I never felt pressured to make a decision.
-      I am extremely satisfied with my experience at CarTune, and I would highly recommend them to anyone in the market for a new vehicle. The combination of their vast selection, knowledgeable staff, and exceptional customer service made for a truly positive buying experience. Thank you CarTune for helping me find the car of my dreams!`,
+      `Recently, I had the pleasure of visiting CarTune for the purpose of purchasing a new vehicle. From start
+      to finish, the experience was nothing short of exceptional.
+
+      Upon arrival, I was greeted by a friendly sales representative who was eager to assist me in finding the
+      perfect car for my needs. The sales representative took the time to listen to my requirements, understand
+      my budget, and show me a variety of options that met my criteria. He was knowledgeable, professional, and
+      patient, and I never felt pressured to make a decision.
+
+      I am extremely satisfied with my experience at CarTune, and I would highly recommend them to anyone in
+      the market for a new vehicle. The combination of their vast selection, knowledgeable staff, and exceptional
+      customer service made for a truly positive buying experience. Thank you CarTune for helping me find the
+      car of my dreams!`,
   },
 ];
 

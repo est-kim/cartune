@@ -30,6 +30,7 @@ function App() {
   const [manufacturers, setManufacturers] = useState([]);
   const [vehicleModels, setVehicleModels] = useState([]);
   const [automobiles, setAutomobiles] = useState([]);
+  const [mode, setMode] = useState('light');
 
   const getSalesPersons = async () => {
     const url = 'http://localhost:8090/api/salespersons/'
@@ -119,6 +120,11 @@ function App() {
     }
   }
 
+  const toggleMode = () => {
+    setMode(mode === 'light' ? 'dark' : 'light');
+  };
+
+
   useEffect( () => {
     getAppointments();
     getTechnicians();
@@ -140,10 +146,12 @@ function App() {
   ]
   )
 
+
   return (
     <BrowserRouter>
       <Nav />
         <div className="main-app">
+        <div className={`App ${mode}`}>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="customers">
@@ -180,6 +188,10 @@ function App() {
               <Route path="new" element={<AutomobileForm getAutomobiles={getAutomobiles} />} />
           </Route>
         </Routes>
+        </div>
+          <button className="mode-toggle" onClick={toggleMode}>
+            <i className={`${mode === 'light' ? 'fas fa-moon' : 'fas fa-sun'}`} />
+          </button>
         </div>
       <Footer/>
     </BrowserRouter>
