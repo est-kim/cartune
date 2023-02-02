@@ -5,27 +5,80 @@ import {
   MDBCardText,
   MDBRow,
   MDBCol,
-  MDBBtn,
-  MDBCardImage,
-  MDBIcon,
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
 
+const reviews = [
+  {
+    id: 1,
+    name: "Robin Frost",
+    img:
+      "https://www.yourtango.com/sites/default/files/styles/header_slider/public/image_blog/7-year-cycle.jpg?itok=AxoJqMrp",
+    text:
+    `I recently had the pleasure of purchasing a new car from this dealership and I
+    couldn't be happier with my experience! The CarTune sales team was knowledgeable,
+    friendly,and went above and beyond to ensure I got the car of my dreams at a great
+    price. The financing process was smooth and stress-free, and I appreciated the transparency
+    throughout the entire process. I highly recommend this dealership to anyone in the market
+    for a new vehicle. The professional staff and quality care for me and my car has made me
+    a lifelong customer. Thank you for making my car buying experience a positive one!`,
+  },
+  {
+    id: 2,
+    name: "Kennedy Cassiday",
+    img:
+      "./KCassiday.png",
+    text:
+      `I had an amazing experience with this car service! From the moment I made the reservation, the staff were professional and accommodating. The vehicle was spotless and well-maintained, and the driver was friendly and knowledgeable. The ride was smooth and comfortable, and I arrived at my destination on time and stress-free. I would highly recommend this car service to anyone looking for a reliable and top-notch transportation experience.`,
+  },
+  {
+    id: 3,
+    name: "Ching Cheng",
+    img:
+      "./ChingCheng.png",
+    text:
+      `I recently had the privilege of taking my car to CarTune for some repairs, and I was blown away by the quality of service I received. The technicians were knowledgeable, friendly and took the time to explain the issues with my car and what needed to be done to fix them. They went above and beyond to ensure my car was running smoothly and safely, and I appreciated their honesty and transparency throughout the entire process.
+
+      The pricing was fair, and I felt confident that I was getting a great value for my money. The team at CarTune took care of my car as if it was their own, and I was impressed by the attention to detail and quality of workmanship. I also appreciated the quick turnaround time, as I was able to have my car back on the road in no time.
+
+      I highly recommend CarTune to anyone in need of car repairs. The professional staff and exceptional care for both me and my car has earned them a lifelong customer. Thank you, CarTune, for making my car repair experience a positive one!`,
+  },
+  {
+    id: 4,
+    name: "Anthony Pham",
+    img:
+      "./AnthonyPham.jpeg",
+    text:
+      `Recently, I had the pleasure of visiting CarTune for the purpose of purchasing a new vehicle. From start to finish, the experience was nothing short of exceptional.
+      Upon arrival, I was greeted by a friendly sales representative who was eager to assist me in finding the perfect car for my needs. The sales representative took the time to listen to my requirements, understand my budget, and show me a variety of options that met my criteria. He was knowledgeable, professional, and patient, and I never felt pressured to make a decision.
+      I am extremely satisfied with my experience at CarTune, and I would highly recommend them to anyone in the market for a new vehicle. The combination of their vast selection, knowledgeable staff, and exceptional customer service made for a truly positive buying experience. Thank you CarTune for helping me find the car of my dreams!`,
+  },
+];
 
 function MainPage() {
-  // return (
-  //   <div className="px-4 py-5 my-5 text-center">
-  //     <h1 className="display-5 fw-bold">CarCar</h1>
-  //     <div className="col-lg-6 mx-auto">
-  //       <p className="lead mb-4">
-  //         The premiere solution for automobile dealership
-  //         management!
-  //       </p>
-  //     </div>
-  //   </div>
-  // );
+  const [currentItem, setCurrentItem] = useState(0);
+  const [item, setItem] = useState(reviews[0]);
+
+  useEffect(() => {
+    setItem(reviews[currentItem]);
+  }, [currentItem]);
+
+  const showNextPerson = () => {
+    setCurrentItem(currentItem + 1);
+    if (currentItem === reviews.length - 1) {
+      setCurrentItem(0);
+    }
+  };
+
+  const showPrevPerson = () => {
+    setCurrentItem(currentItem - 1);
+    if (currentItem === 0) {
+      setCurrentItem(reviews.length - 1);
+    }
+  };
 
   return (
     <header style={{ paddingLeft: 0 }}>
@@ -50,8 +103,8 @@ function MainPage() {
         </div>
         <div className="container">
           <br></br>
-          <p class="fs-2 fw-bold text-center">Welcome to CarTune</p>
-          <p class="text-center">
+          <p className="fs-2 fw-bold text-center">Welcome to CarTune</p>
+          <p className="text-center">
             At CarTune, we're revolutionizing the car dealership and service experience with our one-stop shop.
             Whether you're in the market for a new set of wheels or need to keep your current ride running smoothly,
             we've got you covered. With a wide selection of quality vehicles and expert technicians on hand, you can
@@ -184,33 +237,24 @@ function MainPage() {
         {/* <!-- review --> */}
         <article className="review">
           <div className="img-container">
-            <img src="https://www.yourtango.com/sites/default/files/styles/header_slider/public/image_blog/7-year-cycle.jpg?itok=AxoJqMrp" id="person-img" alt="" />
+            <img src={item.img} id="person-img" alt="" />
           </div>
-          <h4 id="author">Robin Frost</h4>
-          {/* <p id="job">Reporter</p> */}
+          <h4 id="author">{item.name}</h4>
           <p>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
           </p>
 
-          <p id="info">
-            "I recently had the pleasure of purchasing a new car from this dealership and I
-            couldn't be happier with my experience! The CarTune sales team was knowledgeable,
-            friendly,and went above and beyond to ensure I got the car of my dreams at a great
-            price. The financing process was smooth and stress-free, and I appreciated the transparency
-            throughout the entire process. I highly recommend this dealership to anyone in the market
-            for a new vehicle. The professional staff and quality care for me and my car has made me
-            a lifelong customer. Thank you for making my car buying experience a positive one!"
-          </p>
+          <p id="info">{item.text}</p>
           {/* <!-- prev next buttons--> */}
           <div className="button-container">
-            <button className="prev-btn">
+            <button className="prev-btn" onClick={showPrevPerson}>
               <i className="fas fa-chevron-left"></i>
             </button>
-            <button className="next-btn">
+            <button className="next-btn" onClick={showNextPerson}>
               <i className="fas fa-chevron-right"></i>
             </button>
           </div>
