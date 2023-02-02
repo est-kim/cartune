@@ -260,6 +260,60 @@ function MainPage() {
           </MDBRow>
         </div>
         <br></br>
+
+        <section className="container">
+        <div className="title">
+          <p className="fs-2 fw-bold text-center">Our Team</p>
+          <div className="underline"></div>
+        </div>
+          <MDBRow>
+            <MDBCol>
+              <article className="review">
+              <div className='img-container'>
+                <img src="./EstherKim.png" id="person-img" alt="" />
+              </div>
+              <h4 id="author" className='fs-6'>Esther Kim</h4>
+              <p>Founder / Head of Sales</p>
+              <p id="info">
+                Hi, I'm Esther, the founder and head of car sales here at CarTune. I'm proud to say that my team and I have built a reputation
+                for exceptional service and expertise in the automotive industry. With 20 years of experience under my belt, I bring a wealth
+                of knowledge and a deep passion for all things automotive to the table. Whether you're in the market for a luxury sports car or a family-friendly SUV, my team
+                and I will work tirelessly to find the perfect vehicle to meet your needs and exceed your expectations. We believe that buying
+                a car should be an enjoyable and stress-free process, and we're here to make that a reality for you. We go the extra mile to ensure
+                that every customer leaves our dealership completely satisfied. In addition, we offer competitive financing options and a wide range
+                of after-sales services to ensure that your relationship with CarTune extends far beyond the initial sale. So why not come and visit
+                us today? Experience the difference that comes from working with the best in the business and see for yourself why CarTune is
+                the go-to destination for discerning car buyers. I look forward to meeting you soon!
+              </p>
+              </article>
+            </MDBCol>
+            <MDBCol>
+            <article className="review">
+              <div className='img-container'>
+                <img src="./JasonDai.png" id="person-img" alt="" />
+              </div>
+              <h4 id="author" className='fs-6'>Jason Dai</h4>
+              <p>Founder / Head of Sales</p>
+              <p id="info">
+              Hi, I'm Jason, the founder and head of car services at Jason. I have a passion for all things automotive and a commitment to
+              providing the highest quality service to our customers. With 20 of experience in the industry, I bring a wealth of knowledge
+              and expertise to every project we undertake. At CarTune, we believe that car maintenance and repairs should be straightforward
+              and stress-free. That's why we offer a wide range of services, from routine maintenance to complex repairs, all performed by our
+              team of skilled technicians.
+              Our state-of-the-art facilities, cutting-edge tools, and genuine commitment to customer satisfaction
+              make us the go-to destination for car owners across California. Whether you're looking for a routine oil change, a complete engine
+              overhaul, or anything in between, I and my team are here to help. We'll take the time to understand your needs, provide you with
+              a transparent estimate, and work diligently to get you back on the road as quickly as possible. I'm confident you'll be impressed
+              by our commitment to quality and customer service, and I look forward to working with you soon.
+
+              </p>
+            </article>
+            </MDBCol>
+          </MDBRow>
+        </section>
+        <br></br>
+        <br></br>
+        <br></br>
         <section className="container">
         {/* <!-- title --> */}
         <div className="title">
