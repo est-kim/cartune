@@ -143,6 +143,7 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
+        <div className="main-app">
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="customers">
@@ -179,7 +180,8 @@ function App() {
               <Route path="new" element={<AutomobileForm getAutomobiles={getAutomobiles} />} />
           </Route>
         </Routes>
-      <Footer />
+        </div>
+      <Footer/>
     </BrowserRouter>
   );
 }
