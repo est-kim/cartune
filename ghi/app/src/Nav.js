@@ -2,7 +2,7 @@ import { NavLink, Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor:"#fafae9" }}>
+    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor:"#f9ecd6" }}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/"><img src="./cartune_logo.png" alt="CarTune logo" width="125px"/></NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
