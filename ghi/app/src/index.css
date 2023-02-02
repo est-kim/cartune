@@ -80,13 +80,16 @@ Hero Image Area
 
 @keyframes wave {
   0% {
-    transform: translateX(5000px);
+    transform: translateX(3000px);
   }
-  40% {
+  20% {
     transform: translateX(200px);
   }
-  65% {
-    transform: translateX(50px);
+  35% {
+    transform: translateX(10px);
+  }
+  36% {
+    transform: translateX(0px);
   }
 }
 
