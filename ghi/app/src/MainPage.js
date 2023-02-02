@@ -293,7 +293,7 @@ function MainPage() {
                 <img src="./JasonDai.png" id="person-img" alt="" />
               </div>
               <h4 id="author" className='fs-6'>Jason Dai</h4>
-              <p>Founder / Head of Sales</p>
+              <p>Founder / Head of Services</p>
               <p id="info">
               Hi, I'm Jason, the founder and head of car services at Jason. I have a passion for all things automotive and a commitment to
               providing the highest quality service to our customers. With 20 of experience in the industry, I bring a wealth of knowledge

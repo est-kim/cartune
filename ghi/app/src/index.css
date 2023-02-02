@@ -12,9 +12,6 @@ code {
     monospace;
 }
 
-/* #root {
-  background-color: rgba(250, 250, 233)
-} */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
@@ -99,10 +96,7 @@ h2 {
 h4 {
   font-size: 0.875rem;
 }
-/* p {
-  margin-bottom: 1.25rem;
-  color: gray;
-} */
+
 
 /*
 ===============
