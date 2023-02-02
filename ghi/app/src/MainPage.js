@@ -81,7 +81,7 @@ function MainPage() {
   };
 
   return (
-    <header style={{ paddingLeft: 0 }}>
+    <header className="main-page" style={{ paddingLeft: 0 }}>
       <div
         className='p-5 text-center bg-image'
         style={{
@@ -269,7 +269,6 @@ function MainPage() {
       <br></br>
       {/* </div> */}
     </header>
-
   );
 }
 

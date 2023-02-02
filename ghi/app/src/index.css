@@ -50,6 +50,7 @@ body {
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
   font-size: 0.875rem;
+  height: 100%;
 }
 h2,h4 {
   letter-spacing: 0.2rem;
@@ -248,3 +249,40 @@ main {
   color: white;
   font-weight: 600;
 }
+
+/*
+===============
+Main Page
+===============
+*/
+.main-page {
+  flex:1;
+}
+
+
+/*
+===============
+Footer
+===============
+*/
+.footer {
+  margin-top: auto;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-app {
+  padding-bottom: 100px;
+
+}
+html, body, #root {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+ }
