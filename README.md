@@ -11,7 +11,7 @@
 ----
 
 ## Design
-CarCar is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. While utilizing PostgreSQL for relational database management, Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
+CarTune is an application designed to manage an automobile dealership’s inventory, sales, services, customers, and employees. The dealership is split into 3 microservices: inventory, sales, and services. These microservices are designed to provide a solid foundation for building a scalable and maintainable web application. While utilizing PostgreSQL for relational database management, Django and Python were used to build the back-end of this application and ReactJS was used for the front-end to create a smooth and responsive single-page application.
 
 The inventory microservice is responsible for managing the inventory of vehicles in the system. It provides RESTful API endpoints for the Manufacturer, VehicleModel, and Automobile models to allow users to create, read, update, and delete any of those models.
 

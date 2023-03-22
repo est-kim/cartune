@@ -101,8 +101,7 @@ function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: '#f0eeeb' }}>
-        © 2023 Copyright:
-          CarTune
+        © 2023 CarTune™ • Hack Reactor - SJP Nov PT 2022
 
       </div>
     </MDBFooter>

@@ -10,6 +10,10 @@ import {
 } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
+import cartune_logo from "./images/cartune_logo.png";
+import cartune_slogan from "./images/cartune_slogan.png";
+import EstherKim from "./images/EstherKim.png";
+import JasonDai from "./images/JasonDai.png";
 
 const reviews = [
   {
@@ -125,8 +129,8 @@ function MainPage() {
       >
           <div className='d-flex justify-content-center align-items-center h-100'>
             <div className='text-black'>
-              <h1 className='mb-3'><img src="./cartune_logo.png" alt="CarTune Logo"/></h1>
-              <h4 className='mb-3'><img src="./solid_slogan.png" alt="CarTune Slogan" width="400px" className="wave"/></h4>
+              <h1 className='mb-3'><img src={cartune_logo} alt="CarTune Logo"/></h1>
+              <h4 className='mb-3'><img src={cartune_slogan} alt="CarTune Slogan" width="400px" className="wave"/></h4>
               <a className='book-appointment-button btn btn-outline-light' href='/appointments/new' role='button'>
                 Book Appointment
               </a>
@@ -270,7 +274,7 @@ function MainPage() {
             <MDBCol>
               <article className="review">
               <div className='img-container'>
-                <img src="./EstherKim.png" id="person-img" alt="" />
+                <img src={EstherKim} id="person-img" alt="Esther" />
               </div>
               <h4 id="author" className='fs-6'>Esther Kim</h4>
               <p>Founder / Head of Sales</p>
@@ -290,7 +294,7 @@ function MainPage() {
             <MDBCol>
             <article className="review">
               <div className='img-container'>
-                <img src="./JasonDai.png" id="person-img" alt="" />
+                <img src={JasonDai} id="person-img" alt="Jason" />
               </div>
               <h4 id="author" className='fs-6'>Jason Dai</h4>
               <p>Founder / Head of Services</p>
